@@ -1,19 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="83c183b4-c67b-47c2-8a11-37d29406dea4" name="默认的" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/deployment.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/webServers.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/source/index/alipay.php" afterPath="$PROJECT_DIR$/source/index/alipay.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/source/index/fang_add.php" afterPath="$PROJECT_DIR$/source/index/fang_add.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/source/index/fang_domain.php" afterPath="$PROJECT_DIR$/source/index/fang_domain.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/source/index/notify.php" afterPath="$PROJECT_DIR$/source/index/notify.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/source/index/phpapi.php" afterPath="$PROJECT_DIR$/source/index/phpapi.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/source/index/vip.php" afterPath="$PROJECT_DIR$/source/index/vip.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/source/index/yuming.php" afterPath="$PROJECT_DIR$/source/index/yuming.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/source/pack/mail/mail.php" afterPath="$PROJECT_DIR$/source/pack/mail/mail.php" />
-    </list>
+    <list default="true" id="83c183b4-c67b-47c2-8a11-37d29406dea4" name="默认的" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -33,11 +21,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="phpapi.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="phpapi.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/source/index/phpapi.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="254" column="24" lean-forward="true" selection-start-line="254" selection-start-column="24" selection-end-line="254" selection-end-column="24" />
+            <state relative-caret-position="738">
+              <caret line="289" column="37" lean-forward="false" selection-start-line="289" selection-start-column="30" selection-end-line="289" selection-end-column="37" />
               <folding>
                 <marker date="1572414637578" expanded="true" signature="147:177" ph="select * fro... t_jump" />
                 <marker date="1572414637578" expanded="true" signature="471:503" ph="select * fro... t_domain" />
@@ -190,11 +178,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="config.inc.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="config.inc.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/source/system/config.inc.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="44">
-              <caret line="14" column="31" lean-forward="true" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
+            <state relative-caret-position="264">
+              <caret line="24" column="31" lean-forward="true" selection-start-line="24" selection-start-column="31" selection-end-line="24" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -232,13 +220,13 @@
       <find>$page</find>
       <find>fetch_array</find>
       <find>fetch</find>
-      <find>num_rows</find>
       <find>$db</find>
       <find>落地页</find>
       <find>$where</find>
       <find>select</find>
       <find>$pre_fix</find>
       <find>Drj3sTB54YN2mmmZ</find>
+      <find>num_rows</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -265,7 +253,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="1">
     <option name="x" value="472" />
     <option name="y" value="35" />
     <option name="width" value="1381" />
@@ -350,15 +338,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1572410732647</updated>
-      <workItem from="1572410733795" duration="7053000" />
+      <workItem from="1572410733795" duration="7171000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7053000" />
+    <option name="totallyTimeSpent" value="7171000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="472" y="35" width="1381" height="978" extended-state="0" />
+    <frame x="472" y="35" width="1381" height="978" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24981685" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -446,54 +434,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/source/index/phpapi.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="254" column="24" lean-forward="true" selection-start-line="254" selection-start-column="24" selection-end-line="254" selection-end-column="24" />
-          <folding>
-            <marker date="1572414637578" expanded="true" signature="147:177" ph="select * fro... t_jump" />
-            <marker date="1572414637578" expanded="true" signature="471:503" ph="select * fro... t_domain" />
-            <marker date="1572414637578" expanded="true" signature="610:640" ph="select * fro... t_jump" />
-            <marker date="1572414637578" expanded="true" signature="947:991" ph="update t_jum... " />
-            <marker date="1572414637578" expanded="true" signature="1052:1101" ph="update t_dom... " />
-            <marker date="1572414637578" expanded="true" signature="1349:1391" ph="select * fro... prefix_user" />
-            <marker date="1572414637578" expanded="true" signature="1557:1629" ph="update prefi... " />
-            <marker date="1572414637578" expanded="true" signature="1681:1749" ph="update prefi... " />
-            <marker date="1572414637578" expanded="true" signature="2102:2132" ph="select * fro... t_jump" />
-            <marker date="1572414637578" expanded="true" signature="2296:2333" ph="update t_jum... " />
-            <marker date="1572414637578" expanded="true" signature="2488:2525" ph="update t_jum... " />
-            <marker date="1572414637578" expanded="true" signature="2744:2774" ph="select * fro... t_jump" />
-            <marker date="1572414637578" expanded="true" signature="2938:2975" ph="update t_jum... " />
-            <marker date="1572414637578" expanded="true" signature="3130:3167" ph="update t_jum... " />
-            <marker date="1572414637578" expanded="true" signature="3392:3431" ph="select * fro... prefix_vipprice" />
-            <marker date="1572414637578" expanded="true" signature="3543:3585" ph="select * fro... prefix_user" />
-            <marker date="1572414637578" expanded="true" signature="4257:4336" ph="update prefi... " />
-            <marker date="1572414637578" expanded="true" signature="4510:4571" ph="select * fro... t_domain" />
-            <marker date="1572414637578" expanded="true" signature="4761:4803" ph="select * fro... t_domain" />
-            <marker date="1572414637578" expanded="true" signature="4953:5027" ph="update t_dom... " />
-            <marker date="1572414637578" expanded="true" signature="5201:5317" ph="update prefi... " />
-            <marker date="1572414637578" expanded="true" signature="5372:5426" ph="update t_jum... " />
-            <marker date="1572414637578" expanded="true" signature="5612:5654" ph="select * fro... t_domain" />
-            <marker date="1572414637578" expanded="true" signature="5782:5847" ph="update t_dom... " />
-            <marker date="1572414637578" expanded="true" signature="6222:6305" ph="insert INTO prefix_buy_cha_log... " />
-            <marker date="1572414637578" expanded="true" signature="6732:6774" ph="select * fro... prefix_user" />
-            <marker date="1572414637578" expanded="true" signature="7030:7072" ph="select * fro... t_domain" />
-            <marker date="1572414637578" expanded="true" signature="7192:7257" ph="update t_dom... " />
-            <marker date="1572414637578" expanded="true" signature="7389:7461" ph="update prefi... " />
-            <marker date="1572414637578" expanded="true" signature="7654:7737" ph="insert INTO prefix_buy_cha_log... " />
-            <marker date="1572414637578" expanded="true" signature="8105:8135" ph="delete from " />
-            <marker date="1572414637578" expanded="true" signature="8567:8603" ph="insert into t_domain... " />
-            <marker date="1572414637578" expanded="true" signature="8798:8827" ph="select count... t_domain" />
-            <marker date="1572414637578" expanded="true" signature="8861:8902" ph="select count... t_domain" />
-            <marker date="1572414637578" expanded="true" signature="9230:9272" ph="select * fro... prefix_user" />
-            <marker date="1572414637578" expanded="true" signature="9492:9535" ph="select count... t_jump" />
-            <marker date="1572414637578" expanded="true" signature="9804:9864" ph="select * fro... t_jump" />
-            <marker date="1572414637578" expanded="true" signature="9985:10191" ph="insert INTO t_jump... " />
-            <marker date="1572414637578" expanded="true" signature="10884:10981" ph="update t_jum... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/source/system/backups.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -508,14 +448,6 @@
             <marker date="1572400234000" expanded="true" signature="1142:1199" ph="Insert INTO prefix_path... " />
             <marker date="1572400234000" expanded="true" signature="1272:1312" ph="select in_id... ${tname('app')}" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/system/db.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-32">
-          <caret line="28" column="28" lean-forward="false" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -588,9 +520,65 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/source/system/config.inc.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="14" column="31" lean-forward="true" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
+        <state relative-caret-position="264">
+          <caret line="24" column="31" lean-forward="true" selection-start-line="24" selection-start-column="31" selection-end-line="24" selection-end-column="31" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/system/db.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-32">
+          <caret line="28" column="28" lean-forward="false" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/index/phpapi.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="738">
+          <caret line="289" column="37" lean-forward="false" selection-start-line="289" selection-start-column="30" selection-end-line="289" selection-end-column="37" />
+          <folding>
+            <marker date="1572414637578" expanded="true" signature="147:177" ph="select * fro... t_jump" />
+            <marker date="1572414637578" expanded="true" signature="471:503" ph="select * fro... t_domain" />
+            <marker date="1572414637578" expanded="true" signature="610:640" ph="select * fro... t_jump" />
+            <marker date="1572414637578" expanded="true" signature="947:991" ph="update t_jum... " />
+            <marker date="1572414637578" expanded="true" signature="1052:1101" ph="update t_dom... " />
+            <marker date="1572414637578" expanded="true" signature="1349:1391" ph="select * fro... prefix_user" />
+            <marker date="1572414637578" expanded="true" signature="1557:1629" ph="update prefi... " />
+            <marker date="1572414637578" expanded="true" signature="1681:1749" ph="update prefi... " />
+            <marker date="1572414637578" expanded="true" signature="2102:2132" ph="select * fro... t_jump" />
+            <marker date="1572414637578" expanded="true" signature="2296:2333" ph="update t_jum... " />
+            <marker date="1572414637578" expanded="true" signature="2488:2525" ph="update t_jum... " />
+            <marker date="1572414637578" expanded="true" signature="2744:2774" ph="select * fro... t_jump" />
+            <marker date="1572414637578" expanded="true" signature="2938:2975" ph="update t_jum... " />
+            <marker date="1572414637578" expanded="true" signature="3130:3167" ph="update t_jum... " />
+            <marker date="1572414637578" expanded="true" signature="3392:3431" ph="select * fro... prefix_vipprice" />
+            <marker date="1572414637578" expanded="true" signature="3543:3585" ph="select * fro... prefix_user" />
+            <marker date="1572414637578" expanded="true" signature="4257:4336" ph="update prefi... " />
+            <marker date="1572414637578" expanded="true" signature="4510:4571" ph="select * fro... t_domain" />
+            <marker date="1572414637578" expanded="true" signature="4761:4803" ph="select * fro... t_domain" />
+            <marker date="1572414637578" expanded="true" signature="4953:5027" ph="update t_dom... " />
+            <marker date="1572414637578" expanded="true" signature="5201:5317" ph="update prefi... " />
+            <marker date="1572414637578" expanded="true" signature="5372:5426" ph="update t_jum... " />
+            <marker date="1572414637578" expanded="true" signature="5612:5654" ph="select * fro... t_domain" />
+            <marker date="1572414637578" expanded="true" signature="5782:5847" ph="update t_dom... " />
+            <marker date="1572414637578" expanded="true" signature="6222:6305" ph="insert INTO prefix_buy_cha_log... " />
+            <marker date="1572414637578" expanded="true" signature="6732:6774" ph="select * fro... prefix_user" />
+            <marker date="1572414637578" expanded="true" signature="7030:7072" ph="select * fro... t_domain" />
+            <marker date="1572414637578" expanded="true" signature="7192:7257" ph="update t_dom... " />
+            <marker date="1572414637578" expanded="true" signature="7389:7461" ph="update prefi... " />
+            <marker date="1572414637578" expanded="true" signature="7654:7737" ph="insert INTO prefix_buy_cha_log... " />
+            <marker date="1572414637578" expanded="true" signature="8105:8135" ph="delete from " />
+            <marker date="1572414637578" expanded="true" signature="8567:8603" ph="insert into t_domain... " />
+            <marker date="1572414637578" expanded="true" signature="8798:8827" ph="select count... t_domain" />
+            <marker date="1572414637578" expanded="true" signature="8861:8902" ph="select count... t_domain" />
+            <marker date="1572414637578" expanded="true" signature="9230:9272" ph="select * fro... prefix_user" />
+            <marker date="1572414637578" expanded="true" signature="9492:9535" ph="select count... t_jump" />
+            <marker date="1572414637578" expanded="true" signature="9804:9864" ph="select * fro... t_jump" />
+            <marker date="1572414637578" expanded="true" signature="9985:10191" ph="insert INTO t_jump... " />
+            <marker date="1572414637578" expanded="true" signature="10884:10981" ph="update t_jum... " />
+          </folding>
         </state>
       </provider>
     </entry>
