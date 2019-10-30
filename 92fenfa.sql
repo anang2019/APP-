@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: 2019-10-21 09:25:05
+-- Generation Time: 2019-10-30 12:32:27
 -- 服务器版本： 5.5.62-log
 -- PHP Version: 5.4.45
 
@@ -74,39 +74,38 @@ CREATE TABLE IF NOT EXISTS `prefix_app` (
   `in_removead` int(11) NOT NULL,
   `in_addtime` datetime DEFAULT NULL,
   `in_ios_super` varchar(255) DEFAULT NULL COMMENT '超级签名'
-) ENGINE=MyISAM AUTO_INCREMENT=32 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=33 DEFAULT CHARSET=utf8;
 
 --
 -- 转存表中的数据 `prefix_app`
 --
 
 INSERT INTO `prefix_app` (`in_id`, `in_uid`, `in_uname`, `in_name`, `in_bid`, `in_mnvs`, `in_bsvs`, `in_bvs`, `in_type`, `in_nick`, `in_team`, `in_form`, `in_icon`, `in_plist`, `in_hits`, `in_size`, `in_kid`, `in_sign`, `in_resign`, `in_link`, `in_removead`, `in_addtime`, `in_ios_super`) VALUES
-(2, 1, '42424567@qq.com', '嗨拼团', 'com.kingkr.bianselong', '8.0', '1.0.0', '3', 1, 'shanxizhangshangyunwei', 'China Telecom Corporation Limited Shanghai enterprise information operations center', 'iOS', '1-1571034694.png', 'https://92ff.cn/data/attachment/1-1571034694.plist', 193, '19.8 MB', 7, 0, 0, '', 0, '2019-10-14 14:32:45', NULL),
+(2, 1, '42424567@qq.com', '嗨拼团', 'com.kingkr.bianselong', '8.0', '1.0.0', '3', 1, 'shanxizhangshangyunwei', 'China Telecom Corporation Limited Shanghai enterprise information operations center', 'iOS', '1-1571034694.png', 'https://92ff.cn/data/attachment/1-1571034694.plist', 195, '19.8 MB', 7, 0, 0, '', 0, '2019-10-14 14:32:45', NULL),
 (13, 3, '1@qq.com', '庄园之恋', 'com.kvvbsv.kgqcwuv', '17', '1.0.1', '4', 0, '*', '*', 'Android', '3-1569058015.png', 'http://www.92ff.cn/data/attachment/3-1569058015.apk', 4, '6.18 MB', 0, 0, 0, NULL, 0, '2019-09-21 17:27:20', NULL),
 (9, 2, '489683@qq.com', '智慧生活', 'com.kmsxjx.knnydri', '8.0', '6.0.0', '5', 1, 'com.cmcc.enterprise-classID.onecardmultinumber.sdk', 'China Mobile Internet Company Limited', 'iOS', '2-1568535008.png', 'https://www.92ff.cn/data/attachment/2-1568535008.plist', 175, '13 MB', 0, 0, 0, NULL, 0, '2019-09-15 16:11:55', NULL),
 (10, 3, '1@qq.com', '趣购商城', 'com.krbhic.kiazgzc', '8.0', '1.0.1', '2', 1, 'com.cmcc.enterprise-classID.onecardmultinumber.sdk', 'China Mobile Internet Company Limited', 'iOS', '3-1568535826.png', 'https://www.92ff.cn/data/attachment/3-1568535826.plist', 47, '12.9 MB', 0, 0, 0, NULL, 0, '2019-09-15 16:24:41', NULL),
-(8, 2, '489683@qq.com', '护工端', 'com.kingkr.bianselong', '8.0', '1.0.0', '3', 1, 'shanxizhangshangyunwei', 'China Telecom Corporation Limited Shanghai enterprise information operations center', 'iOS', '2-1571034870.png', 'https://92ff.cn/data/attachment/2-1571034870.plist', 140, '13.4 MB', 0, 0, 0, '', 0, '2019-10-14 14:34:40', NULL),
-(7, 1, '42424567@qq.com', '嗨拼团', 'com.kvbpkj.kvpruig', '17', '1.0.0', '5', 0, '*', '*', 'Android', '1-1568097208.png', 'http://www.92ff.cn/data/attachment/1-1568097208.apk', 50, '7.57 MB', 2, 0, 0, NULL, 1, '2019-09-10 14:34:23', NULL),
-(11, 3, '1@qq.com', 'pact扫雷', 'com.konyoa.kudmfct', '17', '1.0.1', '4', 0, '*', '*', 'Android', '3-1568802158.png', 'https://vtrep.cn/data/attachment/1410-1569365507.apk', 16, '7.35 MB', 0, 0, 0, NULL, 0, '2019-09-18 18:23:00', NULL),
+(8, 2, '489683@qq.com', '护工端', 'com.kingkr.bianselong', '8.0', '1.0.0', '3', 1, 'shanxizhangshangyunwei', 'China Telecom Corporation Limited Shanghai enterprise information operations center', 'iOS', '2-1571034870.png', 'https://92ff.cn/data/attachment/2-1571034870.plist', 147, '13.4 MB', 0, 0, 0, '', 0, '2019-10-14 14:34:40', NULL),
+(7, 1, '42424567@qq.com', '嗨拼团', 'com.kvbpkj.kvpruig', '17', '1.0.0', '5', 0, '*', '*', 'Android', '1-1568097208.png', 'http://www.92ff.cn/data/attachment/1-1568097208.apk', 54, '7.57 MB', 2, 0, 0, NULL, 1, '2019-09-10 14:34:23', NULL),
+(11, 3, '1@qq.com', 'pact扫雷', 'com.konyoa.kudmfct', '17', '1.0.1', '4', 0, '*', '*', 'Android', '3-1568802158.png', 'https://fenfa.haibagroup.cn/369/2019-10-30-10-32-21-5db8f6359f6d4?attname=1410-1569365507.apk', 17, '7.35 MB', 0, 0, 0, NULL, 0, '2019-09-18 18:23:00', 'https://fenfa.haibagroup.cn/369/2019-10-30-10-32-21-5db8f6359f6d4?attname=1410-1569365507.apk'),
 (12, 3, '1@qq.com', '嗨运动', 'io.dcloud.UNI7D0911E', '19', '1.0.1', '400', 0, '*', '*', 'Android', '3-1568885760.png', 'http://92ff.cn/data/attachment/3-1568885760.apk', 2, '26.4 MB', 0, 0, 0, NULL, 1, '2019-09-19 17:38:15', NULL),
 (14, 6, '1234@qq.com', '嗨拼团', 'com.kvbpkj.kvpruig', '17', '1.0.0', '5', 0, '*', '*', 'Android', '6-1569143199.png', 'http://92ff.cn/data/attachment/6-1569143199.apk', 0, '7.57 MB', 0, 0, 0, NULL, 0, '2019-09-22 17:07:48', NULL),
 (15, 3, '1@qq.com', '九四玩游戏', 'a94hwan.bjkyzh.combo', '21', '2.1-build20190923', '117', 0, '*', '*', 'Android', '3-1569204674.png', 'http://92ff.cn/data/attachment/3-1569204674.apk', 0, '21.6 MB', 0, 0, 0, NULL, 1, '2019-09-23 10:12:42', NULL),
 (16, 1, '42424567@qq.com', '金羊毛', 'com.reader.readking', '21', '1.37', '37', 0, '*', '*', 'Android', '1-1569228738.png', 'http://92ff.cn/data/attachment/1-1569228738.apk', 0, '2.62 MB', 0, 0, 0, '', 0, '2019-09-23 16:53:14', NULL),
 (17, 1, '42424567@qq.com', '小熊云秘书', 'com.ang.paphelper', '22', '1.10', '1', 0, '*', '*', 'Android', '1-1569571919.png', 'http://92ff.cn/data/attachment/1-1569571919.apk', 7, '5.27 MB', 0, 0, 0, '', 0, '2019-09-27 16:12:23', ''),
-(18, 9, '2@qq.com', '激战', 'com.kfhlav.kgswmjo', '17', '1.0.0', '5', 0, '*', '*', 'Android', '9-1569462062.png', 'https://vtrep.cn/data/attachment/1410-1569365507.apk', 78, '7.49 MB', 0, 0, 0, NULL, 0, '2019-09-26 09:41:36', 'https://vtrep.cn/data/attachment/1410-1569365507.apk'),
-(19, 3, '1@qq.com', 'PACIFIC', 'com.kxbapc.kvjpxwk', '17', '1.0.0', '8', 0, '*', '*', 'Android', '3-1569729428.png', 'http://www.92ff.cn/data/attachment/3-1569729428.apk', 75, '5.67 MB', 0, 0, 0, '', 0, '2019-09-29 11:58:18', NULL),
-(20, 1, '42424567@qq.com', '小熊云控', 'com.auto.big.ang', '21', '1.2.6', '26', 0, '*', '*', 'Android', '1-1570352743.png', 'http://92ff.cn/data/attachment/1-1570352743.apk', 4, '11.5 MB', 0, 0, 0, NULL, 0, '2019-10-06 17:06:13', NULL),
-(21, 1, '42424567@qq.com', 'OTC股票交易系统', 'com.krmbsf.krbhzik', '17', '1.0.1', '4', 0, '*', '*', 'Android', '1-1570244186.png', 'http://92ff.cn/data/attachment/1-1570244186.apk', 34, '6.85 MB', 0, 0, 0, '', 1, '2019-10-05 10:56:50', NULL),
-(22, 1, '42424567@qq.com', 'CCB', 'com.kytkfq.kaiynsq', '17', '1.0.1', '4', 0, '*', '*', 'Android', '1-1570412140.png', 'http://www.92ff.cn/data/attachment/1-1570412140.apk', 190, '8.21 MB', 0, 0, 0, NULL, 0, '2019-10-07 09:37:57', 'https://app.92ff.cn/download/5d91b07ba06b2.html'),
-(23, 1, '42424567@qq.com', '飞禽走兽', 'com.ktjrzt.kxxcbym', '17', '1.0.3', '5', 0, '*', '*', 'Android', '1-1570529839.png', 'https://vtrep.cn/data/attachment/1410-1569365507.apk', 13, '6.86 MB', 0, 0, 0, NULL, 0, '2019-10-08 18:17:51', NULL),
+(18, 9, '2@qq.com', '激战', 'com.kfhlav.kgswmjo', '17', '1.0.0', '5', 0, '*', '*', 'Android', '9-1571649032.png', 'https://fenfa.haibagroup.cn/369/2019-10-30-10-32-21-5db8f6359f6d4?attname=1410-1569365507.apk', 99, '7.49 MB', 0, 0, 0, NULL, 0, '2019-10-21 17:12:05', 'https://fenfa.haibagroup.cn/369/2019-10-30-10-32-21-5db8f6359f6d4?attname=1410-1569365507.apk'),
+(19, 3, '1@qq.com', 'PACIFIC', 'com.kxbapc.kvjpxwk', '17', '1.0.0', '8', 0, '*', '*', 'Android', '3-1569729428.png', 'http://www.92ff.cn/data/attachment/3-1569729428.apk', 77, '5.67 MB', 0, 0, 0, '', 0, '2019-09-29 11:58:18', NULL),
+(20, 1, '42424567@qq.com', '小熊云控', 'com.auto.big.ang', '21', '1.2.8', '28', 0, '*', '*', 'Android', '1-1572344168.png', 'http://92ff.cn/data/attachment/1-1572344168.apk', 7, '11.1 MB', 0, 0, 0, NULL, 0, '2019-10-29 18:17:30', ''),
+(22, 1, '42424567@qq.com', 'CCB', 'com.kytkfq.kaiynsq', '17', '1.0.1', '4', 0, '*', '*', 'Android', '1-1570412140.png', 'https://fenfa.haibagroup.cn/369/2019-10-30-10-32-21-5db8f6359f6d4?attname=1410-1569365507.apk', 310, '8.21 MB', 0, 0, 0, NULL, 0, '2019-10-07 09:37:57', 'https://fenfa.haibagroup.cn/369/2019-10-30-10-32-21-5db8f6359f6d4?attname=1410-1569365507.apk'),
+(23, 1, '42424567@qq.com', '飞禽走兽', 'com.ktjrzt.kxxcbym', '17', '1.0.3', '5', 0, '*', '*', 'Android', '1-1570529839.png', 'https://fenfa.haibagroup.cn/369/2019-10-30-10-32-21-5db8f6359f6d4?attname=1410-1569365507.apk', 13, '6.86 MB', 0, 0, 0, NULL, 0, '2019-10-08 18:17:51', NULL),
 (24, 1, '42424567@qq.com', '趣购商城', 'com.krbhic.kiazgzc', '17', '1.0.1', '4', 0, '*', '*', 'Android', '1-1570597529.png', 'http://92ff.cn/data/attachment/1-1570597529.apk', 1, '6.33 MB', 25, 0, 0, NULL, 0, '2019-10-09 13:05:51', NULL),
 (25, 1, '42424567@qq.com', '趣购商城', 'com.krbhic.kiazgzc', '8.0', '1.0.1', '2', 1, 'epson_wb_dis', 'Epson (China) Co., Ltd.', 'iOS', '1-1570597551.png', 'https://92ff.cn/data/attachment/1-1570597551.plist', 2, '12.9 MB', 24, 0, 0, NULL, 0, '2019-10-09 13:07:06', NULL),
-(26, 3, '1@qq.com', '捉集商城', 'com.ksfwvj.klgczgp', '17', '1.0.0', '8', 0, '*', '*', 'Android', '3-1570765624.png', 'http://www.92ff.cn/data/attachment/3-1570765624.apk', 6, '6.24 MB', 0, 0, 0, NULL, 0, '2019-10-11 11:49:29', NULL),
-(27, 3, '1@qq.com', 'otc股票交易系统', 'com.ktqmxt.kqrrurs', '17', '1.0.0', '4', 0, '*', '*', 'Android', '3-1570781473.png', 'http://www.92ff.cn/data/attachment/3-1570781473.apk', 3124, '6.85 MB', 0, 0, 0, NULL, 1, '2019-10-11 16:11:59', NULL),
-(28, 1, '42424567@qq.com', '霹雳兔-洗车端', 'com.pilitu.smxc.service', '15', '1.1.8', '6', 0, '*', '*', 'Android', '1-1571392825.png', 'http://92ff.cn/data/attachment/1-1571392825.apk', 11, '36.4 MB', 0, 0, 0, NULL, 0, '2019-10-18 18:00:45', NULL),
-(29, 1, '42424567@qq.com', '霹雳兔', 'com.pilitu.smxc.client', '15', '1.1.8', '6', 0, '*', '*', 'Android', '1-1571392778.png', 'http://92ff.cn/data/attachment/1-1571392778.apk', 12, '10.7 MB', 0, 0, 0, NULL, 0, '2019-10-18 17:59:48', NULL),
-(30, 1, '42424567@qq.com', '嗨运动', 'io.dcloud.UNI7D0911E', '8.0', '1.0.1', '400', 1, 'shanxizhangshangyunwei', 'China Telecom Corporation Limited Shanghai enterprise information operations center', 'iOS', '1-1571191119.png', 'https://92ff.cn/data/attachment/1-1571191119.plist', 3, '28.9 MB', 31, 0, 0, NULL, 0, '2019-10-16 09:59:53', NULL),
-(31, 1, '42424567@qq.com', '嗨运动', 'io.dcloud.UNI7D0911E', '19', '1.0.1', '400', 0, '*', '*', 'Android', '1-1571191194.png', 'http://92ff.cn/data/attachment/1-1571191194.apk', 56, '26.4 MB', 30, 0, 0, NULL, 0, '2019-10-16 10:00:57', NULL);
+(26, 3, '1@qq.com', '捉集商城', 'com.ksfwvj.klgczgp', '17', '1.0.0', '8', 0, '*', '*', 'Android', '3-1570765624.png', 'http://www.92ff.cn/data/attachment/3-1570765624.apk', 7, '6.24 MB', 0, 0, 0, NULL, 0, '2019-10-11 11:49:29', NULL),
+(27, 3, '1@qq.com', 'otc股票交易系统', 'com.ktqmxt.kqrrurs', '17', '1.0.0', '4', 0, '*', '*', 'Android', '3-1570781473.png', 'http://92ff.cn/data/attachment/3-1570781473.apk', 6623, '6.85 MB', 0, 0, 0, NULL, 1, '2019-10-11 16:11:59', NULL),
+(28, 1, '42424567@qq.com', '霹雳兔-洗车端', 'com.pilitu.smxc.service', '15', '1.1.9', '7', 0, '*', '*', 'Android', '1-1572062391.png', 'http://92ff.cn/data/attachment/1-1572062391.apk', 12, '36.8 MB', 0, 0, 0, NULL, 0, '2019-10-26 12:04:35', NULL),
+(29, 1, '42424567@qq.com', '霹雳兔', 'com.pilitu.smxc.client', '15', '1.1.9', '7', 0, '*', '*', 'Android', '1-1572062279.png', 'http://92ff.cn/data/attachment/1-1572062279.apk', 13, '11.1 MB', 0, 0, 0, NULL, 0, '2019-10-26 11:59:40', NULL),
+(30, 1, '42424567@qq.com', '嗨运动', 'io.dcloud.UNI7D0911E', '8.0', '1.0.1', '400', 1, 'shanxizhangshangyunwei', 'China Telecom Corporation Limited Shanghai enterprise information operations center', 'iOS', '1-1571191119.png', 'https://92ff.cn/data/attachment/1-1571191119.plist', 12, '28.9 MB', 31, 0, 0, NULL, 0, '2019-10-16 09:59:53', NULL),
+(31, 1, '42424567@qq.com', '嗨运动', 'io.dcloud.UNI7D0911E', '19', '1.0.1', '400', 0, '*', '*', 'Android', '1-1571191194.png', 'https://fenfa.haibagroup.cn/369/2019-10-30-10-32-21-5db8f6359f6d4?attname=1410-1569365507.apk', 208, '26.4 MB', 30, 0, 0, NULL, 0, '2019-10-16 10:00:57', 'https://fenfa.haibagroup.cn/369/2019-10-30-10-32-21-5db8f6359f6d4?attname=1410-1569365507.apk');
 
 -- --------------------------------------------------------
 
@@ -123,14 +122,15 @@ CREATE TABLE IF NOT EXISTS `prefix_buylog` (
   `in_money` int(11) NOT NULL,
   `in_lock` int(11) NOT NULL,
   `in_addtime` datetime DEFAULT NULL
-) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
 
 --
 -- 转存表中的数据 `prefix_buylog`
 --
 
 INSERT INTO `prefix_buylog` (`in_id`, `in_uid`, `in_uname`, `in_title`, `in_tid`, `in_money`, `in_lock`, `in_addtime`) VALUES
-(4, 1, '42424567@qq.com', '1-1568983003', 10, 3600, 1, '2019-09-20 20:36:43');
+(4, 1, '42424567@qq.com', '1-1568983003', 10, 3600, 1, '2019-09-20 20:36:43'),
+(7, 9, '2@qq.com', '9-1571649341', 100, 3600, 1, '2019-10-21 17:15:41');
 
 -- --------------------------------------------------------
 
@@ -208,6 +208,52 @@ CREATE TABLE IF NOT EXISTS `prefix_mail` (
   `in_ucode` varchar(255) NOT NULL,
   `in_addtime` datetime DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `prefix_path`
+--
+
+CREATE TABLE IF NOT EXISTS `prefix_path` (
+  `id` int(11) NOT NULL,
+  `uid` int(11) NOT NULL,
+  `path` varchar(255) DEFAULT NULL,
+  `super` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=28 DEFAULT CHARSET=utf8;
+
+--
+-- 转存表中的数据 `prefix_path`
+--
+
+INSERT INTO `prefix_path` (`id`, `uid`, `path`, `super`) VALUES
+(1, 2, 'https://92ff.cn/data/attachment/1-1571034694.plist', ''),
+(2, 13, 'http://www.92ff.cn/data/attachment/3-1569058015.apk', ''),
+(3, 9, 'https://www.92ff.cn/data/attachment/2-1568535008.plist', ''),
+(4, 10, 'https://www.92ff.cn/data/attachment/3-1568535826.plist', ''),
+(5, 8, 'https://92ff.cn/data/attachment/2-1571034870.plist', ''),
+(6, 7, 'http://www.92ff.cn/data/attachment/1-1568097208.apk', ''),
+(7, 11, 'https://baidu.com', ''),
+(8, 12, 'http://92ff.cn/data/attachment/3-1568885760.apk', ''),
+(9, 14, 'http://92ff.cn/data/attachment/6-1569143199.apk', ''),
+(10, 15, 'http://92ff.cn/data/attachment/3-1569204674.apk', ''),
+(11, 16, 'http://92ff.cn/data/attachment/1-1569228738.apk', ''),
+(12, 17, 'http://92ff.cn/data/attachment/1-1569571919.apk', ''),
+(13, 18, 'http://92ff.cn/data/attachment/9-1571649032.apk', 'https://app.92ff.cn/download/5d8b5209d5a8b.html'),
+(14, 19, 'http://www.92ff.cn/data/attachment/3-1569729428.apk', ''),
+(15, 20, 'http://92ff.cn/data/attachment/1-1572344168.apk', ''),
+(16, 21, 'http://92ff.cn/data/attachment/1-1572312630.apk', ''),
+(17, 22, 'http://www.92ff.cn/data/attachment/1-1570412140.apk', ''),
+(18, 23, '', ''),
+(19, 24, 'http://92ff.cn/data/attachment/1-1570597529.apk', ''),
+(20, 25, 'https://92ff.cn/data/attachment/1-1570597551.plist', ''),
+(21, 26, 'http://www.92ff.cn/data/attachment/3-1570765624.apk', ''),
+(22, 27, 'http://92ff.cn/data/attachment/1-1570244186.apk', ''),
+(23, 28, 'http://92ff.cn/data/attachment/1-1572062391.apk', ''),
+(24, 29, 'http://92ff.cn/data/attachment/1-1572062279.apk', ''),
+(25, 30, 'https://92ff.cn/data/attachment/1-1571191119.plist', ''),
+(26, 31, 'http://92ff.cn/data/attachment/1-1571191194.apk', 'http://92ff.cn/data/attachment/1-1571191194.apk'),
+(27, 32, 'http://92ff.cn/data/attachment/1-1572403639.apk', '');
 
 -- --------------------------------------------------------
 
@@ -333,23 +379,23 @@ CREATE TABLE IF NOT EXISTS `prefix_user` (
   `end_time` int(10) NOT NULL COMMENT '到期时间',
   `domain` varchar(255) DEFAULT NULL COMMENT '域名',
   `user_money` decimal(10,2) NOT NULL DEFAULT '0.00' COMMENT '余额'
-) ENGINE=MyISAM AUTO_INCREMENT=22 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=25 DEFAULT CHARSET=utf8;
 
 --
 -- 转存表中的数据 `prefix_user`
 --
 
 INSERT INTO `prefix_user` (`in_userid`, `in_username`, `in_userpassword`, `in_mobile`, `in_qq`, `in_firm`, `in_job`, `in_regdate`, `in_loginip`, `in_logintime`, `in_islock`, `in_points`, `user_level`, `end_time`, `domain`, `user_money`) VALUES
-(1, '42424567@qq.com', 'c0a027f55b2ab3fc', '', '', '', '', '2019-09-07 14:44:17', '1.190.209.1', '2019-10-18 17:29:29', 0, 13509, 2, 1597649210, 'vcvcb.qoi074.cn', '365.00'),
-(2, '489683@qq.com', 'c0a027f55b2ab3fc', '', '', '', '', '2019-09-10 14:50:57', '125.211.136.71', '2019-10-14 14:34:25', 0, 9735, 0, 0, NULL, '0.00'),
-(3, '1@qq.com', 'c0a027f55b2ab3fc', '', '', '', '', NULL, '125.211.136.71', '2019-10-14 14:42:16', 0, 7676, 0, 0, NULL, '0.00'),
-(4, '19915277@qq.com', 'c0a027f55b2ab3fc', NULL, NULL, NULL, NULL, '2019-09-18 10:22:12', '221.207.193.139', '2019-09-27 12:59:32', 0, 101030, 2, 1579508881, 'weri.qoi074.cn', '6042.00'),
+(1, '42424567@qq.com', 'c0a027f55b2ab3fc', '', '', '', '', '2019-09-07 14:44:17', '221.207.163.88', '2019-10-30 10:47:14', 0, 13200, 2, 1597649210, 'vcvcb.qoi074.cn', '365.00'),
+(2, '489683@qq.com', 'c0a027f55b2ab3fc', '', '', '', '', '2019-09-10 14:50:57', '125.211.136.71', '2019-10-14 14:34:25', 0, 9728, 0, 0, NULL, '0.00'),
+(3, '1@qq.com', 'c0a027f55b2ab3fc', '', '', '', '', NULL, '221.207.163.88', '2019-10-30 10:30:27', 0, 4173, 0, 0, NULL, '0.00'),
+(4, '19915277@qq.com', 'c0a027f55b2ab3fc', NULL, NULL, NULL, NULL, '2019-09-18 10:22:12', '113.4.141.120', '2019-10-25 10:45:23', 0, 101030, 2, 1579508881, 'weri.qoi074.cn', '6042.00'),
 (5, '123@qq.com', '49ba59abbe56e057', NULL, NULL, NULL, NULL, '2019-09-22 16:09:30', '125.211.136.80', '2019-09-22 21:46:27', 0, 10, 2, 1589876962, '域名6', '4400.00'),
 (6, '1234@qq.com', '49ba59abbe56e057', NULL, NULL, NULL, NULL, '2019-09-22 16:55:37', '1.190.209.2', '2019-09-23 16:20:52', 0, 1010, 2, 1574326640, '域名11', '2871.00'),
 (7, '3272982524@qq.com', 'b8ee297bc5ec0411', NULL, NULL, NULL, NULL, '2019-09-24 16:54:27', '49.114.53.248', '2019-09-24 16:54:27', 0, 1000, 0, 0, NULL, '0.00'),
 (8, '416625@qq.com', '49ba59abbe56e057', '', '', '', '', '2019-09-25 15:26:55', '114.99.240.131', '2019-09-25 15:26:55', 0, 100000, 0, 0, NULL, '0.00'),
-(9, '2@qq.com', 'c0a027f55b2ab3fc', NULL, NULL, NULL, NULL, '2019-09-25 18:03:42', '125.211.136.71', '2019-10-14 14:34:06', 0, 99922, 0, 0, NULL, '0.00'),
-(10, '3@qq.com', 'c0a027f55b2ab3fc', NULL, NULL, NULL, NULL, '2019-09-25 18:05:13', '221.207.187.90', '2019-09-25 18:05:13', 0, 0, 0, 0, NULL, '0.00'),
+(9, '2@qq.com', 'c0a027f55b2ab3fc', NULL, NULL, NULL, NULL, '2019-09-25 18:03:42', '221.207.163.235', '2019-10-21 17:02:00', 0, 99901, 0, 0, NULL, '0.00'),
+(10, '3@qq.com', 'c0a027f55b2ab3fc', NULL, NULL, NULL, NULL, '2019-09-25 18:05:13', '221.207.163.88', '2019-10-30 10:17:14', 0, 0, 0, 0, NULL, '0.00'),
 (11, '4@qq.com', 'c0a027f55b2ab3fc', NULL, NULL, NULL, NULL, '2019-09-25 18:06:06', '221.207.187.90', '2019-09-25 18:06:06', 0, 0, 0, 0, NULL, '0.00'),
 (12, '5@qq.com', 'c0a027f55b2ab3fc', NULL, NULL, NULL, NULL, '2019-09-25 18:06:53', '221.207.187.90', '2019-09-25 18:06:53', 0, 0, 0, 0, NULL, '0.00'),
 (13, '7@qq.com', 'c0a027f55b2ab3fc', NULL, NULL, NULL, NULL, '2019-09-25 18:08:20', '221.207.187.90', '2019-09-25 18:08:20', 0, 1000, 0, 0, NULL, '0.00'),
@@ -360,7 +406,10 @@ INSERT INTO `prefix_user` (`in_userid`, `in_username`, `in_userpassword`, `in_mo
 (18, '5833956@qq.com', '6f02e1eabcd0d71e', NULL, NULL, NULL, NULL, '2019-09-28 11:43:25', '115.208.7.169', '2019-09-28 11:43:25', 0, 100000, 0, 0, NULL, '0.00'),
 (20, '2039399031@qq.com', '750b9ebee8973232', NULL, NULL, NULL, NULL, '2019-10-12 16:40:10', '117.25.180.91', '2019-10-12 16:40:10', 0, 100000, 0, 0, NULL, '0.00'),
 (19, '735817791@qq.com', '50faed3f34b99083', NULL, NULL, NULL, NULL, '2019-10-05 20:42:24', '113.16.25.86', '2019-10-05 20:43:38', 0, 100000, 0, 0, NULL, '0.00'),
-(21, '233458066@qq.com', '60408f5adc358a74', NULL, NULL, NULL, NULL, '2019-10-14 14:14:41', '14.144.60.56', '2019-10-14 20:23:09', 0, 100000, 1, 1573734912, '4.qoi074.cn', '0.00');
+(21, '233458066@qq.com', '60408f5adc358a74', NULL, NULL, NULL, NULL, '2019-10-14 14:14:41', '14.144.60.56', '2019-10-14 20:23:09', 0, 100000, 1, 1573734912, '4.qoi074.cn', '0.00'),
+(22, '772613551@qq.com', 'd7ebde30a62b865d', NULL, NULL, NULL, NULL, '2019-10-23 09:41:54', '106.122.241.121', '2019-10-23 09:41:54', 0, 100000, 0, 0, NULL, '0.00'),
+(23, '277227078@qq.com', 'f5ac40a900bbcb00', NULL, NULL, NULL, NULL, '2019-10-23 10:46:43', '58.59.237.43', '2019-10-23 10:46:43', 0, 100000, 0, 0, NULL, '0.00'),
+(24, 'i@woaiwangpai.com', '4d4946d4131e5e28', NULL, NULL, NULL, NULL, '2019-10-24 18:04:27', '124.236.142.19', '2019-10-24 18:06:03', 0, 100000, 0, 0, NULL, '0.00');
 
 -- --------------------------------------------------------
 
@@ -530,7 +579,7 @@ CREATE TABLE IF NOT EXISTS `t_jump` (
   `remarks` text,
   `user_uid` int(10) DEFAULT NULL,
   `domain` text COMMENT '用户访问域名'
-) ENGINE=InnoDB AUTO_INCREMENT=129 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=130 DEFAULT CHARSET=utf8;
 
 --
 -- 转存表中的数据 `t_jump`
@@ -539,10 +588,10 @@ CREATE TABLE IF NOT EXISTS `t_jump` (
 INSERT INTO `t_jump` (`id`, `title`, `status`, `entrance`, `beborn`, `create_time`, `update_time`, `end_time`, `remarks`, `user_uid`, `domain`) VALUES
 (93, '111', 1, 'wnjrbd.gdn', 'http://h5zn.com', '2019-08-28 21:25:52', '2019-10-31 21:27:15', '2019-10-31 00:00:00', '', NULL, NULL),
 (94, '标题', NULL, '入口域名', '落地页', NULL, NULL, '2019-09-13 00:00:00', '备注', NULL, NULL),
-(95, '333', 1, 'weri.qoi074.cn\nqwer .qoi074.cn', '35555', '2019-09-21 00:00:00', '2019-09-27 10:20:53', '2019-09-26 00:00:00', '4567', 1, NULL),
+(95, '333', 1, 'weri.qoi074.cn\nqwer .qoi074.cn', 'http://ls.yosql.com/app/index.php?i=84&c=entry&do=zhuanfa&actid=3&m=shf_fxhb', '2019-09-21 00:00:00', '2019-10-23 10:04:41', '2020-04-22 00:00:00', '4567', 1, NULL),
 (96, '3454', 1, '', '3', '2019-09-16 10:09:16', '2019-09-27 09:37:34', '2019-09-19 00:00:00', '域名2', 1, NULL),
 (97, '4', 1, '98\n域名3', '3', '0000-00-00 00:00:00', NULL, '2019-09-11 00:00:00', 'beizhu', 1, NULL),
-(98, '23', 1, '1\n域名6', '45', '2019-09-06 10:11:06', NULL, '2019-09-27 00:00:00', 'sca', 1, NULL),
+(98, '23', 1, '1234.qoi074.cn', 'https://web.woaiwangpai.com/', '2019-09-06 10:11:06', '2019-10-25 10:49:36', '2020-08-06 00:00:00', 'sca', 1, NULL),
 (99, '111111', 0, '', 'https://zx.lingji666.com/pay/lunhuishu.html?order_id=LHS153054845000300050', '2019-09-21 00:00:00', '2019-09-26 21:04:37', '2019-10-24 00:00:00', '\n\nwnjrbd.gdn微信被封\nfggh.qoi074.cn微信被封\nqqwwyt.qoi074.cn微信被封', 1, 'wnjrbd.gdn'),
 (100, '标题', 1, '111', '111', '0000-00-00 00:00:00', NULL, '2019-09-27 00:00:00', '', 1, NULL),
 (102, '111111', 1, 'csacsa', '2222', '2019-09-21 10:56:44', NULL, '2019-09-27 00:00:00', '', 1, NULL),
@@ -569,9 +618,10 @@ INSERT INTO `t_jump` (`id`, `title`, `status`, `entrance`, `beborn`, `create_tim
 (123, '55', 1, '', 'ffff', '2019-09-27 09:24:25', '2019-09-27 10:09:13', '2020-07-18 15:26:50', '', 1, NULL),
 (124, '111122', 1, '', '222', '2019-09-27 09:53:28', '2019-09-27 09:53:45', '2020-07-18 15:26:50', '', 1, NULL),
 (125, 'eee', 1, '', 'eee', '2019-09-27 10:21:03', '2019-09-27 10:21:03', '2020-07-18 15:26:50', '', 1, NULL),
-(126, '123456', 1, '1234.qoi074.cn\n1.qoi074.cn', 'www.baidu.com', '2019-10-03 12:15:58', '2019-10-05 17:20:38', '2019-10-07 15:26:50', '\nqwer .qoi074.cn微信被封', 1, NULL),
-(127, '小熊防封', 1, '2.qoi074.cn\n3.qoi074.cn', 'http://www.baidu.com', '2019-10-05 17:21:43', '2019-10-06 16:34:08', '2020-08-17 15:26:50', '', 1, NULL),
-(128, '诺亚国际', 1, '13.qoi074.cn\n5.qoi074.cn\n6.qoi074.cn\n7.qoi074.cn\n8.qoi074.cn\n9.qoi074.cn\n10.qoi074.cn\n11.qoi074.cn\n12.qoi074.cn', 'http://ny.san734567.cn/home.php', '2019-10-14 21:02:49', '2019-10-14 21:14:44', '2019-11-14 20:35:12', '', 21, NULL);
+(126, '123456', 1, '1234.qoi074.cn\n1.qoi074.cn', 'www.baidu.com', '2019-10-03 12:15:58', '2019-10-05 17:20:38', '2019-11-21 15:26:50', '\nqwer .qoi074.cn微信被封', 1, NULL),
+(127, '小熊防封', 1, '2.qoi074.cn\n3.qoi074.cn', 'web.woaiwangpai.com', '2019-10-05 17:21:43', '2019-10-24 18:09:50', '2020-08-17 15:26:50', '', 1, NULL),
+(128, '诺亚国际', 1, '13.qoi074.cn\n5.qoi074.cn\n6.qoi074.cn\n7.qoi074.cn\n8.qoi074.cn\n9.qoi074.cn\n10.qoi074.cn\n11.qoi074.cn\n12.qoi074.cn', 'http://ny.san734567.cn/home.php', '2019-10-14 21:02:49', '2019-10-14 21:14:44', '2019-11-14 20:35:12', '', 21, NULL),
+(129, '33333', 1, '', 'www.baidu.com', '2019-10-25 10:46:55', '2019-10-25 10:46:55', '2020-01-20 16:28:01', '', 4, NULL);
 
 -- --------------------------------------------------------
 
@@ -836,6 +886,12 @@ ALTER TABLE `prefix_mail`
   ADD PRIMARY KEY (`in_id`);
 
 --
+-- Indexes for table `prefix_path`
+--
+ALTER TABLE `prefix_path`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `prefix_paylog`
 --
 ALTER TABLE `prefix_paylog`
@@ -944,12 +1000,12 @@ ALTER TABLE `prefix_admin`
 -- AUTO_INCREMENT for table `prefix_app`
 --
 ALTER TABLE `prefix_app`
-  MODIFY `in_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=32;
+  MODIFY `in_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=33;
 --
 -- AUTO_INCREMENT for table `prefix_buylog`
 --
 ALTER TABLE `prefix_buylog`
-  MODIFY `in_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
+  MODIFY `in_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=8;
 --
 -- AUTO_INCREMENT for table `prefix_buy_cha_log`
 --
@@ -970,6 +1026,11 @@ ALTER TABLE `prefix_key`
 --
 ALTER TABLE `prefix_mail`
   MODIFY `in_id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `prefix_path`
+--
+ALTER TABLE `prefix_path`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=28;
 --
 -- AUTO_INCREMENT for table `prefix_paylog`
 --
@@ -999,7 +1060,7 @@ ALTER TABLE `prefix_signlog`
 -- AUTO_INCREMENT for table `prefix_user`
 --
 ALTER TABLE `prefix_user`
-  MODIFY `in_userid` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=22;
+  MODIFY `in_userid` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=25;
 --
 -- AUTO_INCREMENT for table `prefix_vipprice`
 --
@@ -1019,7 +1080,7 @@ ALTER TABLE `t_domain`
 -- AUTO_INCREMENT for table `t_jump`
 --
 ALTER TABLE `t_jump`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=129;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=130;
 --
 -- AUTO_INCREMENT for table `t_sys_config`
 --
