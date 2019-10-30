@@ -1,8 +1,8 @@
 <?php if(!defined('IN_ROOT')){exit('Access denied');} ?>
 <?php
 
-$db = extension_loaded('pdo_mysql') ? new db_pdo(IN_DBHOST, IN_DBUSER, IN_DBPW, IN_DBNAME) : new db_mysql(IN_DBHOST, IN_DBUSER, IN_DBPW, IN_DBNAME);
-$yumingprice = $db->getrow("select * from prefix_vipprice where type=2");
+
+$yumingprice = $GLOBALS['db']->getrow("select * from prefix_vipprice where type=2");
 
 
 ?>

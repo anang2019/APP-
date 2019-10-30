@@ -4,17 +4,6 @@
 $userid=$_COOKIE["in_userid"];
 	$post = $_REQUEST;
 	$ac=$_REQUEST['act'];
-	
-	$db = extension_loaded('pdo_mysql') ? new db_pdo(IN_DBHOST, IN_DBUSER, IN_DBPW, IN_DBNAME) : new db_mysql(IN_DBHOST, IN_DBUSER, IN_DBPW, IN_DBNAME);
-	
-
-
-
-					
-					
-
-
-					
 ?>
 <!DOCTYPE html>
 <html lang="zh-cn">
@@ -153,9 +142,8 @@ $userid=$_COOKIE["in_userid"];
 		<div class="package-cards-wrap">
 			<div class="package-cards" id="package_content">
 				<?php
-				    $db = extension_loaded('pdo_mysql') ? new db_pdo(IN_DBHOST, IN_DBUSER, IN_DBPW, IN_DBNAME) : new db_mysql(IN_DBHOST, IN_DBUSER, IN_DBPW, IN_DBNAME);
-					$query = $db->query("select * from prefix_vipprice where type=1");
-					while($row = $db->fetch_array($query)){
+				    $query = $GLOBALS['db']->query("select * from prefix_vipprice where type=1");
+					while($row = $GLOBALS['db']->fetch_array($query)){
 					
 				?>
 				<div class="package-card">

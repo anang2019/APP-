@@ -3,12 +3,7 @@
 <?php
     // 登录id
    $userid=$_COOKIE["in_userid"];
-    $db = extension_loaded('pdo_mysql') ? new db_pdo(IN_DBHOST, IN_DBUSER, IN_DBPW, IN_DBNAME) : new db_mysql(IN_DBHOST, IN_DBUSER, IN_DBPW, IN_DBNAME);
 
-
-	// echo "123";
-	// if(!empty($_POST['addfangfeng'])) {
-		
 		$codepay_id= "206049";//这里改成码支付ID
         $codepay_key="YQDFRDfUugk5FUzHhXHgCdd8r5tUK5w5"; //这是您的通讯密钥
 		static $ORDERSN=array();                                        //静态变量
@@ -22,9 +17,9 @@
 		$num = 1;
         $price = $_REQUEST['price'];
 	    $time=time();
-		$db->query("insert INTO t_buy_log (user_id,price,time,zt,order_number) VALUES ('$userid','100','$time','0','$orderid')");
+        $GLOBALS['db']->query("insert INTO t_buy_log (user_id,price,time,zt,order_number) VALUES ('$userid','100','$time','0','$orderid')");
 		//返回刚刚添加数据的id
-		$log_id = $db->insert_id(); 
+		$log_id = $GLOBALS['db']->insert_id();
 		
 		$map = array(
                   "id" => $codepay_id,//你的码支付ID
@@ -57,13 +52,6 @@
         $url = "http://api2.fateqq.com:52888/creat_order/?".$query; //支付页面
 	    
 		exit(header("location:".$url));
-		// $query = $db->query("select * from t_buy_log where id=".$log_id);
-										
-		// $row = $db->fetch_array($query);
-		
-
-	
-		
 		
 	// } 
 ?>

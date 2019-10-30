@@ -3,9 +3,7 @@
 <?php
     // 登录id
     $userid=$_COOKIE["in_userid"];
-
-    $db = extension_loaded('pdo_mysql') ? new db_pdo(IN_DBHOST, IN_DBUSER, IN_DBPW, IN_DBNAME) : new db_mysql(IN_DBHOST, IN_DBUSER, IN_DBPW, IN_DBNAME);
-	$ios = $GLOBALS['db']->num_rows($GLOBALS['db']->query("select count(*) from ".tname('app')." where in_form='iOS' and in_uid=".$GLOBALS['erduo_in_userid']));
+    $ios = $GLOBALS['db']->num_rows($GLOBALS['db']->query("select count(*) from ".tname('app')." where in_form='iOS' and in_uid=".$GLOBALS['erduo_in_userid']));
 	$android = $GLOBALS['db']->num_rows($GLOBALS['db']->query("select count(*) from ".tname('app')." where in_form='Android' and in_uid=".$GLOBALS['erduo_in_userid']));
 	$home = explode('/', $_SERVER['PATH_INFO']);
 	$string = isset($home[2]) ? $home[2] : NULL;
@@ -18,18 +16,19 @@
 	$key = SafeSql(trim(is_utf8($string)));
 	$query = $GLOBALS['db']->query("select * from ".tname('app')." where in_name like '%".$key."%' and in_uid=".$GLOBALS['erduo_in_userid']." order by in_addtime desc");
 	}
-	
-	$pre_fix="";
-	$query_pre_fix = $db->query("select * from prefix_user where in_userid=".$userid);
-	while($row_pre_fix = $db->fetch_array($query_pre_fix)){
-	  $pre_fix = $row_pre_fix['domain'];
-	}
+    $pre_fix=$GLOBALS['db']->query("select * from prefix_domain where pid=$userid and status=2");
+	if($pre_fix==""){
+        $query_pre_fix = $GLOBALS['db']->query("select * from prefix_user where in_userid=".$userid);
+        while($row_pre_fix = $GLOBALS['db']->fetch_array($query_pre_fix)){
+            $pre_fix = $row_pre_fix['domain'];
+        }
+    }
 
 	$user_money="0";
 	$user_levelzi="";
-	$query = $db->query("select * from prefix_user where in_userid=".$userid);
+	$query = $GLOBALS['db']->query("select * from prefix_user where in_userid=".$userid);
 	$arr=[];
-	while($row = $db->fetch_array($query)){
+	while($row = $GLOBALS['db']->fetch_array($query)){
 	 if($row['user_level']  == 0){
 	 	
 	 	$user_levelzi='体验用户';
@@ -298,156 +297,136 @@
                         <tbody>
 
                         <?php
-                        
-                         //8.修改$page的值
-	                     $page = empty($_GET['page'])?1 : $_GET['page'];
-	                     $conn = mysqli_connect("localhost","92fenfa","Drj3sTB54YN2mmmZ");
-	                     if(!$conn){
-	                          echo "失败";
-	                     }
-	                     
-	                     mysqli_select_db($conn,"92fenfa");
-	                     
-	                     $where = '';
 
-						 if(!empty($_REQUEST['title'])){
+                        //8.修改$page的值
+                        $page = empty($_GET['page'])?1 : $_GET['page'];
 
-					   	   $where .= " and title='$_REQUEST[title]'";
 
-						 }
-						 
-	                      //------------分页开始-------------------
-	                      //1.求出总条数
-	                      $sql = "select count(*) as count from t_jump where user_uid=$userid $where";
-	                      $result = mysqli_query($conn,$sql);
-	                      $pageRes = mysqli_fetch_assoc($result);
-	                      #var_dump($pageRes);   //13
-	                      $count = $pageRes['count'];
-	
-	                      //2.每页显示数(5)
-	                      $num = 5;
-	
-	                      //3.根据每页显示数求出总页数
-	                      $pageCount = ceil($count / $num);  //向上取整
-	                      #var_dump($pageCount);  //3
-	
-	                      //4.根据总页数求出偏移量
-	                      $offset = ($page - 1) * $num;  //$page默认为 1, 下一步设置
-	
-	                      //------------分页结束-------------------
-	                      //6.修改sql语句
-	
-						  $sql = "select * from t_jump  where user_uid=$userid $where limit " . $offset . ',' . $num;
-						  
-	                      $obj = mysqli_query($conn,$sql);
+                        //------------分页开始-------------------
+                        //1.求出总条数
+                        $count = $GLOBALS['db']->getone("select count(*) from t_jump where user_uid=$userid ");
+                        //2.每页显示数(5)
+                        $num = 10;
 
-                        // print_r($row);
-                        while($row = mysqli_fetch_assoc($obj)){
-                        ?>
-                        <tr class="el-table__row">
-                            <td rowspan="1" colspan="1" class="el-table_1_column_1 is-center ">
-                                <div class="cell"><span>
+                        //3.根据每页显示数求出总页数
+                        $pageCount = ceil($count / $num);  //向上取整
+                        #var_dump($pageCount);  //3
+
+                        //4.根据总页数求出偏移量
+                        $offset = ($page - 1) * $num;  //$page默认为 1, 下一步设置
+
+                        //------------分页结束-------------------
+                        //6.修改sql语句
+
+                        $obj =$GLOBALS['db']->query("select * from t_jump  where user_uid=$userid limit " . $offset . ',' . $num);
+
+                        while($row = $GLOBALS['db']->fetch_array($obj)){
+                            ?>
+                            <tr class="el-table__row">
+                                <td rowspan="1" colspan="1" class="el-table_1_column_1 is-center ">
+                                    <div class="cell"><span>
                                 	<?php
-                                	
-                                	  if($row['entrance']){
-                                	  	
-                                	  	echo $pre_fix."/";
-                                	  	echo base64_encode($row['id']).".html";
-                                	  }else{
-                                	  	
-                                	  	echo "无入口域名";
-                                	  }
-                                	?>
+                                    if($row['entrance']){
+                                        if($pre_fix!=""){
+                                            echo $pre_fix."/";
+                                            echo base64_encode($row['id']).".html";
+                                        }else{
+                                            echo "无访问域名,请联系管理员";
+                                        }
+                                    }else{
+                                        echo "无入口域名";
+                                    }
+                                    ?>
                                 	</span></div>
-                            </td>
-                            <td rowspan="1" colspan="1" class="el-table_1_column_2 is-center ">
-                                <div class="cell"><span><?php echo $row['title']?></span></div>
-                            </td>
-                            <td rowspan="1" colspan="1" class="el-table_1_column_3 is-center ">
-                                <div class="cell"><span><?php echo $row['beborn']?></span></div>
-                            </td>
-                            <td rowspan="1" colspan="1" class="el-table_1_column_4 is-center ">
-                                <div class="cell"><span><?php echo $row['create_time']?></span></div>
-                            </td>
-                            <td rowspan="1" colspan="1" class="el-table_1_column_5 is-center ">
-                                <div class="cell"><span><?php echo $row['end_time']?></span></div>
-                            </td>
-                            <td rowspan="1" colspan="1" class="el-table_1_column_6  status-col">
-                                <div class="cell">
+                                </td>
+                                <td rowspan="1" colspan="1" class="el-table_1_column_2 is-center ">
+                                    <div class="cell"><span><?php echo $row['title']?></span></div>
+                                </td>
+                                <td rowspan="1" colspan="1" class="el-table_1_column_3 is-center ">
+                                    <div class="cell"><span><?php echo $row['beborn']?></span></div>
+                                </td>
+                                <td rowspan="1" colspan="1" class="el-table_1_column_4 is-center ">
+                                    <div class="cell"><span><?php echo $row['create_time']?></span></div>
+                                </td>
+                                <td rowspan="1" colspan="1" class="el-table_1_column_5 is-center ">
+                                    <div class="cell"><span><?php echo $row['end_time']?></span></div>
+                                </td>
+                                <td rowspan="1" colspan="1" class="el-table_1_column_6  status-col">
+                                    <div class="cell">
 
-                                    <?
-												   if($row['status'] == 1){
-
-
+                                        <?
+                                        if($row['status'] == 1){
 
 
-												?>
 
-                                    <span class="el-tag el-tag--success el-tag--medium">
+
+                                            ?>
+
+                                            <span class="el-tag el-tag--success el-tag--medium">
 													正常
 												</span>
-                                    <?php
-												   }else{
+                                            <?php
+                                        }else{
 
 
 
 
-												?>
+                                            ?>
 
-                                    <span class="el-tag el-tag--success el-tag--medium" style="background-color: #ff49491c; border-color: #ff4949; color: #ff4949;">
+                                            <span class="el-tag el-tag--success el-tag--medium" style="background-color: #ff49491c; border-color: #ff4949; color: #ff4949;">
 													下架
 												</span>
-                                    <?
+                                            <?
 
-												   }
-												?>
-
-
-
-                                </div>
-                            </td>
-                            <td rowspan="1" colspan="1" class="el-table_1_column_7 is-center small-padding fixed-width">
-                                <div class="cell">
-                                    <button type="button" onclick="xiugaifangfeng(<? echo $row['id']?>)"  class="el-button el-button--primary el-button--mini index-xiugai">
-                                        <span>修改</span>
-                                    </button>
-
-                                    <?php
-												   if($row['status'] == 1){
+                                        }
+                                        ?>
 
 
-												?>
-                                    <button type="button" onclick="xiajiafangfeng(<? echo $row['id']?>)" class="el-button el-button--default el-button--mini">
-                                        <span>下架</span>
-                                    </button>
 
-                                    <?php
-												   }else{
-												?>
-                                    <button type="button" onclick="xiajiafangfeng(<? echo $row['id']?>)" class="el-button el-button--default el-button--mini">
-                                        <span>上架</span>
-                                    </button>
-                                    <?php
-												   }
-												?>
-                                </div>
-                            </td>
-                        </tr>
+                                    </div>
+                                </td>
+                                <td rowspan="1" colspan="1" class="el-table_1_column_7 is-center small-padding fixed-width">
+                                    <div class="cell">
+                                        <button type="button" onclick="xiugaifangfeng(<? echo $row['id']?>)"  class="el-button el-button--primary el-button--mini index-xiugai">
+                                            <span>修改</span>
+                                        </button>
 
-                        <?php
-							}
-							$prev = $page - 1;
-			                $next = $page + 1;
-			
-			                //11.设置页数限制
-			                if($prev<1){
-			                   $prev = 1;
-			                }
-			                if($next>$pageCount){
-			                    $next = $pageCount;
-			                }
-	              
-						?>
+                                        <?php
+                                        if($row['status'] == 1){
+
+
+                                            ?>
+                                            <button type="button" onclick="xiajiafangfeng(<? echo $row['id']?>)" class="el-button el-button--default el-button--mini">
+                                                <span>下架</span>
+                                            </button>
+
+                                            <?php
+                                        }else{
+                                            ?>
+                                            <button type="button" onclick="xiajiafangfeng(<? echo $row['id']?>)" class="el-button el-button--default el-button--mini">
+                                                <span>上架</span>
+                                            </button>
+                                            <?php
+                                        }
+                                        ?>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <?php
+                        }
+                        $prev = $page - 1;
+                        $next = $page + 1;
+
+                        //11.设置页数限制
+                        if($prev<1){
+                            $prev = 1;
+                        }
+                        if($next>$pageCount){
+                            $next = $pageCount;
+                        }
+
+                        ?>
 
 
                         <script type="text/javascript">
@@ -637,6 +616,7 @@
                         <!---->
                     </div>
                 </div>
+                <p style="margin-left: 200px;">请填写全部网址,如:https://baidu.com</p>
                 <div class="el-form-item el-form-item--medium"><label class="el-form-item__label" style="width: 130px;">落地页</label>
                     <div class="el-form-item__content" style="margin-left: 130px;">
                         <div class="el-input el-input--medium">
@@ -742,6 +722,7 @@
                         <!---->
                     </div>
                 </div>
+                <p style="margin-left: 200px;">请填写全部网址,如:https://baidu.com</p>
                 <div class="el-form-item el-form-item--medium"><label class="el-form-item__label" style="width: 130px;">落地页</label>
                     <div class="el-form-item__content" style="margin-left: 130px;">
                         <div class="el-input el-input--medium">

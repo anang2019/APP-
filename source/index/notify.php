@@ -1,8 +1,7 @@
 <?php 
 
 // echo "123456";
-    $db = extension_loaded('pdo_mysql') ? new db_pdo(IN_DBHOST, IN_DBUSER, IN_DBPW, IN_DBNAME) : new db_mysql(IN_DBHOST, IN_DBUSER, IN_DBPW, IN_DBNAME);
-    
+
     $post = $_REQUEST;
 	ksort($post); //排序post参数
 	reset($post); //内部指针指向数组中的第一个元素
@@ -24,19 +23,16 @@
         $price =  $post['price']; //订单的原价
         $param = $post['param']; //自定义参数
        // $pay_no = $post['pay_no']; //流水号
-        $query = $db->query("select * from t_buy_log where order_number=".$pay_id." and zt='0' ");
-	
-		// $row = $db->fetch_array($query);
-		
-		while($row = $db->fetch_array($query)){
+        $query = $GLOBALS['db']->query("select * from t_buy_log where order_number=".$pay_id." and zt='0' ");
+
+		while($row = $GLOBALS['db']->fetch_array($query)){
 		
 	
 			if($row){
-				// echo "1111";
-				// $db->query('UPDATE '.tname($tablename).' SET '.$setsql.' WHERE '.$where, $silent ? 'SILENT' : '');
-				$db->query("update t_buy_log set zt= 1 where order_number=".$pay_id);
-				
-            	$db->query("update prefix_user set user_money=user_money+".$price." where in_userid=".$row['user_id']);
+
+                $GLOBALS['db']->query("update t_buy_log set zt= 1 where order_number=".$pay_id);
+
+                $GLOBALS['db']->query("update prefix_user set user_money=user_money+".$price." where in_userid=".$row['user_id']);
             	
 			   	exit('success');	
 			}else{
