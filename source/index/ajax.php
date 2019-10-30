@@ -43,7 +43,7 @@ if($ac == 'login'){
 		        'in_loginip' => getonlineip(),
 		        'in_logintime' => date('Y-m-d H:i:s'),
 		        'in_islock' => 0,
-		        'in_points' => IN_LOGINPOINTS
+		        'in_points' => IN_REGPOINTS
 	        );
 	        $in_userid = inserttable('user', $setarr, 1);
 		setcookie('in_userid', $in_userid, time() + 86400, IN_PATH);
@@ -66,6 +66,9 @@ if($ac == 'login'){
 	$email->IsSMTP();
 	$email->CharSet = 'utf-8';
 	$email->SMTPAuth = true;
+	$email->SMTPSecure = 'ssl';                    // 允许 TLS 或者ssl协议
+    $email->Port = 465;     
+    
 	$email->Host = IN_MAILSMTP;
 	$email->Username = IN_MAIL;
 	$email->Password = IN_MAILPW;

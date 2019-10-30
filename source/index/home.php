@@ -1,6 +1,8 @@
 <?php if(!defined('IN_ROOT')){exit('Access denied');} ?>
 <?php if(!$GLOBALS['userlogined']){exit(header('location:'.IN_PATH.'index.php/login'));} ?>
 <?php
+// 登录id
+    $userid=$_COOKIE["in_userid"];
 	$ios = $GLOBALS['db']->num_rows($GLOBALS['db']->query("select count(*) from ".tname('app')." where in_form='iOS' and in_uid=".$GLOBALS['erduo_in_userid']));
 	$android = $GLOBALS['db']->num_rows($GLOBALS['db']->query("select count(*) from ".tname('app')." where in_form='Android' and in_uid=".$GLOBALS['erduo_in_userid']));
 	$home = explode('/', $_SERVER['PATH_INFO']);
@@ -14,6 +16,25 @@
 		$key = SafeSql(trim(is_utf8($string)));
 		$query = $GLOBALS['db']->query("select * from ".tname('app')." where in_name like '%".$key."%' and in_uid=".$GLOBALS['erduo_in_userid']." order by in_addtime desc");
 	}
+	
+	$user_money="0";
+	$user_levelzi="";
+	$query55533 = $GLOBALS['db']->query("select * from prefix_user where in_userid=".$userid);
+	$arr=[];
+	while($row22233 = $GLOBALS['db']->fetch_array($query55533)){
+	 if($row22233['user_level']  == 0){
+	 	
+	 	$user_levelzi='体验用户';
+	 }else if($row22233['user_level']  == 1){
+	 	
+	 	$user_levelzi='VIP';
+	 }else if($row22233['user_level']  == 2){
+	 	
+	 	$user_levelzi='超级VIP';
+	 }
+	$user_money = $row22233['user_money'];
+	}
+	
 ?>
 <!DOCTYPE html>
 <html lang="zh-cn">
@@ -52,6 +73,8 @@ var remote = {'open':'<?php echo IN_REMOTE; ?>','dir':'<?php echo IN_REMOTEPK; ?
 				<div class="email"><span class="ng-binding"><?php echo $GLOBALS['erduo_in_username']; ?></span></div>
 				<div class="dropdown-menus">
 					<ul>
+						 <li><a class="ng-binding">余额：<? echo $user_money?>元</a></li>
+                            <li><a class="ng-binding">等级：<? echo $user_levelzi?></a></li>
 						<li><a href="<?php echo IN_PATH.'index.php/profile_info'; ?>" class="ng-binding">个人资料</a></li>
 						<li><a href="<?php echo IN_PATH.'index.php/profile_pwd'; ?>">修改密码</a></li>
 						<li><a href="<?php echo IN_PATH.'index.php/profile_avatar'; ?>">更新头像</a></li>
@@ -60,9 +83,13 @@ var remote = {'open':'<?php echo IN_REMOTE; ?>','dir':'<?php echo IN_REMOTEPK; ?
 				</div>
 				</sidebar>
 				<nav>
-				<h1 class="navbar-title logo"><span onclick="location.href='<?php echo IN_PATH; ?>'"><?php echo $_SERVER['HTTP_HOST']; ?></span></h1>
+				<h1 class="navbar-title logo"><span onclick="location.href='/index.php/index'"><?php echo $_SERVER['HTTP_HOST']; ?></span></h1>
 				<i class="icon-angle-right"></i>
-				<div class="navbar-title primary-title"><a href="<?php echo IN_PATH.'index.php/home'; ?>" class="ng-binding">我的应用</a></div>
+						<div class="navbar-title primary-title"><a href="<?php echo IN_PATH.'index.php/fang_add'; ?>" class="ng-binding">我的防封</a></div>
+				<div class="navbar-title primary-title"><a href="<?php echo IN_PATH.'index.php/home'; ?>" class="ng-binding" style="color: #000;">我的分发</a></div>
+		
+				                 <div class="navbar-title primary-title"><a href="http://app.92ff.cn" target="view_window" class="ng-binding" style="color: #F44336 !important;"> <img style="    width: 22px;position: absolute;transform: rotate(-42deg);margin-top: -9px;margin-left: -13px;"  src="<?php echo IN_PATH; ?>static/index/huangguan1.png">超级签名</a></div>
+				
 				</nav>
 			</div>
 		</div>

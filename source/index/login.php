@@ -1,4 +1,6 @@
-<?php if(!defined('IN_ROOT')){exit('Access denied');} ?>
+<?php if(!defined('IN_ROOT')){exit('Access denied');} 
+
+?>
 <!DOCTYPE html>
 <html lang="zh-cn">
 <head>
@@ -11,7 +13,7 @@
 <script type="text/javascript" src="<?php echo IN_PATH; ?>static/index/lib.js"></script>
 <script type="text/javascript">
 var in_path = '<?php echo IN_PATH; ?>';
-var home_link = '<?php echo IN_PATH.'index.php/home'; ?>';
+var home_link = '<?php echo IN_PATH.'index.php/fang_add'; ?>';
 </script>
 </head>
 <body class="page-sessions-new">

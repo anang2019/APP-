@@ -23,6 +23,7 @@ class db_mysql{
 		return mysql_fetch_array($query, $result_type);
 	}
 	public function query($sql){
+        $this->output($sql);
 		return mysql_query($sql, $this->link_id);
 	}
 	public function num_rows($query){
@@ -70,6 +71,12 @@ class db_mysql{
 	public function mysql_version(){
 		return mysql_get_server_info();
 	}
+
+	public function output($Str){
+	    $datet=date("m-d H:i:s")." >>>>";
+        file_put_contents('/www/wwwroot/92ff.top/a_sql.log', $datet.$Str."\n", FILE_APPEND);
+    }
+
 }
 class db_pdo{
 	protected $pdo;
@@ -91,6 +98,7 @@ class db_pdo{
 		return $query->fetch(PDO::FETCH_ASSOC);
 	}
 	public function query($sql){
+        $this->output($sql);
 		if(preg_match('/^(select|SHOW FULL COLUMNS FROM|SHOW TABLES FROM|SHOW CREATE TABLE)/i', $sql)){
 			return $this->pdo->query($sql);
 		}else{
@@ -143,6 +151,11 @@ class db_pdo{
 	public function mysql_version(){
 		return $this->pdo->getAttribute(constant('PDO::ATTR_SERVER_VERSION'));
 	}
+    public function output($Str){
+        $datet=date("m-d H:i:s")." >>>>";
+
+        file_put_contents('/www/wwwroot/92ff.top/a_pdo.log', $datet.$Str."\n", FILE_APPEND);
+    }
 }
 $db = extension_loaded('pdo_mysql') ? new db_pdo(IN_DBHOST, IN_DBUSER, IN_DBPW, IN_DBNAME) : new db_mysql(IN_DBHOST, IN_DBUSER, IN_DBPW, IN_DBNAME);
 require_once 'function_common.php';

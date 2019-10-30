@@ -53,7 +53,7 @@ function EditBoard($Arr,$url){
 	$in_points = $Arr[7];
 ?>
 <div class="container">
-<script type="text/javascript">parent.document.title = 'EarCMS Board 管理中心 - 用户 - 编辑用户';if(parent.$('admincpnav')) parent.$('admincpnav').innerHTML='用户&nbsp;&raquo;&nbsp;编辑用户';</script>
+<script type="text/javascript">parent.document.title = '小熊分发管理中心 - 用户 - 编辑用户';if(parent.$('admincpnav')) parent.$('admincpnav').innerHTML='用户&nbsp;&raquo;&nbsp;编辑用户';</script>
 <div class="floattop"><div class="itemtitle"><h3>编辑用户</h3><ul class="tab1">
 <li><a href="?iframe=user"><span>所有用户</span></a></li>
 <li><a href="?iframe=user&action=lock"><span>锁定状态</span></a></li>
@@ -135,9 +135,9 @@ function all_save(form){
 }
 </script>
 <div class="container">
-<?php if(empty($action)){echo "<script type=\"text/javascript\">parent.document.title = 'EarCMS Board 管理中心 - 用户 - 所有用户';if(parent.$('admincpnav')) parent.$('admincpnav').innerHTML='用户&nbsp;&raquo;&nbsp;所有用户';</script>";} ?>
-<?php if($action=="lock"){echo "<script type=\"text/javascript\">parent.document.title = 'EarCMS Board 管理中心 - 用户 - 锁定状态';if(parent.$('admincpnav')) parent.$('admincpnav').innerHTML='用户&nbsp;&raquo;&nbsp;锁定状态';</script>";} ?>
-<?php if($action=="keyword"){echo "<script type=\"text/javascript\">parent.document.title = 'EarCMS Board 管理中心 - 用户 - 搜索用户';if(parent.$('admincpnav')) parent.$('admincpnav').innerHTML='用户&nbsp;&raquo;&nbsp;搜索用户';</script>";} ?>
+<?php if(empty($action)){echo "<script type=\"text/javascript\">parent.document.title = '小熊分发管理中心 - 用户 - 所有用户';if(parent.$('admincpnav')) parent.$('admincpnav').innerHTML='用户&nbsp;&raquo;&nbsp;所有用户';</script>";} ?>
+<?php if($action=="lock"){echo "<script type=\"text/javascript\">parent.document.title = '小熊分发管理中心 - 用户 - 锁定状态';if(parent.$('admincpnav')) parent.$('admincpnav').innerHTML='用户&nbsp;&raquo;&nbsp;锁定状态';</script>";} ?>
+<?php if($action=="keyword"){echo "<script type=\"text/javascript\">parent.document.title = '小熊分发管理中心 - 用户 - 搜索用户';if(parent.$('admincpnav')) parent.$('admincpnav').innerHTML='用户&nbsp;&raquo;&nbsp;搜索用户';</script>";} ?>
 <div class="floattop"><div class="itemtitle"><h3><?php if(empty($action)){echo "所有用户";}else if($action=="lock"){echo "锁定状态";}else if($action=="keyword"){echo "搜索用户";} ?></h3><ul class="tab1">
 <?php if(empty($action)){echo "<li class=\"current\">";}else{echo "<li>";} ?><a href="?iframe=user"><span>所有用户</span></a></li>
 <?php if($action=="lock"){echo "<li class=\"current\">";}else{echo "<li>";} ?><a href="?iframe=user&action=lock"><span>锁定状态</span></a></li>

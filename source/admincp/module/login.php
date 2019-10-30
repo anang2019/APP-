@@ -68,10 +68,7 @@ function CheckLogin(){
 <body>
 <table class="logintb">
 <tr>
-	<td class="login">
-		<h1>EarCMS Administrator's Control Panel</h1>
-		<p><a href="http://www.earcms.net" target="_blank">耳朵CMS</a> 是 <a href="http://www.eardev.com" target="_blank">耳朵软件</a> 推出的一款以PHP语言开发的Web内容管理系统，帮助网站实现一站式服务。</p>
-	</td>
+
 	<td>	<form method="post" name="form" action="?action=login" target="_top">
 		<p class="logintitle">用户名: </p>
 		<p class="loginform"><input name="adminname" id="adminname" type="text" class="txt" /></p>
@@ -93,15 +90,6 @@ function CheckLogin(){
 	</td>
 </tr>
 </table>
-<table class="logintb">
-<tr>
-	<td colspan="2" class="footer">
-		<div class="copyright">
-			<p>Powered by <a href="http://www.earcms.net/" target="_blank">EarCMS</a> <?php echo IN_VERSION; ?> </p>
-			<p>&copy; 2011-<?php echo date('Y'); ?>, <a href="http://www.eardev.com/" target="_blank">EarDev</a> Inc.</p>
-		</div>
-	</td>
-</tr>
-</table>
+
 </body>
 </html>

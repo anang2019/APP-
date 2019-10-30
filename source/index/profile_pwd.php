@@ -1,5 +1,5 @@
 <?php if(!defined('IN_ROOT')){exit('Access denied');} ?>
-<?php if(!$GLOBALS['userlogined']){exit(header('location:'.IN_PATH.'index.php/login'));} ?>
+<?php if(!$GLOBALS['userlogined']){exit(header('location:'.IN_PATH.'index.php/index'));} ?>
 <!DOCTYPE html>
 <html lang="zh-cn">
 <head>

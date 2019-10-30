@@ -30,7 +30,7 @@ $app = $GLOBALS['db']->num_rows($GLOBALS['db']->query("select count(*) from ".tn
 <script type="text/javascript">window.onload = CheckBuild;</script>
 </head>
 <body>
-<div class="container"><script type="text/javascript">parent.document.title = 'EarCMS Board 管理中心 - 首页';if(parent.$('admincpnav')) parent.$('admincpnav').innerHTML='首页';</script><div class="itemtitle"><h3>EarCMS Board 管理中心</h3></div>
+<div class="container"><script type="text/javascript">parent.document.title = '小熊分发管理中心 - 首页';if(parent.$('admincpnav')) parent.$('admincpnav').innerHTML='首页';</script><div class="itemtitle"><h3>小熊分发管理中心</h3></div>
 <?php if($sign > 0 || $signlog > 0){ ?>
 <table class="tb tb2 nobdb fixpadding">
 <tr><td><h3 class="left margintop">待处理事项:</h3>
@@ -48,7 +48,7 @@ $app = $GLOBALS['db']->num_rows($GLOBALS['db']->query("select count(*) from ".tn
 </table>
 <table class="tb tb2 fixpadding">
 <tr><th colspan="15" class="partition">系统信息</th></tr>
-<tr><td class="vtop td24 lineheight">软件授权</td><td class="lineheight smallfont"><img id="grade" src="static/admincp/css/load.gif" /></td></tr>
+<tr><td class="vtop td24 lineheight">软件授权</td><td class="lineheight smallfont">小熊科技</td></tr>
 <tr><td class="vtop td24 lineheight">程序版本</td><td class="lineheight smallfont">EarCMS <?php echo IN_VERSION; ?> 简体中文<?php echo strtoupper(IN_CHARSET); ?> <?php echo IN_BUILD; ?></td></tr>
 <tr><td class="vtop td24 lineheight">服务器IP地址</td><td class="lineheight smallfont"><?php echo $serverip; ?></td></tr>
 <tr><td class="vtop td24 lineheight">服务器系统及 PHP</td><td class="lineheight smallfont"><?php echo $serverinfo; ?></td></tr>
@@ -62,13 +62,7 @@ $app = $GLOBALS['db']->num_rows($GLOBALS['db']->query("select count(*) from ".tn
 <tr><td class="vtop td24 lineheight">fsockopen()</td><td class="lineheight smallfont"><?php echo $check_fsockopen; ?></td></tr>
 <tr><td class="vtop td24 lineheight">curl_init()</td><td class="lineheight smallfont"><?php echo $check_curl_init; ?></td></tr>
 </table>
-<table class="tb tb2 fixpadding">
-<tr><th colspan="15" class="partition">开发团队</th></tr>
-<tr><td class="vtop td24 lineheight">版权所有</td><td><span class="bold"><a href="http://www.eardev.com" class="lightlink2" target="_blank">耳朵软件</a></span></td></tr>
-<tr><td class="vtop td24 lineheight">团队成员</td><td class="lineheight smallfont team"><a href="http://wpa.qq.com/msgrd?v=3&uin=136245992&site=EarDev&menu=yes" target="_blank" class="lightlink2 smallfont">刘文韬</a></td></tr>
-<tr><td class="vtop td24 lineheight">合作邮箱</td><td class="lineheight"><a href="mailto:web@eardev.com" target="_blank" class="lightlink2 smallfont">web@eardev.com</a></td></tr>
-<tr><td class="vtop td24 lineheight">旗下域名</td><td class="lineheight"><a href="http://www.eardev.com/" class="lightlink2" target="_blank">www.eardev.com</a>, <a href="http://www.earcms.net/" class="lightlink2" target="_blank">www.earcms.net</a>, <a href="http://www.dsx.im/" class="lightlink2" target="_blank">www.dsx.im</a></td></tr>
-</table>
+
 </div>
 </body>
 </html>

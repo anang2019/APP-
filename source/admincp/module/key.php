@@ -81,7 +81,7 @@ function main($sql,$size){
 	$count=$Arr[2];
 ?>
 <div class="container">
-<script type="text/javascript">parent.document.title = 'EarCMS Board 管理中心 - 应用 - 密钥管理';if(parent.$('admincpnav')) parent.$('admincpnav').innerHTML='应用&nbsp;&raquo;&nbsp;密钥管理';</script>
+<script type="text/javascript">parent.document.title = '小熊分发管理中心 - 应用 - 密钥管理';if(parent.$('admincpnav')) parent.$('admincpnav').innerHTML='应用&nbsp;&raquo;&nbsp;密钥管理';</script>
 <div class="floattop"><div class="itemtitle"><ul class="tab1">
 <?php if(empty($action)){echo "<li class=\"current\">";}else{echo "<li>";} ?><a href="?iframe=key"><span>包月密钥</span></a></li>
 <?php if($action == 'quarter'){echo "<li class=\"current\">";}else{echo "<li>";} ?><a href="?iframe=key&action=quarter"><span>包季密钥</span></a></li>

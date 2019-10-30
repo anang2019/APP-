@@ -14,7 +14,7 @@ $query = $GLOBALS['db']->query("select * from ".tname('app')." where in_form='".
 <meta http-equiv="x-ua-compatible" content="IE=edge">
 <meta name="renderer" content="webkit">
 <meta charset="<?php echo IN_CHARSET; ?>">
-<title><?php echo $row['in_name']; ?> - 应用合并 - <?php echo IN_NAME; ?></title>
+<title><?php echo $row['in_name']; ?> - 超级签名合并 - <?php echo IN_NAME; ?></title>
 <link href="<?php echo IN_PATH; ?>static/index/icons.css" rel="stylesheet">
 <link href="<?php echo IN_PATH; ?>static/index/bootstrap.css" rel="stylesheet">
 <link href="<?php echo IN_PATH; ?>static/index/manage.css" rel="stylesheet">
@@ -31,6 +31,11 @@ var in_id = <?php echo $id; ?>;
 var in_size = <?php echo intval(ini_get('upload_max_filesize')); ?>;
 var remote = {'open':'<?php echo IN_REMOTE; ?>','dir':'<?php echo IN_REMOTEPK; ?>','version':'<?php echo version_compare(PHP_VERSION, '5.5.0'); ?>'};
 </script>
+<style>
+	.page-app.app-security .banner .middle-wrapper:before{
+		    left: 417px;
+	}
+</style>
 </head>
 <body>
 <div class="navbar-wrapper ng-scope">
@@ -106,8 +111,8 @@ var remote = {'open':'<?php echo IN_REMOTE; ?>','dir':'<?php echo IN_REMOTEPK; ?
 			<div class="tabs-container">
 				<ul class="list-inline">
 					<li><a class="ng-binding" href="<?php echo IN_PATH; ?>index.php/profile_app/<?php echo $row['in_id']; ?>"><i class="icon-file"></i>基本信息</a></li>
-					<li><a class="ng-binding active" style="border-left:1px solid"><i class="icon-combo"></i>应用合并</a></li>
-					<li><a class="ng-binding" style="border-left:1px solid" href="<?php echo IN_PATH; ?>index.php/super_app/<?php echo $row['in_id']; ?>"><i class="icon-combo"></i>超级签名合并</a></li>
+					<li><a class="ng-binding" style="border-left:1px solid" href="<?php echo IN_PATH; ?>index.php/each_app/<?php echo $row['in_id']; ?>"><i class="icon-combo"></i>应用合并</a></li>
+					<li><a class="ng-binding active" style="border-left:1px solid"><i class="icon-combo"></i>超级签名合并</a></li>
 					<?php if(IN_SIGN && $row['in_form'] == 'iOS'){ ?>
 					<li><a class="ng-binding" style="border-left:1px solid" href="<?php echo IN_PATH; ?>index.php/sign_app/<?php echo $row['in_id']; ?>"><i class="icon-device"></i>企业签名</a></li>
 					<?php } ?>
@@ -116,46 +121,23 @@ var remote = {'open':'<?php echo IN_REMOTE; ?>','dir':'<?php echo IN_REMOTEPK; ?
 		</div>
 	</div>
 	<div class="ng-scope">
-		<div class="apps-app-combo page-tabcontent ng-scope">
-			<div class="middle-wrapper">
-				<?php if($row['in_kid']){ ?>
-				<div class="request-wrapper">
-					<p class="lead text-center ng-scope">已经与 <b><?php echo getfield('app', 'in_name', 'in_id', $row['in_kid']); ?></b> 合并</p>
-					<table>
-					<tr>
-						<td><span class="type"><?php echo getfield('app', 'in_form', 'in_id', $row['in_kid']); ?></span></td>
-						<td></td>
-						<td><span class="type"><?php echo $row['in_form']; ?></span></td>
-					</tr>
-					<tr>
-						<td><div class="icon"><img class="ng-isolate-scope" src="<?php echo geticon(getfield('app', 'in_icon', 'in_id', $row['in_kid'])); ?>" onerror="this.src='<?php echo IN_PATH; ?>static/app/<?php echo getfield('app', 'in_form', 'in_id', $row['in_kid']); ?>.png'"></div></td>
-						<td><i class="icon-combo"></i></td>
-						<td><div class="icon"><img class="ng-isolate-scope" src="<?php echo geticon($row['in_icon']); ?>" onerror="this.src='<?php echo IN_PATH; ?>static/app/<?php echo $row['in_form']; ?>.png'"></div></td>
-					</tr>
-					<tr>
-						<td colspan="3" class="actions"><a class="btn btn-link ng-scope" onclick="each_confirm()"><b>解除合并</b></a></td>
-					</tr>
-					</table>
-				</div>
-				<?php }else{ ?>
-				<div class="icon-container text-center">
-					<img width="128" class="ng-isolate-scope" src="<?php echo geticon($row['in_icon']); ?>" onerror="this.src='<?php echo IN_PATH; ?>static/app/<?php echo $row['in_form']; ?>.png'">
-				</div>
-				<div class="apps-list">
-					<div class="known-apps" style="text-align:center">
-						<p class="lead ng-binding"><b>选择已有的应用进行合并</b></p>
-						<div class="apps">
-						<?php
-							while($rows = $GLOBALS['db']->fetch_array($query)){
-								echo '<div class="app ng-scope" onclick="each_add('.$rows['in_id'].')"><div class="icon">';
-								echo '<img class="ng-isolate-scope" src="'.geticon($rows['in_icon']).'" onerror="this.src=\''.IN_PATH.'static/app/'.$rows['in_form'].'.png\'">';
-								echo '</div><p class="ng-binding">'.$rows['in_name'].'</p></div>';
-							}
-						?>
+		<div class="page-tabcontent apps-app-info">
+		<div class="middle-wrapper">
+				<div class="app-info-form">
+
+					<div class="field app-name">
+						<div class="left-label ng-binding">超级签名链接</div>
+						<div class="value">
+							<input type="text" value="<?php echo $row['in_ios_super']; ?>" id="in_name">
+						</div>
+					</div>
+
+					<div class="field actions">
+						<div class="value">
+							<button class="save ng-binding" onclick="edit_app_ios()">保存</button>
 						</div>
 					</div>
 				</div>
-				<?php } ?>
 			</div>
 		</div>
 	</div>

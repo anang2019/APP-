@@ -82,7 +82,7 @@ function main(){
 	$count=$db->num_rows($db->query(str_replace('*', 'count(*)', $sql)));
 ?>
 <div class="container">
-<script type="text/javascript">parent.document.title = 'EarCMS Board 管理中心 - 系统 - 系统用户';if(parent.$('admincpnav')) parent.$('admincpnav').innerHTML='系统&nbsp;&raquo;&nbsp;系统用户';</script>
+<script type="text/javascript">parent.document.title = '小熊分发管理中心 - 系统 - 系统用户';if(parent.$('admincpnav')) parent.$('admincpnav').innerHTML='系统&nbsp;&raquo;&nbsp;系统用户';</script>
 <div class="floattop"><div class="itemtitle"><h3>系统用户</h3><ul class="tab1">
 <li class="current"><a href="?iframe=admin"><span>系统用户</span></a></li>
 <li><a href="?iframe=admin&action=add"><span>新增用户</span></a></li>
@@ -132,7 +132,7 @@ function EditBoard($Arr,$url,$arrname){
 	$in_permission = $Arr[2];
 ?>
 <div class="container">
-<script type="text/javascript">parent.document.title = 'EarCMS Board 管理中心 - 系统 - <?php echo $arrname; ?>用户';if(parent.$('admincpnav')) parent.$('admincpnav').innerHTML='系统&nbsp;&raquo;&nbsp;<?php echo $arrname; ?>用户';</script>
+<script type="text/javascript">parent.document.title = '小熊分发管理中心 - 系统 - <?php echo $arrname; ?>用户';if(parent.$('admincpnav')) parent.$('admincpnav').innerHTML='系统&nbsp;&raquo;&nbsp;<?php echo $arrname; ?>用户';</script>
 <div class="floattop"><div class="itemtitle"><h3><?php echo $arrname; ?>用户</h3><ul class="tab1">
 <li><a href="?iframe=admin"><span>系统用户</span></a></li>
 <?php if($_GET['action']=="add"){echo "<li class=\"current\">";}else{echo "<li>";} ?><a href="?iframe=admin&action=add"><span>新增用户</span></a></li>
@@ -157,6 +157,7 @@ function EditBoard($Arr,$url,$arrname){
 <?php if(ergodic_array($in_permission,5)){echo "<li class=\"checked\">";}else{echo "<li>";} ?><input class="checkbox" type="checkbox" name="in_permission[]" id="value5" value="5"<?php if(ergodic_array($in_permission,5)){echo " checked";} ?>><label for="value5">工具</label></li>
 <?php if(ergodic_array($in_permission,6)){echo "<li class=\"checked\">";}else{echo "<li>";} ?><input class="checkbox" type="checkbox" name="in_permission[]" id="value6" value="6"<?php if(ergodic_array($in_permission,6)){echo " checked";} ?>><label for="value6">系统</label></li>
 <?php if(ergodic_array($in_permission,7)){echo "<li class=\"checked\">";}else{echo "<li>";} ?><input class="checkbox" type="checkbox" name="in_permission[]" id="value7" value="7"<?php if(ergodic_array($in_permission,7)){echo " checked";} ?>><label for="value7">云平台</label></li>
+<?php if(ergodic_array($in_permission,8)){echo "<li class=\"checked\">";}else{echo "<li>";} ?><input class="checkbox" type="checkbox" name="in_permission[]" id="value8" value="8"<?php if(ergodic_array($in_permission,8)){echo " checked";} ?>><label for="value8">防封</label></li>
 </ul></td>
 <td class="vtop"><select name="in_islock" class="ps">
 <option value="0"<?php if($in_islock==0){echo " selected";} ?>>激活状态</option>

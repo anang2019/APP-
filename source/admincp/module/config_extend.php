@@ -35,7 +35,7 @@ switch($action){
 </body>
 </html>
 <?php function main(){ ?>
-<script type="text/javascript">parent.document.title = 'EarCMS Board 管理中心 - 全局 - 扩展配置';if(parent.$('admincpnav')) parent.$('admincpnav').innerHTML='全局&nbsp;&raquo;&nbsp;扩展配置';</script>
+<script type="text/javascript">parent.document.title = '小熊分发管理中心 - 全局 - 扩展配置';if(parent.$('admincpnav')) parent.$('admincpnav').innerHTML='全局&nbsp;&raquo;&nbsp;扩展配置';</script>
 <form method="post" action="?iframe=config_extend&action=save">
 <input type="hidden" name="hash" value="<?php echo $_COOKIE['in_adminpassword']; ?>" />
 <div class="container">

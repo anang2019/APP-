@@ -1,5 +1,5 @@
 <?php if(!defined('IN_ROOT')){exit('Access denied');} ?>
-<?php if(!$GLOBALS['userlogined']){exit(header('location:'.IN_PATH.'index.php/login'));} ?>
+<?php if(!$GLOBALS['userlogined']){exit(header('location:'.IN_PATH.'index.php/index'));} ?>
 <!DOCTYPE html>
 <html lang="zh-cn">
 <head>
@@ -8,7 +8,8 @@
 <title>更新头像 - <?php echo IN_NAME; ?></title>
 <link href="<?php echo IN_PATH; ?>static/index/application.css" rel="stylesheet">
 <link href="<?php echo IN_PATH; ?>static/index/user_info.css" rel="stylesheet">
-<script type="text/javascript">var updateavatar = function () {location.reload();}</script>
+<script type="text/javascript">var updateavatar = function () {
+location.reload();}</script>
 </head>
 <body>
 <header>

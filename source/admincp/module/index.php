@@ -6,14 +6,15 @@ Administrator(1);
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=<?php echo IN_CHARSET; ?>" />
-<title>EarCMS 管理中心</title>
+<title>小熊分发 管理中心</title>
 <link href="static/admincp/css/main.css" rel="stylesheet" type="text/css" media="all" />
 <style type="text/css">
 #mod_dialog{display:none}.dialog_mask{position:fixed;top:0;left:0;width:100%;height:100%;z-index:10000;display:-webkit-box;-webkit-box-pack:center;-webkit-box-align:center;background:rgba(0,0,0,.4)}.dialog_body{width:563px;padding-top:20px;border-radius:7px;background:#fff}.dialog_tit{margin:0;line-height:22px;text-align:center;font-size:17px;color:#000}.dialog_cont{margin:10px 80px 15px;overflow:hidden;padding:0}.dialog_txt{margin:0 30px 5px;line-height:16px;text-align:center;font-size:14px;color:#000}.dialog_txt a{text-decoration:none;color:#000}.dialog_operate{position:relative;display:-webkit-box}.dialog_operate:before{content:"";position:absolute;top:0;left:0;right:0;z-index:1;height:1px;background:rgba(0,0,0,.3)}.dialog_operate .dialog_btn{display:block;cursor:pointer;-webkit-box-flex:1;position:relative;height:44px;line-height:44px;text-decoration:none;text-align:center;font-size:17px;color:#157efb;-webkit-tap-highlight-color:rgba(0,0,0,0)}.dialog_operate .dialog_btn:nth-child(2):before{content:"";position:absolute;left:0;top:0;bottom:0;z-index:1;width:1px;background:rgba(0,0,0,.3)}.dialog_operate .dialog_btn span{display:inline-block;width:120px}.dialog_operate .dialog_btn_strong{font-weight:bold}@media only screen and (-webkit-min-device-pixel-ratio:1.5){.dialog_operate:before{-webkit-transform:scaleY(.5)}.dialog_operate .btn:nth-child(2):before{-webkit-transform:scaleX(.5)}}.SuspendedBall{position:fixed;width:50px;height:50px;background:#3071a9;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px;filter:alpha(opacity=50);-moz-opacity:.5;opacity:.5;z-index:999;cursor:pointer;right:0;bottom:0}.SuspendedBall>div{width:30px;height:30px;margin:10px;background:#fff;border-radius:15px;-moz-border-radius:15px;-webkit-border-radius:15px;filter:alpha(opacity=80);-moz-opacity:.8;opacity:.8;background-image:url("static/pack/chat/icon/avatar.png");background-repeat:no-repeat;background-size:80% auto;background-position-x:50%;background-position-y:50%}.talk_mask{display:none;position:fixed;top:0;left:0;width:100%;height:100%;z-index:10000;-webkit-box-pack:center;-webkit-box-align:center}.talk_body{position:fixed;background:#F2F9FD}
 </style>
 <script type="text/javascript" src="static/admincp/js/common.js"></script>
 <script type="text/javascript" src="static/pack/chat/js/drag.js"></script>
-<script type="text/javascript">window.onload = function () {startDrag($('_bar'), $('_box'));}</script>
+<script type="text/javascript">window.onload = function () {
+startDrag($('_bar'), $('_box'));}</script>
 </head>
 <body style="margin: 0px" scroll="no">
 <div id="mod_dialog">
@@ -29,7 +30,7 @@ Administrator(1);
 		</div>
 	</div>
 </div>
-<div id="notice"><a onclick="$('main').src='?iframe=update&setup=checkup'">您目前使用的 EarCMS 程序有新版本发布<span>在线升级[<b id="build" style="color:red"></b>]</span></a></div>
+<div id="notice"><a onclick="$('main').src='?iframe=update&setup=checkup'">您目前使用的  程序有新版本发布<span>在线升级[<b id="build" style="color:red"></b>]</span></a></div>
 <div class="SuspendedBall" id="_box" title="长按可拖拽" onclick="$('_dialog').style.display='block'"><div id="_bar"></div></div>
 <div class="talk_mask" id="_dialog" onclick="$('_dialog').style.display='none'"><div class="talk_body"><iframe width="838" height="561" allowtransparency="true" scrolling="no" border="0" frameborder="0" src="?iframe=talk"></iframe></div></div>
 <table id="frametable" cellpadding="0" cellspacing="0" width="100%" height="100%">
@@ -51,6 +52,7 @@ Administrator(1);
 <li><em><a href="?iframe=backup" id="header_plugin" hidefocus="true" onmouseover="previewheader('plugin')" onmouseout="previewheader()" onclick="toggleMenu('plugin', '?iframe=backup');doane(event);">工具</a></em></li>
 <li><em><a href="?iframe=admin" id="header_system" hidefocus="true" onmouseover="previewheader('system')" onmouseout="previewheader()" onclick="toggleMenu('system', '?iframe=admin');doane(event);">系统</a></em></li>
 <li><em><a href="?iframe=module" id="header_app" hidefocus="true" onmouseover="previewheader('app')" onmouseout="previewheader()" onclick="toggleMenu('app', '?iframe=module');doane(event);">云平台</a></em></li>
+<li><em><a href="?iframe=fangfeng" id="header_fangfeng" hidefocus="true" onmouseover="previewheader('fangfeng')" onmouseout="previewheader()" onclick="toggleMenu('fangfeng', '?iframe=fangfeng');doane(event);">防封</a></em></li>
 </ul>
 <div class="currentloca">
 <p id="admincpnav"></p>
@@ -97,6 +99,7 @@ Administrator(1);
 <li><a href="?iframe=signlog" hidefocus="true" target="main"><em onclick="menuNewwin(this)" title="新窗口打开"></em>签名记录</a></li>
 </ul>
 <ul id="menu_app" style="display: none">
+	<ul id="menu_fangfeng" style="display: none">
 <?php echo Menu_App(); ?>
 </ul>
 </div>
@@ -109,28 +112,68 @@ Administrator(1);
 <div id="scrolllink" style="display: none">
 	<span onclick="menuScroll(1)"><img src="static/admincp/css/scrollu.gif" /></span><span onclick="menuScroll(2)"><img src="static/admincp/css/scrolld.gif" /></span>
 </div>
-<div class="copyright">
-	<p>版本: <?php echo IN_VERSION; ?></p>
-	<p>编码: <?php echo strtoupper(IN_CHARSET); ?></p>
-	<p>更新: <?php echo IN_BUILD; ?></p>
-	<p>Powered by <a href="http://www.earcms.net/" target="_blank">EarCMS</a></p>
-	<p>&copy; 2011-<?php echo date('Y'); ?>, <a href="http://www.eardev.com/" target="_blank">EarDev Inc.</a></p>
-</div>
+
 <div id="cpmap_menu" class="custom" style="display: none">
 	<div class="cmain" id="cmain"></div>
 	<div class="cfixbd"></div>
 </div>
 <script type="text/javascript">
-var cookiepre='3KLp_2132_',cookiedomain='',cookiepath='/';var headers=new Array('index','global','content','user','plugin','system','app'),admincpfilename='',menukey='';function switchheader(key){if(!key||!$('header_'+key)){return;}
-for(var k in top.headers){if($('menu_'+headers[k])){$('menu_'+headers[k]).style.display=headers[k]==key?'':'none';}}
-var lis=$('topmenu').getElementsByTagName('li');for(var i=0;i<lis.length;i++){if(lis[i].className=='navon')lis[i].className='';}
-$('header_'+key).parentNode.parentNode.className='navon';}
+var cookiepre='3KLp_2132_',cookiedomain='',cookiepath='/';
+var headers=new Array('index','global','content','user','plugin','system','app','fangfeng'),admincpfilename='',menukey='';
+
+function switchheader(key){
+	if(!key||!$('header_'+key)){
+		return;
+		
+	}
+	
+for(var k in top.headers){
+	if($('menu_'+headers[k])){
+		$('menu_'+headers[k]).style.display=headers[k]==key?'':'none';
+	}
+	
+}
+var lis=$('topmenu').getElementsByTagName('li');
+for(var i=0;i<lis.length;i++){
+	if(lis[i].className=='navon')lis[i].className='';
+	
+}
+$('header_'+key).parentNode.parentNode.className='navon';
+	
+}
+
 var headerST=null;function previewheader(key){if(key){headerST=setTimeout(function(){for(var k in top.headers){if($('menu_'+headers[k])){$('menu_'+headers[k]).style.display=headers[k]==key?'':'none';}}
 var hrefs=$('menu_'+key).getElementsByTagName('a');for(var j=0;j<hrefs.length;j++){hrefs[j].className='';}},1000);}else{clearTimeout(headerST);}}
-function toggleMenu(key,url){menukey=key;switchheader(key);if(url){parent.main.location=admincpfilename+url;var hrefs=$('menu_'+key).getElementsByTagName('a');for(var j=0;j<hrefs.length;j++){hrefs[j].className=j==(key=='app'?1:0)?'tabon':'';}}
-setMenuScroll();}
-function setMenuScroll(){$('frametable').style.width=document.body.offsetWidth<1000?'1000px':'100%';var obj=$('menu_'+menukey);if(!obj){return;}
-var scrollh=document.body.offsetHeight-160;obj.style.overflow='visible';obj.style.height='';$('scrolllink').style.display='none';if(obj.offsetHeight+150>document.body.offsetHeight&&scrollh>0){obj.style.overflow='hidden';obj.style.height=scrollh+'px';$('scrolllink').style.display='';}}
+
+function toggleMenu(key,url){
+	menukey=key;
+	switchheader(key);
+	if(url){
+		parent.main.location=admincpfilename+url;
+		var hrefs=$('menu_'+key).getElementsByTagName('a');
+		for(var j=0;j<hrefs.length;j++){
+			hrefs[j].className=j==(key=='app'?1:0)?'tabon':'';
+			
+		}
+		
+	}
+setMenuScroll();
+	
+}
+function setMenuScroll(){
+	$('frametable').style.width=document.body.offsetWidth<1000?'1000px':'100%';
+	var obj=$('menu_'+menukey);
+	
+	if(!obj){return;}
+var scrollh=document.body.offsetHeight-160;obj.style.overflow='visible';obj.style.height='';
+$('scrolllink').style.display='none';
+if(obj.offsetHeight+150>document.body.offsetHeight&&scrollh>0){
+	obj.style.overflow='hidden';obj.style.height=scrollh+'px';
+	$('scrolllink').style.display='';
+	
+}
+	
+}
 function resizeHeadermenu(){var lis=$('topmenu').getElementsByTagName('li');var maxsize=$('frameuinfo').offsetLeft-160,widths=0,moi=-1,mof='';if($('menu_mof')){$('topmenu').removeChild($('menu_mof'));}
 if($('menu_mof_menu')){$('append_parent').removeChild($('menu_mof_menu'));}
 for(var i=0;i<lis.length;i++){widths+=lis[i].offsetWidth;if(widths>maxsize){lis[i].style.visibility='hidden';var sobj=lis[i].childNodes[0].childNodes[0];if(sobj){mof+='<a href="'+sobj.getAttribute('href')+'" onclick="$(\''+sobj.id+'\').onclick()">&rsaquo; '+sobj.innerHTML+'</a><br style="clear:both" />';}}else{lis[i].style.visibility='visible';}}
@@ -139,7 +182,10 @@ mofli=document.createElement('li');mofli.innerHTML='<em><a href="javascript:;">&
 mofli.id='menu_mof';$('topmenu').insertBefore(mofli,lis[moi]);mofmli=document.createElement('li');mofmli.className='popupmenu_popup';mofmli.style.width='150px';mofmli.innerHTML=mof;mofmli.id='menu_mof_menu';mofmli.style.display='none';$('append_parent').appendChild(mofmli);}}
 function menuScroll(op,e){var obj=$('menu_'+menukey);var scrollh=document.body.offsetHeight-160;if(op==1){obj.scrollTop=obj.scrollTop-scrollh;}else if(op==2){obj.scrollTop=obj.scrollTop+scrollh;}else if(op==3){if(!e)e=window.event;if(e.wheelDelta<=0||e.detail>0){obj.scrollTop=obj.scrollTop+20;}else{obj.scrollTop=obj.scrollTop-20;}}}
 function menuNewwin(obj){var href=obj.parentNode.href;if(obj.parentNode.href.indexOf(admincpfilename+'?')!=-1){href+='';}
-window.open(href);doane();}
+window.open(href);
+doane();
+	
+}
 function initCpMenus(menuContainerid){var key='',lasttabon1=null,lasttabon2=null,hrefs=$(menuContainerid).getElementsByTagName('a');for(var i=0;i<hrefs.length;i++){if(menuContainerid=='leftmenu'&&'action=index'.indexOf(hrefs[i].href.substr(hrefs[i].href.indexOf(admincpfilename+'?')+admincpfilename.length+1))!=-1){if(lasttabon1){lasttabon1.className='';}
 if(hrefs[i].parentNode.parentNode.tagName=='OL'){hrefs[i].parentNode.parentNode.style.display='';hrefs[i].parentNode.parentNode.parentNode.className='lsub desc';key=hrefs[i].parentNode.parentNode.parentNode.parentNode.parentNode.id.substr(5);}else{key=hrefs[i].parentNode.parentNode.id.substr(5);}
 hrefs[i].className='tabon';lasttabon1=hrefs[i];}

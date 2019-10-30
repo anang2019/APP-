@@ -1,4 +1,11 @@
 <?php if(!defined('IN_ROOT')){exit('Access denied');} ?>
+<?php
+
+$db = extension_loaded('pdo_mysql') ? new db_pdo(IN_DBHOST, IN_DBUSER, IN_DBPW, IN_DBNAME) : new db_mysql(IN_DBHOST, IN_DBUSER, IN_DBPW, IN_DBNAME);
+$yumingprice = $db->getrow("select * from prefix_vipprice where type=2");
+
+
+?>
 <!DOCTYPE html>
 <html lang="zh-cn">
 <head>
@@ -10,8 +17,10 @@
 <link href="<?php echo IN_PATH; ?>static/index/icons.css" rel="stylesheet">
 <link href="<?php echo IN_PATH; ?>static/index/bootstrap.css" rel="stylesheet">
 <link href="<?php echo IN_PATH; ?>static/index/main.css" rel="stylesheet">
-<script type="text/javascript" src="<?php echo IN_PATH; ?>static/index/main.js"></script>
 <script type="text/javascript" src="<?php echo IN_PATH; ?>static/pack/layer/jquery.js"></script>
+
+<script type="text/javascript" src="<?php echo IN_PATH; ?>static/index/main.js"></script>
+
 <script type="text/javascript" src="<?php echo IN_PATH; ?>static/pack/layer/lib.js"></script>
 
     <script type="text/javascript" src="<?php echo IN_PATH; ?>static/index/laydate.js"></script>
@@ -19,6 +28,8 @@
     
 <script type="text/javascript" src="<?php echo IN_PATH; ?>static/index/lib.js"></script>
 <script type="text/javascript">var in_path = '<?php echo IN_PATH; ?>';</script>
+</head>
+
 <style type="text/css">
 	.black{
 		    width: 100%;
@@ -71,7 +82,7 @@
 		    bottom: 10%;
 	}
 </style>
-</head>
+
 <body class="page-Pricing">
 <nav class="navbar navbar-transparent" role="navigation">
 <div class="navbar-header">
@@ -82,12 +93,12 @@
 		<div>
 			<i class="icon-brace-left"></i>
 			<ul class="navbar-bracket">
-				<li><a href="/index.php/index">首页</a><i class="icon-comma"></i></li>
+				<li><a href="<?php echo IN_PATH; ?>">首页</a><i class="icon-comma"></i></li>
 				<li><a href="<?php echo IN_PATH.'index.php/install'; ?>">分发价格</a><i class="icon-comma"></i></li>
 				<?php if(IN_SIGN){ ?><li><a href="<?php echo IN_PATH.'index.php/sign'; ?>">签名价格</a><i class="icon-comma"></i></li><?php } ?>
 				<li><a href="<?php echo IN_PATH.'index.php/webview'; ?>">封装价格</a><i class="icon-comma"></i></li>
 				<?php if($GLOBALS['userlogined']){ ?>
-				<li><a href="<?php echo IN_PATH.'index.php/home'; ?>">应用管理</a><i class="icon-comma"></i></li>
+				<li><a href="<?php echo IN_PATH.'index.php/fang_domain'; ?>">域名管理</a><i class="icon-comma"></i></li>
 				<li class="signup"><a href="<?php echo IN_PATH.'index.php/logout'; ?>">退出</a></li>
 				<?php }else{ ?>
 				<li><a href="<?php echo IN_PATH.'index.php/login'; ?>">立即登录</a><i class="icon-comma"></i></li>
@@ -104,12 +115,12 @@
 </div>
 <menu>
 <ul>
-	<li><a href="<?php echo IN_PATH; ?>">首页</a></li>
+	<li><a href="/index.php/index">首页</a></li>
 	<li><a href="<?php echo IN_PATH.'index.php/install'; ?>">分发价格</a></li>
 	<?php if(IN_SIGN){ ?><li><a href="<?php echo IN_PATH.'index.php/sign'; ?>">签名价格</a></li><?php } ?>
 	<li><a href="<?php echo IN_PATH.'index.php/webview'; ?>">封装价格</a></li>
 	<?php if($GLOBALS['userlogined']){ ?>
-	<li><a href="<?php echo IN_PATH.'index.php/home'; ?>">应用管理</a></li>
+	<li><a href="<?php echo IN_PATH.'index.php/fang_add'; ?>">域名管理</a></li>
 	<li><a href="<?php echo IN_PATH.'index.php/logout'; ?>">退出</a></li>
 	<?php }else{ ?>
 	<li><a href="<?php echo IN_PATH.'index.php/reg'; ?>">免费注册</a></li>
@@ -121,81 +132,68 @@
 	<div class="banner banner-packages">
 		<h1>
 		<div class="brackets">
-			<i class="icon-brace-left"></i><span>应用分发</span><i class="icon-brace-right"></i>
+			<i class="icon-brace-left"></i><span>域名购买</span><i class="icon-brace-right"></i>
 		</div>
-		<small>托管分发</small>
+		<small>充值域名</small>
 		</h1>
 		<div class="pattern-bg"></div>
 	</div>
 	<div class="section packages-content">
 		<h3>
-		<div>选择下载点数包</div>
-		<small>每日首次登录赠送&nbsp;<?php echo IN_LOGINPOINTS; ?>&nbsp;免费下载点数，下载点数耗尽的用户可按需求自行购买下载点数包</small>
+		<div>选择域名个数</div>
 		</h3>
-		
-		<input type="hidden" value="<?php echo number_format(IN_RMBPOINTS); ?>" id="dianshu"/>
 		<div class="package-cards-wrap">
 			<div class="package-cards" id="package_content">
 				<div class="package-card">
 					<div class="package-header">
-						<h2><?php echo number_format(IN_RMBPOINTS * 10); ?></h2>
-						<small>下载点数</small>
+						<h2>1个</h2>
+						<small>域名</small>
 					</div>
 					<div class="package-content">
-						<div>￥10</div>
+						<div>￥<?php echo $yumingprice['price']?></div>
 					</div>
 					<div class="package-action">
-						<button class="btn" onclick="goumai(10,10)">购买</button>
-					</div>
-				</div>
-				<div class="package-card active">
-					<div class="package-header">
-						<h2><?php echo number_format(IN_RMBPOINTS * 100); ?></h2>
-						<small>下载点数</small>
-					</div>
-					<div class="package-content">
-						<div class="package-badge">
-							<div class="badge-wrap"><span>推荐</span><span class="arraw"></span></div>
-						</div>
-						<div>￥90</div>
-					</div>
-					<div class="package-action">
-						<button class="btn" onclick="goumai(90,100)">购买</button>
+						<button class="btn" onclick="goumai(1,<?php echo $yumingprice['price']?>)">购买</button>
 					</div>
 				</div>
 				<div class="package-card">
 					<div class="package-header">
-						<h2><?php echo number_format(IN_RMBPOINTS * 1000); ?></h2>
-						<small>下载点数</small>
+						<h2>10个</h2>
+						<small>域名</small>
 					</div>
 					<div class="package-content">
-						<div>￥800</div>
+						<div>￥<?php echo $yumingprice['price']*10?></div>
 					</div>
 					<div class="package-action">
-						<button class="btn" onclick="goumai(800,1000)">购买</button>
+						<button class="btn" onclick="goumai(10,<?php echo $yumingprice['price']*10?>)">购买</button>
 					</div>
 				</div>
 			</div>
 		</div>
-		<small>如需包年或私有方案定制，请联系&nbsp;<a href="mailto:<?php echo IN_MAIL; ?>"><?php echo IN_MAIL; ?></a></small>
-	</div>
-	
-	<script>
 		
-		function goumai(price,bei){
+		<script>
+		function goumai(num,price){
 			
-		
-			$.post("/index.php/phpapi",{price:price,num:$("#dianshu").val() * bei,act:'fenfachongzhi'},function(data){
-			       var data=eval("("+data+")"); 
-			       console.log(data);
-	               
-	               
+			
+	
+	
+			$.post("/index.php/phpapi",{num:num,price:price,act:'yumingchongzhi'},function(data){
+			      var data=eval("("+data+")"); 
+			      console.log(data);
 	               if(data.status =="success"){
-	               	  layer.msg(data.message,3,1,function(){
-	               	 	window.location.href="/index.php/fang_home";
+	               	
+	               	 layer.msg(data.message,3,1,function(){
+	               	 	window.location.href="/index.php/fang_domain";
 	               	 });
 	               	 
-	               }else{
+	               	 //setTimeout(function(){
+	               	 //	window.location.href="";
+	               	 //},2000)
+	               	 
+	               }else if(data.status =="yujing"){
+	               
+	                 alert("域名不够还差"+data.message+"个，请联系管理员");
+	               }else if(data.status =="error"){
 	               	
 	               	 $("#haixuyuan").text(data.message);
 	                 $('.black').show()
@@ -204,15 +202,44 @@
 	               }
 	               
 	               
-	               
 			 });
-			
-			
+			 
 		}
 		
-		
-		
 	</script>
+	
+		<small>如需包年或私有方案定制，请联系&nbsp;<a href="mailto:<?php echo IN_MAIL; ?>"><?php echo IN_MAIL; ?></a></small>
+	</div>
+	
+	
+	
+	
+	<!--弹窗-->
+	<div class="black"></div>
+	<div class="alert">
+		<h1>余额不足</h1>
+		<p>您还需充值<span id="haixuyuan"></span>元购买此商品</p>
+		<div class="alert-btn" id="gochongzhi">前往充值</div>
+	</div>
+	
+	<script type="text/javascript">
+		$(function(){
+			
+			$("#gochongzhi").click(function(){
+				
+				  console.log($("#haixuyuan").text());
+				  window.location.href="/index.php/alipay?price="+$("#haixuyuan").text();
+	
+				
+			})
+			
+			$('.black').click(function(){
+				$('.black').hide()
+				$('.alert').hide()
+			})
+		})
+	</script>
+	
 	<div class="section packages-cert">
 		<div class="cert-header">
 			<i class="icon icon-users"></i>
@@ -247,40 +274,5 @@
 	</div>
 </div>
 <?php include 'source/index/bottom.php'; ?>
-
-<!--弹窗-->
-<div class="black"></div>
-<div class="alert">
-	<h1>余额不足</h1>
-	<p>您还需充值<span id="haixuyuan"></span>元购买此商品</p>
-	<div class="alert-btn" id="gochongzhi">前往充值</div>
-</div>
 </body>
-<script type="text/javascript">
-	$(function(){
-		
-		$("#gochongzhi").click(function(){
-			
-			  console.log($("#haixuyuan").text());
-			  window.location.href="/index.php/alipay?price="+$("#haixuyuan").text();
-			 // $.post("https://www.92ff.cn/index.php/notify",{price:$("#haixuyuan").text()},function(data){
-			 //      var data=eval("("+data+")"); 
-			 //      console.log(data);
-    //               alert(data.message);
-                   
-    //               window.location.href="";
-                   
-			 //});
-							 
-			  //alert();
-			
-		})
-		
-		$('.black').click(function(){
-			$('.black').hide()
-			$('.alert').hide()
-		})
-	})
-</script>
-
 </html>

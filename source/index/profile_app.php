@@ -1,5 +1,5 @@
 <?php if(!defined('IN_ROOT')){exit('Access denied');} ?>
-<?php if(!$GLOBALS['userlogined']){exit(header('location:'.IN_PATH.'index.php/login'));} ?>
+<?php if(!$GLOBALS['userlogined']){exit(header('location:'.IN_PATH.'index.php/index'));} ?>
 <?php
 $app = explode('/', $_SERVER['PATH_INFO']);
 $id = intval(isset($app[2]) ? $app[2] : NULL);
@@ -33,6 +33,7 @@ var in_id = <?php echo $id; ?>;
 var in_size = <?php echo intval(ini_get('upload_max_filesize')); ?>;
 var in_adpoints = <?php echo IN_ADPOINTS; ?>;
 var remote = {'open':'<?php echo IN_REMOTE; ?>','dir':'<?php echo IN_REMOTEPK; ?>','version':'<?php echo version_compare(PHP_VERSION, '5.5.0'); ?>'};
+
 </script>
 </head>
 <body>
@@ -110,6 +111,8 @@ var remote = {'open':'<?php echo IN_REMOTE; ?>','dir':'<?php echo IN_REMOTEPK; ?
 				<ul class="list-inline">
 					<li><a class="ng-binding active"><i class="icon-file"></i>基本信息</a></li>
 					<li><a class="ng-binding" style="border-left:1px solid" href="<?php echo IN_PATH; ?>index.php/each_app/<?php echo $row['in_id']; ?>"><i class="icon-combo"></i>应用合并</a></li>
+					<li><a class="ng-binding" style="border-left:1px solid" href="<?php echo IN_PATH; ?>index.php/super_app/<?php echo $row['in_id']; ?>"><i class="icon-combo"></i>超级签名合并</a></li>
+					
 					<?php if(IN_SIGN && $row['in_form'] == 'iOS'){ ?>
 					<li><a class="ng-binding" style="border-left:1px solid" href="<?php echo IN_PATH; ?>index.php/sign_app/<?php echo $row['in_id']; ?>"><i class="icon-device"></i>企业签名</a></li>
 					<?php } ?>

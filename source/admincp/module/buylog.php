@@ -55,7 +55,7 @@ function main($sql,$size){
 	$count=$Arr[2];
 ?>
 <div class="container">
-<script type="text/javascript">parent.document.title = 'EarCMS Board 管理中心 - 系统 - 购钥记录';if(parent.$('admincpnav')) parent.$('admincpnav').innerHTML='系统&nbsp;&raquo;&nbsp;购钥记录';</script>
+<script type="text/javascript">parent.document.title = '小熊分发管理中心 - 系统 - 购钥记录';if(parent.$('admincpnav')) parent.$('admincpnav').innerHTML='系统&nbsp;&raquo;&nbsp;购钥记录';</script>
 <div class="floattop"><div class="itemtitle"><h3>购钥记录</h3></div></div><div class="floattopempty"></div>
 <table class="tb tb2">
 <tr><th class="partition">技巧提示</th></tr>

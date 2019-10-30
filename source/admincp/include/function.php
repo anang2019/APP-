@@ -7,9 +7,9 @@
 	}
 	function ShowMessage($in_msg,$in_url,$in_style,$in_time,$in_type){
 		if($in_type==1){
-			echo "<div class=\"container\"><h3>EarCMS 提示</h3><div class=\"infobox\"><h4 class=\"".$in_style."\">".$in_msg."</h4><script type=\"text/javascript\">setTimeout(\"location.href='".$in_url."';\",".$in_time.");</script><p class=\"marginbot\"><a href=\"".$in_url."\" class=\"lightlink\">如果您的浏览器没有自动跳转，请点击这里</a></p></div></div>";
+			echo "<div class=\"container\"><h3>小熊防封 提示</h3><div class=\"infobox\"><h4 class=\"".$in_style."\">".$in_msg."</h4><script type=\"text/javascript\">setTimeout(\"location.href='".$in_url."';\",".$in_time.");</script><p class=\"marginbot\"><a href=\"".$in_url."\" class=\"lightlink\">如果您的浏览器没有自动跳转，请点击这里</a></p></div></div>";
 		}elseif($in_type==2){
-			echo "<div class=\"container\"><h3>EarCMS 提示</h3><div class=\"infobox\"><h4 class=\"".$in_style."\">".$in_msg."</h4><script type=\"text/javascript\">setTimeout(\"".$in_url."\",".$in_time.");</script><p class=\"marginbot\"><a href=\"javascript:history.go(-1);\" class=\"lightlink\">如果您的浏览器没有自动跳转，请点击这里</a></p></div></div>";
+			echo "<div class=\"container\"><h3>小熊防封 提示</h3><div class=\"infobox\"><h4 class=\"".$in_style."\">".$in_msg."</h4><script type=\"text/javascript\">setTimeout(\"".$in_url."\",".$in_time.");</script><p class=\"marginbot\"><a href=\"javascript:history.go(-1);\" class=\"lightlink\">如果您的浏览器没有自动跳转，请点击这里</a></p></div></div>";
 		}else{
 			echo "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">";
 			echo "<html xmlns=\"http://www.w3.org/1999/xhtml\">";
@@ -20,7 +20,7 @@
 			echo "<link href=\"".IN_PATH."static/admincp/css/main.css\" rel=\"stylesheet\" type=\"text/css\" />";
 			echo "</head>";
 			echo "<body>";
-			echo "<div class=\"container\"><h3>EarCMS 提示</h3><div class=\"infobox\"><h4 class=\"".$in_style."\">".$in_msg."</h4><script type=\"text/javascript\">setTimeout(\"location.href='".$in_url."';\",".$in_time.");</script><p class=\"marginbot\"><a href=\"".$in_url."\" class=\"lightlink\">如果您的浏览器没有自动跳转，请点击这里</a></p></div></div>";
+			echo "<div class=\"container\"><h3>小熊防封 提示</h3><div class=\"infobox\"><h4 class=\"".$in_style."\">".$in_msg."</h4><script type=\"text/javascript\">setTimeout(\"location.href='".$in_url."';\",".$in_time.");</script><p class=\"marginbot\"><a href=\"".$in_url."\" class=\"lightlink\">如果您的浏览器没有自动跳转，请点击这里</a></p></div></div>";
 		}
 			echo "</body>";
 			echo "</html>";

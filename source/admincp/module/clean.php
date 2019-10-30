@@ -34,7 +34,7 @@ function clean_ing(){
 </head>
 <body>
 <div class="container">
-<script type="text/javascript">parent.document.title = 'EarCMS Board 管理中心 - 工具 - 清理缓存';if(parent.$('admincpnav')) parent.$('admincpnav').innerHTML='工具&nbsp;&raquo;&nbsp;清理缓存';</script>
+<script type="text/javascript">parent.document.title = '小熊分发管理中心 - 工具 - 清理缓存';if(parent.$('admincpnav')) parent.$('admincpnav').innerHTML='工具&nbsp;&raquo;&nbsp;清理缓存';</script>
 <div class="floattop"><div class="itemtitle"><h3>清理缓存</h3></div></div><div class="floattopempty"></div>
 <table class="tb tb2">
 <tr><th class="partition">技巧提示</th></tr>

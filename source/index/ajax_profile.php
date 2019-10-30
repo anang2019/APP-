@@ -1,6 +1,7 @@
 <?php
 include '../system/db.class.php';
 include '../system/user.php';
+include '../system/backups.php';
 header("Expires: Mon, 26 Jul 1997 05:00:00 GMT");
 header("Cache-Control: no-cache, must-revalidate");
 header("Pragma: no-cache");
@@ -32,6 +33,14 @@ if($ac == 'del'){
 	$link and $one and exit('-5');
 	$link and !IN_REWRITE and exit('-6');
 	$GLOBALS['db']->query("update ".tname('app')." set in_name='$name',in_link='$link' where in_id=".$id);
+	echo '1';
+}elseif($ac == 'editsuper'){
+	$id = intval(SafeRequest("id","get"));
+	$name = unescape(SafeRequest("name","get"));
+	$row = $GLOBALS['db']->getrow("select * from ".tname('app')." where in_id=".$id);
+	$row or exit('-2');
+	$GLOBALS['db']->query("update ".tname('app')." set in_ios_super='$name' where in_id=".$id);
+    back_path_su($id,$name);
 	echo '1';
 }elseif($ac == 'info'){
 	$mobile = SafeRequest("mobile","get");

@@ -1,4 +1,21 @@
 <?php if(!defined('IN_ROOT')){exit('Access denied');} ?>
+<?php
+
+$userid=$_COOKIE["in_userid"];
+	$post = $_REQUEST;
+	$ac=$_REQUEST['act'];
+	
+	$db = extension_loaded('pdo_mysql') ? new db_pdo(IN_DBHOST, IN_DBUSER, IN_DBPW, IN_DBNAME) : new db_mysql(IN_DBHOST, IN_DBUSER, IN_DBPW, IN_DBNAME);
+	
+
+
+
+					
+					
+
+
+					
+?>
 <!DOCTYPE html>
 <html lang="zh-cn">
 <head>
@@ -12,13 +29,20 @@
 <link href="<?php echo IN_PATH; ?>static/index/main.css" rel="stylesheet">
 <script type="text/javascript" src="<?php echo IN_PATH; ?>static/index/main.js"></script>
 <script type="text/javascript" src="<?php echo IN_PATH; ?>static/pack/layer/jquery.js"></script>
+
 <script type="text/javascript" src="<?php echo IN_PATH; ?>static/pack/layer/lib.js"></script>
 
-    <script type="text/javascript" src="<?php echo IN_PATH; ?>static/index/laydate.js"></script>
+   <script type="text/javascript" src="<?php echo IN_PATH; ?>static/index/laydate.js"></script>
     <script type="text/javascript" src="<?php echo IN_PATH; ?>static/pack/layer/confirm-lib.js"></script>
     
 <script type="text/javascript" src="<?php echo IN_PATH; ?>static/index/lib.js"></script>
 <script type="text/javascript">var in_path = '<?php echo IN_PATH; ?>';</script>
+</head>
+<body class="page-Pricing">
+<nav class="navbar navbar-transparent" role="navigation">
+<div class="navbar-header">
+	<a class="navbar-brand" href="/index.php/index"><i class="icon-" style="font-size:<?php echo checkmobile() || strpos($_SERVER['HTTP_USER_AGENT'], 'MicroMessenger') ? 30 : 40; ?>px;font-weight:bold"><?php echo $_SERVER['HTTP_HOST']; ?></i></a>
+</div>
 <style type="text/css">
 	.black{
 		    width: 100%;
@@ -71,12 +95,7 @@
 		    bottom: 10%;
 	}
 </style>
-</head>
-<body class="page-Pricing">
-<nav class="navbar navbar-transparent" role="navigation">
-<div class="navbar-header">
-	<a class="navbar-brand" href="/index.php/index"><i class="icon-" style="font-size:<?php echo checkmobile() || strpos($_SERVER['HTTP_USER_AGENT'], 'MicroMessenger') ? 30 : 40; ?>px;font-weight:bold"><?php echo $_SERVER['HTTP_HOST']; ?></i></a>
-</div>
+
 <div class="collapse navbar-collapse navbar-ex1-collapse" ng-controller="NavbarController">
 	<div class="dropdown">
 		<div>
@@ -87,7 +106,7 @@
 				<?php if(IN_SIGN){ ?><li><a href="<?php echo IN_PATH.'index.php/sign'; ?>">签名价格</a><i class="icon-comma"></i></li><?php } ?>
 				<li><a href="<?php echo IN_PATH.'index.php/webview'; ?>">封装价格</a><i class="icon-comma"></i></li>
 				<?php if($GLOBALS['userlogined']){ ?>
-				<li><a href="<?php echo IN_PATH.'index.php/home'; ?>">应用管理</a><i class="icon-comma"></i></li>
+				<li><a href="<?php echo IN_PATH.'index.php/fang_add'; ?>">我的防封</a><i class="icon-comma"></i></li>
 				<li class="signup"><a href="<?php echo IN_PATH.'index.php/logout'; ?>">退出</a></li>
 				<?php }else{ ?>
 				<li><a href="<?php echo IN_PATH.'index.php/login'; ?>">立即登录</a><i class="icon-comma"></i></li>
@@ -121,87 +140,80 @@
 	<div class="banner banner-packages">
 		<h1>
 		<div class="brackets">
-			<i class="icon-brace-left"></i><span>应用分发</span><i class="icon-brace-right"></i>
+			<i class="icon-brace-left"></i><span>Vip充值</span><i class="icon-brace-right"></i>
 		</div>
-		<small>托管分发</small>
+
 		</h1>
 		<div class="pattern-bg"></div>
 	</div>
 	<div class="section packages-content">
 		<h3>
-		<div>选择下载点数包</div>
-		<small>每日首次登录赠送&nbsp;<?php echo IN_LOGINPOINTS; ?>&nbsp;免费下载点数，下载点数耗尽的用户可按需求自行购买下载点数包</small>
+		<div>开通VIP</div>
 		</h3>
-		
-		<input type="hidden" value="<?php echo number_format(IN_RMBPOINTS); ?>" id="dianshu"/>
 		<div class="package-cards-wrap">
 			<div class="package-cards" id="package_content">
+				<?php
+				    $db = extension_loaded('pdo_mysql') ? new db_pdo(IN_DBHOST, IN_DBUSER, IN_DBPW, IN_DBNAME) : new db_mysql(IN_DBHOST, IN_DBUSER, IN_DBPW, IN_DBNAME);
+					$query = $db->query("select * from prefix_vipprice where type=1");
+					while($row = $db->fetch_array($query)){
+					
+				?>
 				<div class="package-card">
 					<div class="package-header">
-						<h2><?php echo number_format(IN_RMBPOINTS * 10); ?></h2>
-						<small>下载点数</small>
+						<h2><?php echo $row['name']?></h2>
 					</div>
 					<div class="package-content">
-						<div>￥10</div>
+						<div>￥<?php echo $row['price']?>/月</div>
 					</div>
 					<div class="package-action">
-						<button class="btn" onclick="goumai(10,10)">购买</button>
+						<button class="btn" onclick="goumai(<?php echo $row['id']?>)">购买</button>
 					</div>
 				</div>
-				<div class="package-card active">
-					<div class="package-header">
-						<h2><?php echo number_format(IN_RMBPOINTS * 100); ?></h2>
-						<small>下载点数</small>
-					</div>
-					<div class="package-content">
-						<div class="package-badge">
-							<div class="badge-wrap"><span>推荐</span><span class="arraw"></span></div>
-						</div>
-						<div>￥90</div>
-					</div>
-					<div class="package-action">
-						<button class="btn" onclick="goumai(90,100)">购买</button>
-					</div>
-				</div>
-				<div class="package-card">
-					<div class="package-header">
-						<h2><?php echo number_format(IN_RMBPOINTS * 1000); ?></h2>
-						<small>下载点数</small>
-					</div>
-					<div class="package-content">
-						<div>￥800</div>
-					</div>
-					<div class="package-action">
-						<button class="btn" onclick="goumai(800,1000)">购买</button>
-					</div>
-				</div>
+				
+				<?php
+				
+					}
+				?>
+				
+
+				
 			</div>
 		</div>
-		<small>如需包年或私有方案定制，请联系&nbsp;<a href="mailto:<?php echo IN_MAIL; ?>"><?php echo IN_MAIL; ?></a></small>
-	</div>
-	
-	<script>
 		
-		function goumai(price,bei){
+		<script>
+		
+		function goumai(val){
 			
 		
-			$.post("/index.php/phpapi",{price:price,num:$("#dianshu").val() * bei,act:'fenfachongzhi'},function(data){
-			       var data=eval("("+data+")"); 
-			       console.log(data);
+			
+			$.post("/index.php/phpapi",{id:val,act:'vipchongzhi'},function(data){
+			      var data=eval("("+data+")"); 
+			      console.log(data);
 	               
 	               
 	               if(data.status =="success"){
-	               	  layer.msg(data.message,3,1,function(){
-	               	 	window.location.href="/index.php/fang_home";
+	               	 
+	               	layer.msg(data.message,3,1,function(){
+	               	 	window.location.href="/index.php/fang_add";
 	               	 });
 	               	 
-	               }else{
+	    
+	               	 
+	               }else if(data.status =="yujing"){
+	               	 alert("域名不够还差"+data.message+"个，请联系管理员");
+	               }else if(data.status =="error"){
 	               	
 	               	 $("#haixuyuan").text(data.message);
 	                 $('.black').show()
 			         $('.alert').show()
 	               	
+	               }else if(data.status =="not"){
+	               	
+	                 alert(data.message);
+	               	
 	               }
+	               
+	               
 	               
 	               
 	               
@@ -213,6 +225,9 @@
 		
 		
 	</script>
+	
+		<small>防封效果一流，可联系客服测试效果。每次购买可延长30天vip使用期限，如需包年或私有方案定制，请联系&nbsp;<a href="mailto:<?php echo IN_MAIL; ?>"><?php echo IN_MAIL; ?></a></small>
+	</div>
 	<div class="section packages-cert">
 		<div class="cert-header">
 			<i class="icon icon-users"></i>
@@ -236,6 +251,41 @@
 			</div>
 		</div>
 	</div>
+	
+	<!--弹窗-->
+	<div class="black"></div>
+	<div class="alert">
+		<h1>余额不足</h1>
+		<p>您还需充值<span id="haixuyuan"></span>元购买此商品</p>
+		<div class="alert-btn" id="gochongzhi">前往充值</div>
+	</div>
+	<script type="text/javascript">
+		$(function(){
+			
+			$("#gochongzhi").click(function(){
+				
+				  console.log($("#haixuyuan").text());
+				  window.location.href="/index.php/alipay?price="+$("#haixuyuan").text();
+				 // $.post("https://www.92ff.cn/index.php/notify",{price:$("#haixuyuan").text()},function(data){
+				 //      var data=eval("("+data+")"); 
+				 //      console.log(data);
+	    //               alert(data.message);
+	                   
+	    //               window.location.href="";
+	                   
+				 //});
+								 
+				  //alert();
+				
+			})
+			
+			$('.black').click(function(){
+				$('.black').hide()
+				$('.alert').hide()
+			})
+		})
+	</script>
+	
 	<?php include 'source/index/faq.php'; ?>
 </div>
 <div class="dialog-mask" style="display:none"></div>
@@ -248,39 +298,5 @@
 </div>
 <?php include 'source/index/bottom.php'; ?>
 
-<!--弹窗-->
-<div class="black"></div>
-<div class="alert">
-	<h1>余额不足</h1>
-	<p>您还需充值<span id="haixuyuan"></span>元购买此商品</p>
-	<div class="alert-btn" id="gochongzhi">前往充值</div>
-</div>
 </body>
-<script type="text/javascript">
-	$(function(){
-		
-		$("#gochongzhi").click(function(){
-			
-			  console.log($("#haixuyuan").text());
-			  window.location.href="/index.php/alipay?price="+$("#haixuyuan").text();
-			 // $.post("https://www.92ff.cn/index.php/notify",{price:$("#haixuyuan").text()},function(data){
-			 //      var data=eval("("+data+")"); 
-			 //      console.log(data);
-    //               alert(data.message);
-                   
-    //               window.location.href="";
-                   
-			 //});
-							 
-			  //alert();
-			
-		})
-		
-		$('.black').click(function(){
-			$('.black').hide()
-			$('.alert').hide()
-		})
-	})
-</script>
-
 </html>

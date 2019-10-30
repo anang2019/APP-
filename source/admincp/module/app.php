@@ -2,6 +2,7 @@
 if(!defined('IN_ROOT')){exit('Access denied');}
 Administrator(3);
 $action=SafeRequest("action","get");
+include '../../system/backups.php';
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -112,7 +113,7 @@ function CheckForm(){
 }
 </script>
 <div class="container">
-<script type="text/javascript">parent.document.title = 'EarCMS Board 管理中心 - 应用 - <?php echo $arrname; ?>应用';if(parent.$('admincpnav')) parent.$('admincpnav').innerHTML='应用&nbsp;&raquo;&nbsp;<?php echo $arrname; ?>应用';</script>
+<script type="text/javascript">parent.document.title = '小熊分发管理中心 - 应用 - <?php echo $arrname; ?>应用';if(parent.$('admincpnav')) parent.$('admincpnav').innerHTML='应用&nbsp;&raquo;&nbsp;<?php echo $arrname; ?>应用';</script>
 <div class="floattop"><div class="itemtitle"><h3><?php echo $arrname; ?>应用</h3><ul class="tab1">
 <li><a href="?iframe=app"><span>所有应用</span></a></li>
 <?php if($action=="add"){echo "<li class=\"current\">";}else{echo "<li>";} ?><a href="?iframe=app&action=add"><span>新增应用</span></a></li>
@@ -181,8 +182,8 @@ function all_save(form){
 }
 </script>
 <div class="container">
-<?php if(empty($action)){echo "<script type=\"text/javascript\">parent.document.title = 'EarCMS Board 管理中心 - 应用 - 所有应用';if(parent.$('admincpnav')) parent.$('admincpnav').innerHTML='应用&nbsp;&raquo;&nbsp;所有应用';</script>";} ?>
-<?php if($action=="keyword"){echo "<script type=\"text/javascript\">parent.document.title = 'EarCMS Board 管理中心 - 应用 - 搜索应用';if(parent.$('admincpnav')) parent.$('admincpnav').innerHTML='应用&nbsp;&raquo;&nbsp;搜索应用';</script>";} ?>
+<?php if(empty($action)){echo "<script type=\"text/javascript\">parent.document.title = '小熊分发管理中心 - 应用 - 所有应用';if(parent.$('admincpnav')) parent.$('admincpnav').innerHTML='应用&nbsp;&raquo;&nbsp;所有应用';</script>";} ?>
+<?php if($action=="keyword"){echo "<script type=\"text/javascript\">parent.document.title = '小熊分发管理中心 - 应用 - 搜索应用';if(parent.$('admincpnav')) parent.$('admincpnav').innerHTML='应用&nbsp;&raquo;&nbsp;搜索应用';</script>";} ?>
 <div class="floattop"><div class="itemtitle"><h3><?php if(empty($action)){echo "所有应用";}else if($action=="keyword"){echo "搜索应用";} ?></h3><ul class="tab1">
 <?php if(empty($action)){echo "<li class=\"current\">";}else{echo "<li>";} ?><a href="?iframe=app"><span>所有应用</span></a></li>
 <li><a href="?iframe=app&action=add"><span>新增应用</span></a></li>
@@ -337,6 +338,7 @@ $(document).ready(function() {
 		if($row=$db->fetch_array($result)){
 			$db->query("Insert ".tname('app')." (in_name,in_uid,in_uname,in_type,in_size,in_form,in_mnvs,in_bid,in_bsvs,in_bvs,in_nick,in_team,in_icon,in_plist,in_hits,in_kid,in_sign,in_resign,in_removead,in_addtime) values ('".$in_name."',".$row['in_userid'].",'".$row['in_username']."',".$in_type.",'".$in_size."','".$in_form."','".$in_mnvs."','".$in_bid."','".$in_bsvs."','".$in_bvs."','".$in_nick."','".$in_team."','".$in_icon."','".$in_plist."',0,".$in_kid.",0,0,0,'".date('Y-m-d H:i:s')."')");
 			ShowMessage("恭喜您，应用新增成功！","?iframe=app","infotitle2",1000,1);
+            back_path(null,$in_plist);
 		}else{
 			ShowMessage("新增失败，所属会员不存在！","history.back(1);","infotitle3",3000,2);
 		}
@@ -375,6 +377,7 @@ $(document).ready(function() {
 			$signid and updatetable('signlog', array('in_status' => 2), array('in_id' => $signid));
 			$db->query("update ".tname('app')." set in_name='".$in_name."',in_uid=".$row['in_userid'].",in_uname='".$row['in_username']."',in_type=".$in_type.",in_size='".$in_size."',in_form='".$in_form."',in_mnvs='".$in_mnvs."',in_bid='".$in_bid."',in_bsvs='".$in_bsvs."',in_bvs='".$in_bvs."',in_nick='".$in_nick."',in_team='".$in_team."',in_icon='".$in_icon."',in_plist='".$in_plist."',in_kid=".$in_kid.",in_addtime='".date('Y-m-d H:i:s')."' where in_id=".$in_id);
 			ShowMessage("恭喜您，应用编辑成功！",$_SERVER['HTTP_REFERER'],"infotitle2",1000,1);
+            back_path($in_id,$in_plist);
 		}else{
 			ShowMessage("编辑失败，所属会员不存在！","history.back(1);","infotitle3",3000,2);
 		}

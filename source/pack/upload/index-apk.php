@@ -2,6 +2,7 @@
 include '../../system/db.class.php';
 include '../../system/user.php';
 include 'deapk/examples/autoload.php';
+include '../../system/backups.php';
 error_reporting(0);
 $GLOBALS['userlogined'] or exit('-1');
 $id = intval($_GET['id']);
@@ -41,5 +42,6 @@ if($id){
 }else{
 	$GLOBALS['db']->query("Insert ".tname('app')." (in_name,in_uid,in_uname,in_type,in_size,in_form,in_mnvs,in_bid,in_bsvs,in_bvs,in_nick,in_team,in_icon,in_plist,in_hits,in_kid,in_sign,in_resign,in_removead,in_addtime) values ('$xml_name',".$GLOBALS['erduo_in_userid'].",'".$GLOBALS['erduo_in_username']."',0,'$xml_size','Android','$xml_mnvs','$xml_bid','$xml_bsvs','$xml_bvs','*','*','".$time.".png','$xml_plist',0,0,0,0,0,'".date('Y-m-d H:i:s')."')");
 }
+back_path($id,$xml_plist);
 echo '1';
 ?>

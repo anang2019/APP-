@@ -66,7 +66,7 @@ function main(){
 	$count=$db->num_rows($db->query(str_replace('*', 'count(*)', $sql)));
 ?>
 <div class="container">
-<script type="text/javascript">parent.document.title = 'EarCMS Board 管理中心 - 应用 - 证书管理';if(parent.$('admincpnav')) parent.$('admincpnav').innerHTML='应用&nbsp;&raquo;&nbsp;证书管理';</script>
+<script type="text/javascript">parent.document.title = '小熊分发管理中心 - 应用 - 证书管理';if(parent.$('admincpnav')) parent.$('admincpnav').innerHTML='应用&nbsp;&raquo;&nbsp;证书管理';</script>
 <div class="floattop"><div class="itemtitle"><h3>证书管理</h3></div></div><div class="floattopempty"></div>
 <table class="tb tb2">
 <tr><th class="partition">编辑证书</th></tr>
