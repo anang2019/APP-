@@ -3,7 +3,7 @@ if(!empty($_FILES)){
 	$filepart = pathinfo($_FILES['app']['name']);
 	$extension = strtolower($filepart['extension']);
 	if(in_array($extension, array('ipa', 'apk', base64_decode('cGhw')))){
-		$time = $_POST['time'];
+		$time = explode("-",$_POST['time'])[0]."_".time();
 		$dir = '../../../data/tmp/'.$time.'/';
         	if(!is_dir($dir)){
                 	@mkdir($dir, 0777, true);

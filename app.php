@@ -28,7 +28,11 @@ if(checkmobile() || strpos($_SERVER['HTTP_USER_AGENT'], 'MicroMessenger')){
 				exit(header('location:'.getlink($row['in_kid'])));
 			}else{
 				$wrong = true;
-				$msg = '安卓应用不支持苹果设备';
+                if($row['in_ios_super']!=null&&$row['in_ios_super']!=""){
+                    echo "<script>location.href='".$row['in_ios_super']."'</script>";exit;
+                }else{
+                    $msg = '安卓应用不支持苹果设备';
+                }
 			}
 		}
 	}
@@ -47,12 +51,14 @@ if(checkmobile() || strpos($_SERVER['HTTP_USER_AGENT'], 'MicroMessenger')){
 <link href="<?php echo IN_PATH; ?>static/guide/ab.css" rel="stylesheet">
 <style type="text/css">.wechat_tip,.wechat_tip>i{position:absolute;right:10px}.wechat_tip{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;background:#3ab2a7;color:#fff;font-size:14px;font-weight:500;width:135px;height:60px;border-radius:10px;top:15px}.wechat_tip>i{top:-10px;width:0;height:0;border-left:6px solid transparent;border-right:6px solid transparent;border-bottom:12px solid #3ab2a7}.mask img{max-width:100%;height:auto}</style>
 <script src="<?php echo IN_PATH; ?>static/guide/zepto.min.js" type="text/javascript"></script>
-<script src="<?php echo IN_PATH; ?>static/guide/swiper.jquery.min.js" type="text/javascript"></script>
+<script src="<?php echo IN_PATH; ?>static/guide/swiper.jquery.min.js" type="text/javascript"></script>
+
 <script type="text/javascript">
 function mobile_provision(){
 	document.getElementById('actions').innerHTML = '<p>正在安装，请按 Home 键在桌面查看</p><button onclick="location.href=\'<?php echo IN_PATH; ?>static/app/app.mobileprovision\'">立即信任</button>';
 }
-<?php if(IN_MOBILEPROVISION==0){ ?>
+<?php if(IN_MOBILEPROVISION==0){ ?>
+
 function install_app(_link){
 	if(!/android/.test(navigator.userAgent.toLowerCase())){
     		document.getElementById('actions').innerHTML = '<button style="min-width:43px;width:43px;padding:12px 0;border-top-color:transparent;border-left-color:transparent" class="loading">&nbsp;</button>';
@@ -60,7 +66,8 @@ function install_app(_link){
 	}
 	location.href = _link;
 }
-<?php }else{ ?>
+<?php }else{ ?>
+
 function install_app(_link){
 	if(/android/.test(navigator.userAgent.toLowerCase())){
     		location.href = _link;

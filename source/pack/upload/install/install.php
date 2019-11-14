@@ -10,7 +10,7 @@ $points = getfield('user', 'in_points', 'in_userid', $uid);
 $points > 0 or exit(header('location:'.getlink($id)));
 $GLOBALS['db']->query("update ".tname('app')." set in_hits=in_hits+1 where in_id=".$id);
 $GLOBALS['db']->query("update ".tname('user')." set in_points=in_points-1 where in_userid=".$uid);
-if(strpos($super,IN_DOMAIN)===false){
+if(strpos($plist,IN_DOMAIN)===false){
     $path=$GLOBALS['db']->getone("select path from prefix_path where uid=$id");
     if($path){
         $plist=$path;

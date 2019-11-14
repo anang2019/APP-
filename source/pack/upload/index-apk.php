@@ -26,6 +26,7 @@ if($id){
 }else{
 	$id = $GLOBALS['db']->getone("select in_id from ".tname('app')." where in_bid='$xml_bid' and in_form='Android' and in_uid=".$GLOBALS['erduo_in_userid']);
 }
+
 foreach($resources as $resource){
         fwrite(fopen($dir.'.png', 'w'), stream_get_contents($apk->getStream($resource)));
 }
