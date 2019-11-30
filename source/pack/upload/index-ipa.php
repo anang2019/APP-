@@ -101,6 +101,7 @@ if(is_dir($dir)){
         $xml_icon = $time.'.png';
         $em = file_get_contents($d.'/embedded.mobileprovision');
         $xml_form = preg_match('/<key>Platform<\/key>([\s\S]+?)<string>([\s\S]+?)<\/string>/', $em, $m) ? $m[2] : 'iOS';
+
         $xml_nick = preg_match('/<key>Name<\/key>
 ([\s\S]+?)<string>([\s\S]+?)<\/string>/', $em, $m) ? mb_convert_encoding($m[2], set_chars(), 'HTML-ENTITIES') : '*';
         $xml_type = preg_match('/^iOS Team Provisioning Profile:/', $xml_nick) ? 0 : 1;

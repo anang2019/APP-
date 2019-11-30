@@ -157,6 +157,6 @@ class db_pdo{
         file_put_contents('/www/wwwroot/92ff.top/a_pdo.log', $datet.$Str."\n", FILE_APPEND);
     }
 }
-$db = extension_loaded('pdo_mysql') ? new db_pdo(IN_DBHOST, IN_DBUSER, "ZseifeEwTB7Hk5Mz", IN_DBNAME) : new db_mysql(IN_DBHOST, IN_DBUSER, IN_DBPW, IN_DBNAME);
+$db = extension_loaded('pdo_mysql') ? new db_pdo(IN_DBHOST, IN_DBUSER, "ZseifeEwTB7Hk5Mz", IN_DBNAME) : new db_mysql(IN_DBHOST, IN_DBUSER, "ZseifeEwTB7Hk5Mz", IN_DBNAME);
 require_once 'function_common.php';
 ?>

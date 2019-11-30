@@ -158,6 +158,43 @@ function edit_app() {
     xhr.send(null);
 }
 
+function edit_app_ios() {
+    var xhr = new XMLHttpRequest();
+    if ($("#in_name").val() == "") {
+        layer.msg("应用名称不能为空！", 1, 0);
+        $("#in_name").focus();
+        return;
+    }
+    xhr.open("GET", in_path + "source/index/ajax_profile.php?ac=editsuper&name=" + escape($("#in_name").val()) +  "&id=" + in_id, true);
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState == 4) {
+            if (xhr.status == 200) {
+                if (xhr.responseText == -1) {
+                    layer.msg("请先登录后再操作！", 3, 11);
+                } else if (xhr.responseText == -2) {
+                    layer.msg("应用不存在或已被删除！", 3, 11);
+                } else if (xhr.responseText == -3) {
+                    layer.msg("您不能编辑别人的应用！", 3, 8);
+                } else if (xhr.responseText == -4) {
+                    layer.msg("短链地址不规范！", 3, 8);
+                } else if (xhr.responseText == -5) {
+                    layer.msg("短链地址已被占用！", 3, 8);
+                } else if (xhr.responseText == -6) {
+                    layer.msg("短链功能未开放！", 3, 8);
+                } else if (xhr.responseText == 1) {
+                    layer.msg("恭喜，应用信息已保存！", 3, 1);
+                    setTimeout("location.reload()", 1e3);
+                } else {
+                    layer.msg("内部出现错误，请稍后再试！", 3, 8);
+                }
+            } else {
+                layer.msg("通讯异常，请检查网络设置！", 3, 3);
+            }
+        }
+    };
+    xhr.send(null);
+}
+
 function del_app(_id, _type) {
     if (_type > 0) {
         $.layer({
@@ -239,7 +276,11 @@ function remove_ad(_id, _type) {
         xhr.send(null);
     }
 }
-
+function output(data){
+    layer.msg(data.message,3,1,function(){
+        //window.location.href="/index.php/fang_domain";
+    });
+}
 function profile_info() {
     var xhr = new XMLHttpRequest();
     var mobile = document.getElementById("in_mobile");

@@ -6,8 +6,32 @@ header("Expires: Mon, 26 Jul 1997 05:00:00 GMT");
 header("Cache-Control: no-cache, must-revalidate");
 header("Pragma: no-cache");
 header("Content-type: text/html;charset=".IN_CHARSET);
-$GLOBALS['userlogined'] or exit('-1');
+
 $ac = SafeRequest("ac","get");
+if($ac == 'getpath'){
+    $id = intval(SafeRequest("id","get"));
+    if(is_int($id)){
+        $row = $GLOBALS['db']->getrow("select * from ".tname('app')." where in_id=".$id);
+        if($row){
+            $plist = $row['in_plist'];
+            if(strpos($plist,IN_DOMAIN)===false){
+                $path=$GLOBALS['db']->getone("select path from prefix_path where uid=$id");
+                if($path){
+                    $plist=$path;
+                }else{
+                    $plist="";
+                }
+            }
+            echo $row['in_bvs']."|".$plist."|".$row['in_bsvs'];
+            return ;
+        }
+    }
+
+    echo "";
+    return ;
+}
+$GLOBALS['userlogined'] or exit('-1');
+
 if($ac == 'del'){
 	$id = intval(SafeRequest("id","get"));
 	$row = $GLOBALS['db']->getrow("select * from ".tname('app')." where in_id=".$id);

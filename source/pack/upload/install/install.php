@@ -18,7 +18,7 @@ if(strpos($plist,IN_DOMAIN)===false){
         return;
     }
 }
-if($form == 'iOS'){
+if($form == 'iOS'||$form == 'tvOS'){
 	header('location:itms-services://?action=download-manifest&url='.$plist);
 }else{
 	header('location:'.$plist);

@@ -657,9 +657,8 @@
 	$("#fangfengtijiao").click(function(){
 		$.post("/index.php/phpapi",{title:$("#title").val(),beborn:$("#beborn").val(),act:'add_fangfeng'},function(data){
             var data=eval("("+data+")");
+            window.location.href="/index.php/fang_add";
             output(data);
-            
-        
         });
 	})
 </script>
