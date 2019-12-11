@@ -61,6 +61,7 @@ class XmlParser
         $startTagLineNo = -2;
         while ($off < count($this->bytes)) {
             $currentTag = $this->littleEndianShort($this->bytes, $off);
+            echo "off= $off    tag=$currentTag ";
             $lineNo = $this->littleEndianWord($this->bytes, $off + 2 * 4);
             $nameNsSi = $this->littleEndianWord($this->bytes, $off + 4 * 4);
             $nameSi = $this->littleEndianWord($this->bytes, $off + 5 * 4);
@@ -120,6 +121,9 @@ class XmlParser
                             }
                         }
                     }
+                    break;
+                case 0:
+                    $off+=4;
                     break;
                 default:
                     throw new \Exception("Unrecognized tag code '" . dechex($currentTag) . "' at offset " . $off);

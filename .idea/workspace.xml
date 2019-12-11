@@ -3,12 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="83c183b4-c67b-47c2-8a11-37d29406dea4" name="默认的" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/source/index/ajax_profile.php" afterPath="$PROJECT_DIR$/source/index/ajax_profile.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/source/index/fang_add.php" afterPath="$PROJECT_DIR$/source/index/fang_add.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/source/pack/upload/index-ipa.php" afterPath="$PROJECT_DIR$/source/pack/upload/index-ipa.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/source/pack/upload/install/install.php" afterPath="$PROJECT_DIR$/source/pack/upload/install/install.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/source/system/db.class.php" afterPath="$PROJECT_DIR$/source/system/db.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/index/profile.js" afterPath="$PROJECT_DIR$/static/index/profile.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/source/pack/upload/deapk/lib/ApkParser/XmlParser.php" afterPath="$PROJECT_DIR$/source/pack/upload/deapk/lib/ApkParser/XmlParser.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -19,189 +14,85 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="install.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/source/pack/upload/install/install.php">
+      <file leaf-file-name="uploadify.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/index/uploadify.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="60" column="46" lean-forward="false" selection-start-line="60" selection-start-column="46" selection-end-line="60" selection-end-column="46" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index-uplog.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/source/pack/upload/index-uplog.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="308">
+              <caret line="14" column="37" lean-forward="false" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="37" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index-apk.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/source/pack/upload/index-apk.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="220">
+              <caret line="10" column="41" lean-forward="true" selection-start-line="10" selection-start-column="41" selection-end-line="10" selection-end-column="41" />
+              <folding>
+                <marker date="1576047610674" expanded="true" signature="1046:1138" ph="select in_id... ${tname('app')}" />
+                <marker date="1576047610674" expanded="true" signature="1458:1522" ph="select in_ic... ${tname('app')}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Parser.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/source/pack/upload/deapk/lib/ApkParser/Parser.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="264">
-              <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="19" selection-end-column="1" />
-              <folding>
-                <marker date="1574154090066" expanded="true" signature="725:764" ph="select path prefix_path" />
-              </folding>
+              <caret line="12" column="48" lean-forward="false" selection-start-line="12" selection-start-column="48" selection-end-line="12" selection-end-column="48" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ajax.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/source/index/ajax.php">
+      <file leaf-file-name="Manifest.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/source/pack/upload/deapk/lib/ApkParser/Manifest.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="21" column="33" lean-forward="false" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
-              <folding>
-                <marker date="1572339272000" expanded="true" signature="413:505" ph="select * fro... ${tname('user')}" />
-                <marker date="1572339272000" expanded="true" signature="623:755" ph="select in_us... ${tname('user')}" />
-                <marker date="1572339272000" expanded="true" signature="1689:1758" ph="select in_us... ${tname('user')}" />
-                <marker date="1572339272000" expanded="true" signature="2504:2573" ph="select in_us... ${tname('user')}" />
-                <marker date="1572339272000" expanded="true" signature="3899:3968" ph="select in_us... ${tname('user')}" />
-                <marker date="1572339272000" expanded="true" signature="4038:4127" ph="select in_id... ${tname('mail')}" />
-                <marker date="1572339272000" expanded="true" signature="4189:4231" ph="delete from " />
-              </folding>
+            <state relative-caret-position="-154">
+              <caret line="2" column="20" lean-forward="true" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ajax_profile.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/source/index/ajax_profile.php">
+      <file leaf-file-name="XmlParser.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/source/pack/upload/deapk/lib/ApkParser/XmlParser.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-              <folding>
-                <marker date="1574671478578" expanded="true" signature="445:488" ph="select * fro... ${tname('app')}" />
-                <marker date="1574671478578" expanded="true" signature="649:688" ph="select path prefix_path" />
-                <marker date="1574671478578" expanded="true" signature="1102:1145" ph="select * fro... ${tname('app')}" />
-                <marker date="1574671478578" expanded="true" signature="1260:1301" ph="delete from " />
-                <marker date="1574671478578" expanded="true" signature="1333:1379" ph="delete from " />
-                <marker date="1574671478578" expanded="true" signature="1889:1932" ph="select * fro... ${tname('app')}" />
-                <marker date="1574671478578" expanded="true" signature="2158:2226" ph="select in_id... ${tname('app')}" />
-                <marker date="1574671478578" expanded="true" signature="2567:2610" ph="select * fro... ${tname('app')}" />
-                <marker date="1574671478578" expanded="true" signature="3533:3576" ph="select * fro... ${tname('app')}" />
-                <marker date="1574671478578" expanded="true" signature="3946:3989" ph="select * fro... ${tname('app')}" />
-                <marker date="1574671478578" expanded="true" signature="4499:4542" ph="select * fro... ${tname('app')}" />
-              </folding>
+            <state relative-caret-position="154">
+              <caret line="19" column="50" lean-forward="false" selection-start-line="19" selection-start-column="50" selection-end-line="19" selection-end-column="50" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="fang_add.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/source/index/fang_add.php">
+      <file leaf-file-name="Stream.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/source/pack/upload/deapk/lib/ApkParser/Stream.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="283">
-              <caret line="655" column="0" lean-forward="true" selection-start-line="655" selection-start-column="0" selection-end-line="655" selection-end-column="0" />
-              <folding>
-                <marker date="1575082193066" expanded="true" signature="261:330" ph="select count... ${tname('app')}" />
-                <marker date="1575082193066" expanded="true" signature="423:496" ph="select count... ${tname('app')}" />
-                <marker date="1575082193066" expanded="true" signature="675:775" ph="select * fro... ${tname('app')}" />
-                <marker date="1575082193066" expanded="true" signature="886:1010" ph="select * fro... ${tname('app')}" />
-                <marker date="1575082193066" expanded="true" signature="1096:1226" ph="select * fro... ${tname('app')}" />
-                <marker date="1575082193066" expanded="true" signature="1269:1327" ph="select * fro... prefix_domain" />
-                <marker date="1575082193066" expanded="true" signature="1398:1440" ph="select * fro... prefix_user" />
-                <marker date="1575082193066" expanded="true" signature="1661:1703" ph="select * fro... prefix_user" />
-                <marker date="1575082193066" expanded="true" signature="14837:14880" ph="select count... t_jump" />
-                <marker date="1575082193066" expanded="true" signature="15392:15459" ph="select * fro... t_jump" />
-              </folding>
+            <state relative-caret-position="353">
+              <caret line="50" column="95" lean-forward="false" selection-start-line="50" selection-start-column="83" selection-end-line="50" selection-end-column="95" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="profile.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="profile.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/static/index/profile.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="224">
-              <caret line="282" column="1" lean-forward="true" selection-start-line="282" selection-start-column="1" selection-end-line="282" selection-end-column="1" />
-              <folding>
-                <element signature="n#!!block;n#edit_app#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="yuming.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/source/index/yuming.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="301">
-              <caret line="185" column="68" lean-forward="false" selection-start-line="185" selection-start-column="57" selection-end-line="185" selection-end-column="68" />
-              <folding>
-                <marker date="1572414736800" expanded="true" signature="104:146" ph="select * fro... prefix_vipprice" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="phpapi.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/source/index/phpapi.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="151">
-              <caret line="330" column="61" lean-forward="false" selection-start-line="330" selection-start-column="54" selection-end-line="330" selection-end-column="61" />
-              <folding>
-                <marker date="1572414637578" expanded="true" signature="147:177" ph="select * fro... t_jump" />
-                <marker date="1572414637578" expanded="true" signature="471:503" ph="select * fro... t_domain" />
-                <marker date="1572414637578" expanded="true" signature="610:640" ph="select * fro... t_jump" />
-                <marker date="1572414637578" expanded="true" signature="947:991" ph="update t_jum... " />
-                <marker date="1572414637578" expanded="true" signature="1052:1101" ph="update t_dom... " />
-                <marker date="1572414637578" expanded="true" signature="1349:1391" ph="select * fro... prefix_user" />
-                <marker date="1572414637578" expanded="true" signature="1557:1629" ph="update prefi... " />
-                <marker date="1572414637578" expanded="true" signature="1681:1749" ph="update prefi... " />
-                <marker date="1572414637578" expanded="true" signature="2102:2132" ph="select * fro... t_jump" />
-                <marker date="1572414637578" expanded="true" signature="2296:2333" ph="update t_jum... " />
-                <marker date="1572414637578" expanded="true" signature="2488:2525" ph="update t_jum... " />
-                <marker date="1572414637578" expanded="true" signature="2744:2774" ph="select * fro... t_jump" />
-                <marker date="1572414637578" expanded="true" signature="2938:2975" ph="update t_jum... " />
-                <marker date="1572414637578" expanded="true" signature="3130:3167" ph="update t_jum... " />
-                <marker date="1572414637578" expanded="true" signature="3392:3431" ph="select * fro... prefix_vipprice" />
-                <marker date="1572414637578" expanded="true" signature="3543:3585" ph="select * fro... prefix_user" />
-                <marker date="1572414637578" expanded="true" signature="4257:4336" ph="update prefi... " />
-                <marker date="1572414637578" expanded="true" signature="4510:4571" ph="select * fro... t_domain" />
-                <marker date="1572414637578" expanded="true" signature="4761:4803" ph="select * fro... t_domain" />
-                <marker date="1572414637578" expanded="true" signature="4953:5027" ph="update t_dom... " />
-                <marker date="1572414637578" expanded="true" signature="5201:5317" ph="update prefi... " />
-                <marker date="1572414637578" expanded="true" signature="5372:5426" ph="update t_jum... " />
-                <marker date="1572414637578" expanded="true" signature="5612:5654" ph="select * fro... t_domain" />
-                <marker date="1572414637578" expanded="true" signature="5782:5847" ph="update t_dom... " />
-                <marker date="1572414637578" expanded="true" signature="6222:6305" ph="insert INTO prefix_buy_cha_log... " />
-                <marker date="1572414637578" expanded="true" signature="6732:6774" ph="select * fro... prefix_user" />
-                <marker date="1572414637578" expanded="true" signature="7030:7072" ph="select * fro... t_domain" />
-                <marker date="1572414637578" expanded="true" signature="7192:7257" ph="update t_dom... " />
-                <marker date="1572414637578" expanded="true" signature="7389:7461" ph="update prefi... " />
-                <marker date="1572414637578" expanded="true" signature="7654:7737" ph="insert INTO prefix_buy_cha_log... " />
-                <marker date="1572414637578" expanded="true" signature="8105:8135" ph="delete from " />
-                <marker date="1572414637578" expanded="true" signature="8567:8603" ph="insert into t_domain... " />
-                <marker date="1572414637578" expanded="true" signature="8798:8827" ph="select count... t_domain" />
-                <marker date="1572414637578" expanded="true" signature="8861:8902" ph="select count... t_domain" />
-                <marker date="1572414637578" expanded="true" signature="9230:9272" ph="select * fro... prefix_user" />
-                <marker date="1572414637578" expanded="true" signature="9492:9535" ph="select count... t_jump" />
-                <marker date="1572414637578" expanded="true" signature="9985:10191" ph="insert INTO t_jump... " />
-                <marker date="1572414637578" expanded="true" signature="10884:10981" ph="update t_jum... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="super_app.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/source/index/super_app.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2552">
-              <caret line="116" column="122" lean-forward="false" selection-start-line="116" selection-start-column="114" selection-end-line="116" selection-end-column="122" />
-              <folding>
-                <marker date="1569475403000" expanded="true" signature="277:363" ph="select * fro... ${tname('app')}" />
-                <marker date="1569475403000" expanded="true" signature="504:641" ph="select * fro... ${tname('app')}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index-ipa.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/source/pack/upload/index-ipa.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2222">
-              <caret line="101" column="64" lean-forward="false" selection-start-line="101" selection-start-column="64" selection-end-line="101" selection-end-column="64" />
-              <folding>
-                <marker date="1574157035927" expanded="true" signature="1437:1525" ph="select in_id... ${tname('app')}" />
-                <marker date="1574157035927" expanded="true" signature="3942:3993" ph="..." />
-                <marker date="1574157035927" expanded="true" signature="4197:4252" ph="..." />
-                <marker date="1574157035927" expanded="true" signature="4751:4815" ph="select in_ic... ${tname('app')}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="admin-ipa.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/source/pack/upload/admin-ipa.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2156">
-              <caret line="98" column="72" lean-forward="false" selection-start-line="98" selection-start-column="53" selection-end-line="98" selection-end-column="72" />
-              <folding>
-                <marker date="1536706906000" expanded="true" signature="3929:3980" ph="..." />
-                <marker date="1536706906000" expanded="true" signature="4184:4239" ph="..." />
-              </folding>
+            <state relative-caret-position="397">
+              <caret line="394" column="24" lean-forward="true" selection-start-line="394" selection-start-column="24" selection-end-line="394" selection-end-column="24" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -210,17 +101,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>安卓</find>
-      <find>下载安装</find>
-      <find>install_app(</find>
-      <find>install_ing</find>
-      <find>IN_MOBILEPROVISION</find>
-      <find>checkmobile</find>
-      <find>in_ios_super</find>
-      <find>$msg</find>
-      <find>$wrong</find>
-      <find>in_kid</find>
-      <find>in_ios</find>
       <find>$super</find>
       <find>href</find>
       <find>&quot;http://www.apple.com/DTDs/PropertyList-1.0.dtd&quot;&gt;</find>
@@ -240,6 +120,17 @@
       <find>layer</find>
       <find>add_fangfeng</find>
       <find>baidu</find>
+      <find>eval</find>
+      <find>上传</find>
+      <find>EditBoard</find>
+      <find>in_size</find>
+      <find>upload_max_filesize</find>
+      <find>index-</find>
+      <find>内部出现</find>
+      <find>XmlParser</find>
+      <find>$xml_size</find>
+      <find>$off</find>
+      <find>userlogined</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -261,14 +152,17 @@
         <option value="$PROJECT_DIR$/static/pack/upload/uploadify.js" />
         <option value="$PROJECT_DIR$/source/pack/upload/index-uplog.php" />
         <option value="$PROJECT_DIR$/source/index/put_upload.php" />
-        <option value="$PROJECT_DIR$/source/pack/upload/index-apk.php" />
         <option value="$PROJECT_DIR$/app.php" />
         <option value="$PROJECT_DIR$/source/pack/upload/install/install.php" />
         <option value="$PROJECT_DIR$/source/pack/upload/index-ipa.php" />
         <option value="$PROJECT_DIR$/source/system/db.class.php" />
         <option value="$PROJECT_DIR$/source/index/ajax_profile.php" />
         <option value="$PROJECT_DIR$/static/index/profile.js" />
+        <option value="$PROJECT_DIR$/source/pack/upload/deapk/lib/ApkParser/Manifest.php" />
         <option value="$PROJECT_DIR$/source/index/fang_add.php" />
+        <option value="$PROJECT_DIR$/source/pack/upload/deapk/lib/ApkParser/Parser.php" />
+        <option value="$PROJECT_DIR$/source/pack/upload/deapk/lib/ApkParser/XmlParser.php" />
+        <option value="$PROJECT_DIR$/source/pack/upload/index-apk.php" />
       </list>
     </option>
   </component>
@@ -279,7 +173,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="x" value="407" />
     <option name="y" value="4" />
     <option name="width" value="1400" />
@@ -301,7 +195,6 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -331,6 +224,33 @@
               <item name="APP-FF" type="b2602c69:ProjectViewProjectNode" />
               <item name="APP-FF" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="source" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="pack" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="upload" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="deapk" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="APP-FF" type="b2602c69:ProjectViewProjectNode" />
+              <item name="APP-FF" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="source" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="pack" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="upload" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="deapk" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="lib" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="APP-FF" type="b2602c69:ProjectViewProjectNode" />
+              <item name="APP-FF" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="source" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="pack" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="upload" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="deapk" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="lib" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="ApkParser" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="APP-FF" type="b2602c69:ProjectViewProjectNode" />
+              <item name="APP-FF" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="source" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="system" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
@@ -338,16 +258,11 @@
               <item name="APP-FF" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="static" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
-            <path>
-              <item name="APP-FF" type="b2602c69:ProjectViewProjectNode" />
-              <item name="APP-FF" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="static" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="index" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -385,22 +300,25 @@
       <workItem from="1574150833274" duration="5414000" />
       <workItem from="1574499690935" duration="1020000" />
       <workItem from="1574656124772" duration="4929000" />
-      <workItem from="1575081580538" duration="2891000" />
+      <workItem from="1575081580538" duration="4503000" />
+      <workItem from="1575251232070" duration="2049000" />
+      <workItem from="1575356279595" duration="1295000" />
+      <workItem from="1575964983983" duration="2717000" />
+      <workItem from="1576026260394" duration="14218000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="47262000" />
+    <option name="totallyTimeSpent" value="69153000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="407" y="4" width="1400" height="978" extended-state="1" />
+    <frame x="407" y="4" width="1400" height="978" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2131503" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32947975" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3283237" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -413,6 +331,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -427,69 +346,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/source/index/each_app.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="26" column="4" lean-forward="false" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/install/table.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1400">
-          <caret line="96" column="3" lean-forward="false" selection-start-line="96" selection-start-column="3" selection-end-line="96" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/pack/upload/cert-open.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-56">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/DHTML.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="211" column="0" lean-forward="false" selection-start-line="211" selection-start-column="0" selection-end-line="211" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/pack/upload/admin-apk.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="7" column="21" lean-forward="false" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/pack/upload/uploadify.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
-          <caret line="76" column="19" lean-forward="false" selection-start-line="76" selection-start-column="19" selection-end-line="76" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/superglobals/_superglobals.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" column="3" lean-forward="true" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/index/home.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="156" column="48" lean-forward="true" selection-start-line="156" selection-start-column="48" selection-end-line="156" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/pack/upload/cert-uplog.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="22" column="72" lean-forward="false" selection-start-line="22" selection-start-column="53" selection-end-line="22" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/source/pack/chat/uploadify.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
@@ -508,7 +364,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="184">
           <caret line="239" column="9" lean-forward="false" selection-start-line="239" selection-start-column="9" selection-end-line="239" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -551,6 +406,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
           <caret line="51" column="27" lean-forward="false" selection-start-line="51" selection-start-column="11" selection-end-line="51" selection-end-column="27" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -562,24 +418,10 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/92fenfa.sql" />
-    <entry file="file://$PROJECT_DIR$/source/pack/upload/deapk/lib/ApkParser/Parser.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-834">
-          <caret line="8" column="20" lean-forward="false" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/source/plugin/App-oss/upload.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="206">
           <caret line="17" column="34" lean-forward="true" selection-start-line="17" selection-start-column="34" selection-end-line="17" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/pack/upload/index-uplog.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="7" column="22" lean-forward="false" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -621,26 +463,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/index/uploadify.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1474">
-          <caret line="67" column="51" lean-forward="false" selection-start-line="67" selection-start-column="51" selection-end-line="67" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/app/down.plist">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="455">
           <caret line="26" column="21" lean-forward="false" selection-start-line="26" selection-start-column="21" selection-end-line="26" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/pack/upload/admin-open.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1232">
-          <caret line="56" column="17" lean-forward="false" selection-start-line="56" selection-start-column="17" selection-end-line="56" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -655,13 +481,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="836">
           <caret line="38" column="37" lean-forward="false" selection-start-line="38" selection-start-column="16" selection-end-line="38" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/pack/upload/index-apk.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="18" column="66" lean-forward="false" selection-start-line="18" selection-start-column="58" selection-end-line="18" selection-end-column="66" />
         </state>
       </provider>
     </entry>
@@ -693,22 +512,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/Core/Core.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="282" column="9" lean-forward="false" selection-start-line="282" selection-start-column="9" selection-end-line="282" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/system/config.inc.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" column="8" lean-forward="false" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/source/system/db.class.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3278">
@@ -721,9 +524,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4598">
           <caret line="209" column="73" lean-forward="false" selection-start-line="209" selection-start-column="73" selection-end-line="209" selection-end-column="73" />
-          <folding>
-            <marker date="1572402564000" expanded="true" signature="277:363" ph="select * fro... ${tname('app')}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -731,10 +531,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2552">
           <caret line="116" column="122" lean-forward="false" selection-start-line="116" selection-start-column="114" selection-end-line="116" selection-end-column="122" />
-          <folding>
-            <marker date="1569475403000" expanded="true" signature="277:363" ph="select * fro... ${tname('app')}" />
-            <marker date="1569475403000" expanded="true" signature="504:641" ph="select * fro... ${tname('app')}" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -764,58 +561,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/source/index/phpapi.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="151">
+        <state relative-caret-position="7260">
           <caret line="330" column="61" lean-forward="false" selection-start-line="330" selection-start-column="54" selection-end-line="330" selection-end-column="61" />
-          <folding>
-            <marker date="1572414637578" expanded="true" signature="147:177" ph="select * fro... t_jump" />
-            <marker date="1572414637578" expanded="true" signature="471:503" ph="select * fro... t_domain" />
-            <marker date="1572414637578" expanded="true" signature="610:640" ph="select * fro... t_jump" />
-            <marker date="1572414637578" expanded="true" signature="947:991" ph="update t_jum... " />
-            <marker date="1572414637578" expanded="true" signature="1052:1101" ph="update t_dom... " />
-            <marker date="1572414637578" expanded="true" signature="1349:1391" ph="select * fro... prefix_user" />
-            <marker date="1572414637578" expanded="true" signature="1557:1629" ph="update prefi... " />
-            <marker date="1572414637578" expanded="true" signature="1681:1749" ph="update prefi... " />
-            <marker date="1572414637578" expanded="true" signature="2102:2132" ph="select * fro... t_jump" />
-            <marker date="1572414637578" expanded="true" signature="2296:2333" ph="update t_jum... " />
-            <marker date="1572414637578" expanded="true" signature="2488:2525" ph="update t_jum... " />
-            <marker date="1572414637578" expanded="true" signature="2744:2774" ph="select * fro... t_jump" />
-            <marker date="1572414637578" expanded="true" signature="2938:2975" ph="update t_jum... " />
-            <marker date="1572414637578" expanded="true" signature="3130:3167" ph="update t_jum... " />
-            <marker date="1572414637578" expanded="true" signature="3392:3431" ph="select * fro... prefix_vipprice" />
-            <marker date="1572414637578" expanded="true" signature="3543:3585" ph="select * fro... prefix_user" />
-            <marker date="1572414637578" expanded="true" signature="4257:4336" ph="update prefi... " />
-            <marker date="1572414637578" expanded="true" signature="4510:4571" ph="select * fro... t_domain" />
-            <marker date="1572414637578" expanded="true" signature="4761:4803" ph="select * fro... t_domain" />
-            <marker date="1572414637578" expanded="true" signature="4953:5027" ph="update t_dom... " />
-            <marker date="1572414637578" expanded="true" signature="5201:5317" ph="update prefi... " />
-            <marker date="1572414637578" expanded="true" signature="5372:5426" ph="update t_jum... " />
-            <marker date="1572414637578" expanded="true" signature="5612:5654" ph="select * fro... t_domain" />
-            <marker date="1572414637578" expanded="true" signature="5782:5847" ph="update t_dom... " />
-            <marker date="1572414637578" expanded="true" signature="6222:6305" ph="insert INTO prefix_buy_cha_log... " />
-            <marker date="1572414637578" expanded="true" signature="6732:6774" ph="select * fro... prefix_user" />
-            <marker date="1572414637578" expanded="true" signature="7030:7072" ph="select * fro... t_domain" />
-            <marker date="1572414637578" expanded="true" signature="7192:7257" ph="update t_dom... " />
-            <marker date="1572414637578" expanded="true" signature="7389:7461" ph="update prefi... " />
-            <marker date="1572414637578" expanded="true" signature="7654:7737" ph="insert INTO prefix_buy_cha_log... " />
-            <marker date="1572414637578" expanded="true" signature="8105:8135" ph="delete from " />
-            <marker date="1572414637578" expanded="true" signature="8567:8603" ph="insert into t_domain... " />
-            <marker date="1572414637578" expanded="true" signature="8798:8827" ph="select count... t_domain" />
-            <marker date="1572414637578" expanded="true" signature="8861:8902" ph="select count... t_domain" />
-            <marker date="1572414637578" expanded="true" signature="9230:9272" ph="select * fro... prefix_user" />
-            <marker date="1572414637578" expanded="true" signature="9492:9535" ph="select count... t_jump" />
-            <marker date="1572414637578" expanded="true" signature="9985:10191" ph="insert INTO t_jump... " />
-            <marker date="1572414637578" expanded="true" signature="10884:10981" ph="update t_jum... " />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/source/index/yuming.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
+        <state relative-caret-position="4070">
           <caret line="185" column="68" lean-forward="false" selection-start-line="185" selection-start-column="57" selection-end-line="185" selection-end-column="68" />
-          <folding>
-            <marker date="1572414736800" expanded="true" signature="104:146" ph="select * fro... prefix_vipprice" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -823,45 +577,83 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="264">
           <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="19" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/index/each_app.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2222">
+          <caret line="101" column="61" lean-forward="false" selection-start-line="101" selection-start-column="61" selection-end-line="101" selection-end-column="61" />
           <folding>
-            <marker date="1574154090066" expanded="true" signature="725:764" ph="select path prefix_path" />
+            <marker date="1569470307000" expanded="true" signature="277:363" ph="select * fro... ${tname('app')}" />
+            <marker date="1569470307000" expanded="true" signature="504:641" ph="select * fro... ${tname('app')}" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/index/profile.js">
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/standard/standard_4.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="282" column="1" lean-forward="true" selection-start-line="282" selection-start-column="1" selection-end-line="282" selection-end-column="1" />
-          <folding>
-            <element signature="n#!!block;n#edit_app#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="279">
+          <caret line="411" column="9" lean-forward="false" selection-start-line="411" selection-start-column="9" selection-end-line="411" selection-end-column="9" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/source/index/fang_add.php">
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/standard/standard_5.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
-          <caret line="655" column="0" lean-forward="true" selection-start-line="655" selection-start-column="0" selection-end-line="655" selection-end-column="0" />
-          <folding>
-            <marker date="1575082193066" expanded="true" signature="261:330" ph="select count... ${tname('app')}" />
-            <marker date="1575082193066" expanded="true" signature="423:496" ph="select count... ${tname('app')}" />
-            <marker date="1575082193066" expanded="true" signature="675:775" ph="select * fro... ${tname('app')}" />
-            <marker date="1575082193066" expanded="true" signature="886:1010" ph="select * fro... ${tname('app')}" />
-            <marker date="1575082193066" expanded="true" signature="1096:1226" ph="select * fro... ${tname('app')}" />
-            <marker date="1575082193066" expanded="true" signature="1269:1327" ph="select * fro... prefix_domain" />
-            <marker date="1575082193066" expanded="true" signature="1398:1440" ph="select * fro... prefix_user" />
-            <marker date="1575082193066" expanded="true" signature="1661:1703" ph="select * fro... prefix_user" />
-            <marker date="1575082193066" expanded="true" signature="14837:14880" ph="select count... t_jump" />
-            <marker date="1575082193066" expanded="true" signature="15392:15459" ph="select * fro... t_jump" />
-          </folding>
+        <state relative-caret-position="279">
+          <caret line="39" column="9" lean-forward="false" selection-start-line="39" selection-start-column="9" selection-end-line="39" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/pack/upload/admin-open.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="271">
+          <caret line="17" column="60" lean-forward="false" selection-start-line="17" selection-start-column="41" selection-end-line="17" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/admincp/module/fangfeng.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="301">
+          <caret line="61" column="33" lean-forward="false" selection-start-line="61" selection-start-column="33" selection-end-line="61" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/index/ajax.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="28" column="5" lean-forward="false" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/system/config.inc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="44" column="33" lean-forward="true" selection-start-line="44" selection-start-column="33" selection-end-line="44" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/admincp/module/app.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="213">
+          <caret line="57" column="7" lean-forward="true" selection-start-line="57" selection-start-column="7" selection-end-line="57" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/index/uploadify.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="60" column="46" lean-forward="false" selection-start-line="60" selection-start-column="46" selection-end-line="60" selection-end-column="46" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/source/index/ajax_profile.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+        <state relative-caret-position="616">
+          <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
           <folding>
             <marker date="1574671478578" expanded="true" signature="445:488" ph="select * fro... ${tname('app')}" />
             <marker date="1574671478578" expanded="true" signature="649:688" ph="select path prefix_path" />
@@ -878,19 +670,97 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/source/index/ajax.php">
+    <entry file="file://$PROJECT_DIR$/source/pack/upload/index-uplog.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="21" column="33" lean-forward="false" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
+        <state relative-caret-position="308">
+          <caret line="14" column="37" lean-forward="false" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/Core/Core.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-343">
+          <caret line="282" column="9" lean-forward="false" selection-start-line="282" selection-start-column="9" selection-end-line="282" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/index/fang_add.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="27" column="21" lean-forward="true" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="21" />
           <folding>
-            <marker date="1572339272000" expanded="true" signature="413:505" ph="select * fro... ${tname('user')}" />
-            <marker date="1572339272000" expanded="true" signature="623:755" ph="select in_us... ${tname('user')}" />
-            <marker date="1572339272000" expanded="true" signature="1689:1758" ph="select in_us... ${tname('user')}" />
-            <marker date="1572339272000" expanded="true" signature="2504:2573" ph="select in_us... ${tname('user')}" />
-            <marker date="1572339272000" expanded="true" signature="3899:3968" ph="select in_us... ${tname('user')}" />
-            <marker date="1572339272000" expanded="true" signature="4038:4127" ph="select in_id... ${tname('mail')}" />
-            <marker date="1572339272000" expanded="true" signature="4189:4231" ph="delete from " />
+            <marker date="1576026935489" expanded="true" signature="261:330" ph="select count... ${tname('app')}" />
+            <marker date="1576026935489" expanded="true" signature="423:496" ph="select count... ${tname('app')}" />
+            <marker date="1576026935489" expanded="true" signature="675:775" ph="select * fro... ${tname('app')}" />
+            <marker date="1576026935489" expanded="true" signature="886:1010" ph="select * fro... ${tname('app')}" />
+            <marker date="1576026935489" expanded="true" signature="1096:1226" ph="select * fro... ${tname('app')}" />
+            <marker date="1576026935489" expanded="true" signature="1269:1327" ph="select * fro... prefix_domain" />
+            <marker date="1576026935489" expanded="true" signature="1398:1440" ph="select * fro... prefix_user" />
+            <marker date="1576026935489" expanded="true" signature="1661:1703" ph="select * fro... prefix_user" />
+            <marker date="1576026935489" expanded="true" signature="14837:14880" ph="select count... t_jump" />
+            <marker date="1576026935489" expanded="true" signature="15392:15459" ph="select * fro... t_jump" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/pack/upload/deapk/lib/ApkParser/Stream.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="353">
+          <caret line="50" column="95" lean-forward="false" selection-start-line="50" selection-start-column="83" selection-end-line="50" selection-end-column="95" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/Core/Core_d.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1835">
+          <caret line="339" column="9" lean-forward="false" selection-start-line="339" selection-start-column="9" selection-end-line="339" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/pack/upload/deapk/lib/ApkParser/XmlParser.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="19" column="50" lean-forward="false" selection-start-line="19" selection-start-column="50" selection-end-line="19" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/pack/upload/deapk/lib/ApkParser/Manifest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-154">
+          <caret line="2" column="20" lean-forward="true" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/pack/upload/deapk/lib/ApkParser/Parser.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="12" column="48" lean-forward="false" selection-start-line="12" selection-start-column="48" selection-end-line="12" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/pack/upload/index-apk.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="10" column="41" lean-forward="true" selection-start-line="10" selection-start-column="41" selection-end-line="10" selection-end-column="41" />
+          <folding>
+            <marker date="1576047610674" expanded="true" signature="1046:1138" ph="select in_id... ${tname('app')}" />
+            <marker date="1576047610674" expanded="true" signature="1458:1522" ph="select in_ic... ${tname('app')}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/index/profile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="397">
+          <caret line="394" column="24" lean-forward="true" selection-start-line="394" selection-start-column="24" selection-end-line="394" selection-end-column="24" />
+          <folding />
         </state>
       </provider>
     </entry>
