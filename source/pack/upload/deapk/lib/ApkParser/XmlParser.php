@@ -61,7 +61,6 @@ class XmlParser
         $startTagLineNo = -2;
         while ($off < count($this->bytes)) {
             $currentTag = $this->littleEndianShort($this->bytes, $off);
-            echo "off= $off    tag=$currentTag ";
             $lineNo = $this->littleEndianWord($this->bytes, $off + 2 * 4);
             $nameNsSi = $this->littleEndianWord($this->bytes, $off + 4 * 4);
             $nameSi = $this->littleEndianWord($this->bytes, $off + 5 * 4);
