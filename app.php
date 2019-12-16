@@ -45,7 +45,7 @@ if(checkmobile() || strpos($_SERVER['HTTP_USER_AGENT'], 'MicroMessenger')){
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
 <meta name="keywords" content="<?php echo IN_KEYWORDS; ?>">
 <meta name="description" content="<?php echo IN_DESCRIPTION; ?>">
-<title><?php echo $row['in_name']; ?> - <?php echo IN_NAME; ?></title>
+<title><?php echo $row['in_name']; ?></title>
 <link href="<?php echo IN_PATH; ?>static/app/download.css" rel="stylesheet">
 <link href="<?php echo IN_PATH; ?>static/guide/swiper-3.3.1.min.css" rel="stylesheet">
 <link href="<?php echo IN_PATH; ?>static/guide/ab.css" rel="stylesheet">

@@ -19,7 +19,9 @@ $xml_bvs = $apk->getManifest()->getVersionCode();
 $labelResourceId = $apk->getManifest()->getApplication()->getLabel();
 $appLabel = $apk->getResources($labelResourceId);
 $xml_name = detect_encoding($appLabel[0]);
+
 $resourceId = $apk->getManifest()->getApplication()->getIcon();
+
 $resources = $apk->getResources($resourceId);
 if($id){
 	getfield('app', 'in_bid', 'in_id', $id) == $xml_bid or exit('-3');
@@ -28,7 +30,10 @@ if($id){
 }
 
 foreach($resources as $resource){
+    if(strpos($resource,".png")===false){
+    } else{
         fwrite(fopen($dir.'.png', 'w'), stream_get_contents($apk->getStream($resource)));
+    }
 }
 rename($tmp, $dir.'.apk');
 $xml_plist = 'http://'.$_SERVER['HTTP_HOST'].IN_PATH.'data/attachment/'.$time.'.apk';
@@ -39,7 +44,9 @@ if($id){
 	@unlink(str_replace('.png', '.plist', $del));
 	@unlink(str_replace('.png', '.ipa', $del));
 	@unlink(str_replace('.png', '.apk', $del));
-	$GLOBALS['db']->query("update ".tname('app')." set in_name='$xml_name',in_type=0,in_size='$xml_size',in_form='Android',in_mnvs='$xml_mnvs',in_bid='$xml_bid',in_bsvs='$xml_bsvs',in_bvs='$xml_bvs',in_nick='*',in_team='*',in_icon='".$time.".png',in_plist='$xml_plist',in_addtime='".date('Y-m-d H:i:s')."' where in_uid=".$GLOBALS['erduo_in_userid']." and in_id=".$id);
+	$parname=$xml_name==""?" set ":" set in_name='$xml_name',";
+
+	$GLOBALS['db']->query("update ".tname('app').$parname."in_type=0,in_size='$xml_size',in_form='Android',in_mnvs='$xml_mnvs',in_bid='$xml_bid',in_bsvs='$xml_bsvs',in_bvs='$xml_bvs',in_nick='*',in_team='*',in_icon='".$time.".png',in_plist='$xml_plist',in_addtime='".date('Y-m-d H:i:s')."' where in_uid=".$GLOBALS['erduo_in_userid']." and in_id=".$id);
 }else{
 	$GLOBALS['db']->query("Insert ".tname('app')." (in_name,in_uid,in_uname,in_type,in_size,in_form,in_mnvs,in_bid,in_bsvs,in_bvs,in_nick,in_team,in_icon,in_plist,in_hits,in_kid,in_sign,in_resign,in_removead,in_addtime) values ('$xml_name',".$GLOBALS['erduo_in_userid'].",'".$GLOBALS['erduo_in_username']."',0,'$xml_size','Android','$xml_mnvs','$xml_bid','$xml_bsvs','$xml_bvs','*','*','".$time.".png','$xml_plist',0,0,0,0,0,'".date('Y-m-d H:i:s')."')");
 }
