@@ -19,9 +19,9 @@ $xml_bvs = $apk->getManifest()->getVersionCode();
 $labelResourceId = $apk->getManifest()->getApplication()->getLabel();
 $appLabel = $apk->getResources($labelResourceId);
 $xml_name = detect_encoding($appLabel[0]);
-$fileName=$GLOBALS['erduo_in_userid'].'_'.$xml_bid;
+$fileName=$time.'_'.$xml_bid;
 
-$dir = '../../../data/attachment/'.$fileName;
+
 
 $resourceId = $apk->getManifest()->getApplication()->getIcon();
 
@@ -33,6 +33,7 @@ if($id){
 }
 
 if($id) {
+    $fileName = $xml_bid . '_' . $GLOBALS['erduo_in_userid'] . '_' . $id;
     $del_icon = $GLOBALS['db']->getone("select in_icon from " . tname('app') . " where in_id=$id and in_uid=" . $GLOBALS['erduo_in_userid']);
     $del = '../../../data/attachment/' . $del_icon;
     @unlink($del);
@@ -40,6 +41,7 @@ if($id) {
     @unlink(str_replace('.png', '.ipa', $del));
     @unlink(str_replace('.png', '.apk', $del));
 }
+$dir = '../../../data/attachment/'.$fileName;
 
 foreach($resources as $resource){
     if(strpos($resource,".png")===false){
