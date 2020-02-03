@@ -16,7 +16,6 @@
 		$key = SafeSql(trim(is_utf8($string)));
 		$query = $GLOBALS['db']->query("select * from ".tname('app')." where in_name like '%".$key."%' and in_uid=".$GLOBALS['erduo_in_userid']." order by in_addtime desc");
 	}
-	
 	$user_money="0";
 	$user_levelzi="";
 	$query55533 = $GLOBALS['db']->query("select * from prefix_user where in_userid=".$userid);

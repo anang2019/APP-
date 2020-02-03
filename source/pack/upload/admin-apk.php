@@ -23,6 +23,7 @@ foreach($resources as $resource){
         fwrite(fopen($dir.'.png', 'w'), stream_get_contents($apk->getStream($resource)));
 }
 rename($tmp, $dir.'.apk');
-$xml_plist = 'http://'.$_SERVER['HTTP_HOST'].IN_PATH.'data/attachment/'.$time.'.apk';
+//$xml_plist = 'http://'.$_SERVER['HTTP_HOST'].IN_PATH.'data/attachment/'.$time.'.apk';
+$xml_plist = $time.'.apk';
 echo "{'name':'$xml_name','mnvs':'$xml_mnvs','bid':'$xml_bid','bsvs':'$xml_bsvs','bvs':'$xml_bvs','form':'Android','nick':'*','type':'0','team':'*','icon':'".$time.".png','plist':'$xml_plist','size':'$xml_size'}";
 ?>

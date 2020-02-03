@@ -338,7 +338,7 @@ $(document).ready(function() {
 		if($row=$db->fetch_array($result)){
 			$db->query("Insert ".tname('app')." (in_name,in_uid,in_uname,in_type,in_size,in_form,in_mnvs,in_bid,in_bsvs,in_bvs,in_nick,in_team,in_icon,in_plist,in_hits,in_kid,in_sign,in_resign,in_removead,in_addtime) values ('".$in_name."',".$row['in_userid'].",'".$row['in_username']."',".$in_type.",'".$in_size."','".$in_form."','".$in_mnvs."','".$in_bid."','".$in_bsvs."','".$in_bvs."','".$in_nick."','".$in_team."','".$in_icon."','".$in_plist."',0,".$in_kid.",0,0,0,'".date('Y-m-d H:i:s')."')");
 			ShowMessage("恭喜您，应用新增成功！","?iframe=app","infotitle2",1000,1);
-            back_path(null,$in_plist);
+            //back_path(null,$in_plist);
 		}else{
 			ShowMessage("新增失败，所属会员不存在！","history.back(1);","infotitle3",3000,2);
 		}
@@ -377,7 +377,7 @@ $(document).ready(function() {
 			$signid and updatetable('signlog', array('in_status' => 2), array('in_id' => $signid));
 			$db->query("update ".tname('app')." set in_name='".$in_name."',in_uid=".$row['in_userid'].",in_uname='".$row['in_username']."',in_type=".$in_type.",in_size='".$in_size."',in_form='".$in_form."',in_mnvs='".$in_mnvs."',in_bid='".$in_bid."',in_bsvs='".$in_bsvs."',in_bvs='".$in_bvs."',in_nick='".$in_nick."',in_team='".$in_team."',in_icon='".$in_icon."',in_plist='".$in_plist."',in_kid=".$in_kid.",in_addtime='".date('Y-m-d H:i:s')."' where in_id=".$in_id);
 			ShowMessage("恭喜您，应用编辑成功！",$_SERVER['HTTP_REFERER'],"infotitle2",1000,1);
-            back_path($in_id,$in_plist);
+            //back_path($in_id,$in_plist);
 		}else{
 			ShowMessage("编辑失败，所属会员不存在！","history.back(1);","infotitle3",3000,2);
 		}

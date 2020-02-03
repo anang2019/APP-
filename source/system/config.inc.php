@@ -39,7 +39,7 @@ define('IN_API', '');
 define('IN_SECRET', '');
 define('IN_WEBVIEWPOINTS', '3000');
 define('IN_ADPOINTS', '1000');
-define('IN_ADLINK', 'https://92ff.cn');
+define('IN_ADLINK', 'http://92ff.h5zn.cn');
 define('IN_ADIMG', 'https://92ff.cn/static/52ff/images/ad.jpg');
 define('IN_REMOTE', '0');
 define('IN_REMOTEPK', 'App-oss');

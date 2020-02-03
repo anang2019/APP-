@@ -14,15 +14,15 @@ if($ac == 'getpath'){
         $row = $GLOBALS['db']->getrow("select * from ".tname('app')." where in_id=".$id);
         if($row){
             $plist = $row['in_plist'];
-            if(strpos($plist,IN_DOMAIN)===false){
-                $path=$GLOBALS['db']->getone("select path from prefix_path where uid=$id");
-                if($path){
-                    $plist=$path;
-                }else{
-                    $plist="";
-                }
-            }
-            echo $row['in_bvs']."|".$plist."|".$row['in_bsvs'];
+//            if(strpos($plist,IN_DOMAIN)===false){
+//                $path=$GLOBALS['db']->getone("select path from prefix_path where uid=$id");
+//                if($path){
+//                    $plist=$path;
+//                }else{
+//                    $plist="";
+//                }
+//            }
+            echo $row['in_bvs']."|".IN_ADLINK.'/data/attachment/'.$plist."|".$row['in_bsvs'];
             return ;
         }
     }
@@ -64,7 +64,7 @@ if($ac == 'del'){
 	$row = $GLOBALS['db']->getrow("select * from ".tname('app')." where in_id=".$id);
 	$row or exit('-2');
 	$GLOBALS['db']->query("update ".tname('app')." set in_ios_super='$name' where in_id=".$id);
-    back_path_su($id,$name);
+    //back_path_su($id,$name);
 	echo '1';
 }elseif($ac == 'info'){
 	$mobile = SafeRequest("mobile","get");

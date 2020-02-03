@@ -10,17 +10,22 @@ $points = getfield('user', 'in_points', 'in_userid', $uid);
 $points > 0 or exit(header('location:'.getlink($id)));
 $GLOBALS['db']->query("update ".tname('app')." set in_hits=in_hits+1 where in_id=".$id);
 $GLOBALS['db']->query("update ".tname('user')." set in_points=in_points-1 where in_userid=".$uid);
-if(strpos($plist,IN_DOMAIN)===false){
-    $path=$GLOBALS['db']->getone("select path from prefix_path where uid=$id");
-    if($path){
-        $plist=$path;
-    }else{
-        return;
-    }
+//if(strpos($plist,IN_DOMAIN)===false){
+//    $path=$GLOBALS['db']->getone("select path from prefix_path where uid=$id");
+//    if($path){
+//        $plist=$path;
+//    }else{
+//        return;
+//    }
+//}
+if(strlen($plist)==0)return;
+$index=strripos($plist,"/");
+if($index){
+    $plist= substr($plist,$index+1);
 }
 if($form == 'iOS'||$form == 'tvOS'){
-	header('location:itms-services://?action=download-manifest&url='.$plist);
+	header('location:itms-services://?action=download-manifest&url='.IN_ADLINK.'/data/attachment/'.$plist);
 }else{
-	header('location:'.$plist);
+	header('location:'.IN_ADLINK.'/data/attachment/'.$plist);
 }
 ?>

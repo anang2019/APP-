@@ -73,8 +73,8 @@ class db_mysql{
 	}
 
 	public function output($Str){
-	    $datet=date("m-d H:i:s")." >>>>";
-        file_put_contents('/www/wwwroot/92ff.top/a_sql.log', $datet.$Str."\n", FILE_APPEND);
+	    //$datet=date("m-d H:i:s")." >>>>";
+        //file_put_contents('/www/wwwroot/92ff.top/a_sql.log', $datet.$Str."\n", FILE_APPEND);
     }
 
 }
@@ -152,9 +152,9 @@ class db_pdo{
 		return $this->pdo->getAttribute(constant('PDO::ATTR_SERVER_VERSION'));
 	}
     public function output($Str){
-        $datet=date("m-d H:i:s")." >>>>";
+        //$datet=date("m-d H:i:s")." >>>>";
 
-        file_put_contents('/www/wwwroot/92ff.top/a_pdo.log', $datet.$Str."\n", FILE_APPEND);
+        //file_put_contents('/www/wwwroot/92ff.top/a_pdo.log', $datet.$Str."\n", FILE_APPEND);
     }
 }
 $db = extension_loaded('pdo_mysql') ? new db_pdo(IN_DBHOST, IN_DBUSER, "ZseifeEwTB7Hk5Mz", IN_DBNAME) : new db_mysql(IN_DBHOST, IN_DBUSER, "ZseifeEwTB7Hk5Mz", IN_DBNAME);

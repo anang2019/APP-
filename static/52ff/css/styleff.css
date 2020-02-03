@@ -1,0 +1,272 @@
+.beijing{
+	background-image: url(../img/beijing.png);
+	background-size: 100%;
+	background-repeat: no-repeat;
+	position: absolute;
+	right: 0;
+}
+.zhedan{
+	width: 380px;
+	height: 20px;
+	/*background-color: #fff;*/
+	position: absolute;
+	top: 20px;
+	margin-left: 25px;
+
+}
+.jiange1{
+	width: 100%;
+	margin-top: -2px;
+}
+.fangfeng_jishu{
+	font-size:40px;
+	letter-spacing: 2px;
+	/*border-bottom:2px solid #00f;*/
+}
+.fangfeng_biaoti{
+	text-align: center;
+}
+.fangfeng_biaoti span{
+	display: inline-block;
+	width: 100px;
+	height: 4px;
+	background-color: #00f;
+	position: relative;
+	top: -55px;
+}
+.fangfeng_shuoming{
+	font-size:16px;
+	letter-spacing: 2px;
+	line-height: 25px;
+	margin-top: -40px;
+}
+.fangfen_lizi_1 {
+	width: 23.5%;
+
+	/*border:2px solid #000;*/
+	margin-bottom: 25px;
+	background-color: #fff;
+	border-radius: 10px;
+	float: left;
+	margin-top: 25px;
+	height: 360px;
+	position: relative;
+}
+.fangfen_xbt_1{
+	font-size:24px;
+	margin-top: 15px;
+	letter-spacing: 2px;
+	
+}
+.fangfeng_neirong{
+	font-size:14px;
+	width: 80%;
+	margin-left: 10%;
+	margin-top: 25px;
+	letter-spacing: 1px;
+	line-height: 20px;
+}
+.fangfen_lizi_1 img{
+	margin-top: 25px;
+	width: 50%;
+}
+.fangfen_lizi_1 button{
+	width: 100px;
+	position: relative;
+	top: -35px;
+	height: 30px;
+	background-color: #00f;
+	border:none;
+	border-radius: 5px;
+	color:#fff;
+	box-shadow: 0 1px 3px 1px rgba(0,0,0,.2);
+	bottom: 15px;
+
+}
+.juli_1{
+	margin-right: 2%;
+	margin-left: 2%;
+}
+.juli_2{
+	margin-right: 2%;
+}
+.fangfen_lizi_1 a{
+	color:#fff;
+}
+.jiange_2{
+	color:#fff;
+	font-size: 40px !important;
+}
+.chaoji{
+	padding-top: 22px;
+}
+.pingguo_biaoti span{
+	top: 0;
+}
+.pingguo_shuoming{
+	margin-top: 40px;
+}
+.pingguo_biaoti{
+	margin-top: 30px;
+}
+.pingguo_lizi{
+	width: 32%;
+	height: 400px;
+}
+.juli_3{
+	margin-left: 2%;
+	margin-right: 2%;
+}
+.pingguo_lizi img{
+	width: 25%;
+}
+.pingguo_lizi button{
+	top: 40px;
+}
+.jiage{
+	font-size:23px;
+	color:#00f;
+	margin-top: 15px;
+}
+.jiage span{
+	font-size:14px;
+	color:#333;
+}
+.fenfa_beijing{
+	color: #fff;
+	height: 160px;
+	background-color: #00f;
+	padding-top: 35px;
+	border-radius: 0 0 50% 50%/0 0 50px 50px;
+	position: relative;
+	z-index: 3;
+}
+.fenfa_beijing h2{
+	font-size: 50px;
+	margin-bottom: 12px;
+	line-height: 1.2;
+	font-weight: 500;
+}
+.fenfa_beijing small{
+	font-size: 16px;
+}
+.dianshujg{
+	font-size:40px;
+	margin-top: 20px;
+}
+.fengfa_lizi{
+	height: 350px;
+	width: 25%;
+
+}
+.juli_4{
+	margin-right: 12.5%;
+	margin-left: 12.5%;
+}
+.fenfa{
+	height: 600px;
+}
+.cpfuwu{
+	background-image: url(../images/fueubeijing.jpg);
+	background-size: 100%;
+}
+.fuwu_lizi{
+	height: 350px;
+}
+.mianze{
+	font-size:18px;
+	line-height: 40px;
+}
+.lbottom{
+	float: left;
+	width: 200px;
+	/*border:1px solid #fff;*/
+	text-align: left;
+	margin-right: 25px;
+	margin-top: 25px;
+}
+#footer{
+	padding-bottom: 50px;
+}
+#footer::after { 
+	content:"."; 
+	clear: both; 
+	height: 0; 
+	overflow: hidden; 
+	visibility: hidden; 
+	display: block;
+}
+.lbottom img{
+	width: 130px;
+}
+
+.w{
+	width: 1200px;
+	/*border:1px solid #ff0000;*/
+	margin:auto;
+}
+.QQdi{
+	background-image: url('../images/wangzhang1_61.png');
+	background-size: 17px;
+	background-repeat: no-repeat;
+	padding-left: 30px;
+	margin-top: 15px;
+}
+.dizhi{
+	background-image: url('../images/wangzhang1_64.png');
+	background-size: 17px;
+	background-repeat: no-repeat;
+	padding-left: 30px;
+	margin-top: 15px;
+}
+.bottom p{
+	font-size:12px;
+}
+.lbottom_1 img{
+	width: 40px;
+}
+.lbottom_1{
+	text-align: center;
+	border-right:1px solid #383739;
+}
+.lbottom_1 .daohang1 a{
+	color:#fff;
+	line-height: 30px;
+}
+.erweima{
+	border:none;
+}
+.erweima img{
+	width: 120px;
+}
+.kuaijie p{
+	font-size:15px;
+	letter-spacing: 2px;
+	color:#fff;
+	line-height: 30px;
+	width: 100%;
+}
+.kuaijie p a{
+	display: block;
+	width: 100%;
+	letter-spacing: 2px;
+	color:#fff;
+}
+.kuaijie p a:hover {color: #00f}  
+.kuaijie p a:active {color: #fff;background-color:#00f}   
+.kuaijie{
+	width: 150px;
+	background-color: rgba(0,0,0,.6);
+	border-radius: 5px;
+}
+.anniu button {
+	position: absolute;
+	left: 50%;
+	bottom: 15px;
+	transform: translate(-50%, 0);
+	top: 315px;
+}
+.anniu {
+	position: relative;
+}
+/***********************************************************************/
