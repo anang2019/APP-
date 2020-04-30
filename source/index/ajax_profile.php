@@ -6,6 +6,7 @@ header("Expires: Mon, 26 Jul 1997 05:00:00 GMT");
 header("Cache-Control: no-cache, must-revalidate");
 header("Pragma: no-cache");
 header("Content-type: text/html;charset=".IN_CHARSET);
+header("Access-Control-Allow-Origin:*");
 
 $ac = SafeRequest("ac","get");
 if($ac == 'getpathj'){
